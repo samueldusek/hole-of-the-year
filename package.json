@@ -1,0 +1,24 @@
+{
+  "name": "hole-of-the-year",
+  "version": "1.0.0",
+  "description": "Discgolf hole of the year app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samu3I/hole-of-the-year.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samu3I/hole-of-the-year/issues"
+  },
+  "homepage": "https://github.com/samu3I/hole-of-the-year#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  }
+}
