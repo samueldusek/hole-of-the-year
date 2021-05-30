@@ -1,0 +1,125 @@
+<% layout('/layouts/mainTemplate') %>
+
+<h1 class="my-3"><%= course.name %></h1>
+
+<div class="row mt-4">
+  <div class="col-md-6 mb-md-4">
+    <h3 class="mb-4">Základní informace</h3>
+    <div class="card shadow">
+      <img src="../img/hole.jpg" class="card-img-top" alt="Náhodná jamka" />
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <span class="fw-bold">Lokace:</span> <%= course.region %>
+        </li>
+        <li class="list-group-item">
+          <span class="fw-bold">Typ:</span> <%= course.type %>
+        </li>
+        <li class="list-group-item">
+          <span class="fw-bold">Počet jamek:</span> <%= course.numberOfHoles %>
+        </li>
+        <li class="list-group-item">
+          <span class="fw-bold">Par hřiště:</span> <%= course.layoutPar %>
+        </li>
+        <li class="list-group-item">
+          <span class="fw-bold">Délka hřiště:</span> <%= course.layoutLength %>
+          m
+        </li>
+      </ul>
+    </div>
+    <!-- Comment section  -->
+    <h3 class="my-4">Komentáře</h3>
+    <% if (course.comments.length == 0) { %>
+    <p class="lead">
+      K tomuto hřišti ještě nikdo nepřidal komentář, buď první! Sdílej svůj
+      příběh, který se váže k tomuto hřišti a vyhraj zajímavé ceny!
+    </p>
+    <% } else { %> <% for (let comment of course.comments ) { %>
+    <div class="card mb-3">
+      <div class="card-header">Honza Novák, 9.5.2021</div>
+      <div class="card-body">
+        <p class="card-text"><%= comment.text %></p>
+        <a href="#" class="btn btn-success btn-sm">Like!</a>
+      </div>
+    </div>
+    <% } }%>
+    <form
+      class="validated-form mb-3"
+      action="/courses/<%= course._id %>/comments"
+      method="POST"
+      novalidate
+    >
+      <div class="mb-3">
+        <label class="form-label" for="comment">Přidej komentář</label>
+        <textarea
+          class="form-control"
+          name="comment"
+          id="comment"
+          cols="30"
+          rows="3"
+          required
+        ></textarea>
+        <div class="valid-feedback">To vypadá dobře!</div>
+        <div class="invalid-feedback">Zapoměl jsi zadat text!</div>
+      </div>
+      <button class="btn btn-success btn-sm" type="submit" <%= currentUser ? '' : 'disabled' %>>Přidat</button>
+    </form>
+  </div>
+  <!-- Hole section -->
+  <div class="col-md-6">
+    <h3 class="mb-4 mt-4 mt-md-0">Seznam všech jamek</h3>
+    <% for (let hole of course.holes) { %>
+    <div class="row g-0 mb-3 shadow">
+      <div class="col-auto border border-1 rounded">
+        <img
+          src="/img/teesign.jpg"
+          alt="Random teesign"
+          class="img-fluid"
+          style="max-width: 150px"
+        />
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+          <h5 class="fw-bold d-inline">Jamka č. <%= hole.number %></h5>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span class="fw-bold">Par:</span> <%= hole.par %>
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold">Délka jamky:</span> <%= hole.length %> m
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold">Počet nominací:</span> <%= hole.votes %>
+              <% if (currentUser && currentUser.nominatedHoles.find(userHole => userHole._id.toString() === hole._id.toString())) { %>
+              <span class="ms-1 badge rounded-pill bg-info text-dark">Tebou nominovana jamka</span>
+              <% } %> 
+            </li>
+          </ul>
+          <div class="card-footer d-flex justify-content-start">
+            <form
+              class="me-2"
+              action="/holes/<%= hole._id %>/?_method=PUT"
+              method="POST"
+            >
+              <input type="hidden" name="nomination" value="select">
+              <% if (currentUser) { %> 
+              <input type="hidden" name="userId" value="<%= currentUser._id %>">
+              <% } %> 
+              <button class="btn btn-success btn-sm" <% if (!currentUser || currentUser.nominatedHoles.length >= 3) { %>disabled<% } %>>Nominovat</button>
+            </form>
+            <form action="/holes/<%= hole._id %>/?_method=PUT" method="POST">
+              <% if (currentUser) { %> 
+                <input type="hidden" name="userId" value="<%= currentUser._id %>">
+                <% } %> 
+              <input type="hidden" name="nomination" value="deselect">
+              <button class="btn btn-danger btn-sm" <% if (!currentUser || !currentUser.nominatedHoles.find(userHole => userHole._id.toString() === hole._id.toString())) { %>disabled<% } %>>Zrušit nominaci</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+<script src="/js/validateForm.js"></script>

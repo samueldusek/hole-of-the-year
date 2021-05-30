@@ -1,0 +1,110 @@
+<% layout('/layouts/mainTemplate') %>
+
+<h1 class="my-3">Seznam všech hřišť</h1>
+
+<div class="row mt-4">
+  <div class="col-10 offset-1">
+    <form class="d-flex">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Napiš, které hřiště hledáš..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">Hledej</button>
+    </form>
+  </div>
+</div>
+<div class="mt-4">
+  <% let printedCourses = 0 %> <% for (let course of courses){ %> <% if
+  (printedCourses === 0) { %>
+  <div class="row mb-3 justify-content-center">
+    <% } %>
+    <div class="col-sm-5">
+      <div class="card shadow mt-3">
+        <img
+          src="http://localhost:3000/img/hole.jpg"
+          class="card-img-top"
+          alt="<%= course.name %>"
+        />
+        <div class="card-body">
+          <h5 class="card-title fw-bold"><%= course.name %></h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <span class="fw-bold">Lokace:</span> <%= course.region %>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Typ:</span> <%= course.type %>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Počet jamek:</span> <%= course.numberOfHoles
+            %>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Par hřiště:</span> <%= course.layoutPar %>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Délka hřiště:</span> <%= course.layoutLength
+            %> m
+          </li>
+        </ul>
+        <div class="card-footer">
+          <a
+            href="/courses/<%= course._id %> "
+            class="btn btn-success btn-sm w-100"
+            >Více informací</a
+          >
+        </div>
+      </div>
+    </div>
+    <% if (printedCourses === 1) { %>
+  </div>
+  <% } %> <% if (printedCourses === 0) { printedCourses = 1; } else {
+  printedCourses = 0; } %> <% } %>
+  <div class="mt-4">
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <% if(previousPage != 1 && currentPage != 1) { %>
+        <li class="page-item">
+          <a class="page-link text-success" href="/courses/?page=<%= 1 %>"
+            ><%= 1 %></a
+          >
+        </li>
+        <% } %> <% if(hasPreviousPage) { %>
+        <li class="page-item">
+          <a
+            class="page-link text-success"
+            href="/courses/?page=<%= previousPage %>"
+            ><%= previousPage %></a
+          >
+        </li>
+        <% } %>
+        <li class="page-item">
+          <a
+            class="page-link text-white bg-success"
+            href="/courses/?page=<%= currentPage %>"
+            ><%= currentPage %></a
+          >
+        </li>
+        <% if(hasNextPage) { %>
+        <li class="page-item">
+          <a
+            class="page-link text-success"
+            href="/courses/?page=<%= nextPage %>"
+            ><%= nextPage %></a
+          >
+        </li>
+        <% } %> <% if(lastPage != nextPage && lastPage != currentPage) { %>
+        <li class="page-item">
+          <a
+            class="page-link text-success"
+            href="/courses/?page=<%= lastPage %>"
+            ><%= lastPage %></a
+          >
+        </li>
+        <% } %>
+      </ul>
+    </nav>
+  </div>
+</div>

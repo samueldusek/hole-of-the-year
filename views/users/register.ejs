@@ -1,0 +1,92 @@
+<% layout('/layouts/mainTemplate') %>
+
+<h1 class="mb-3">Registrace</h1>
+
+<div class="row mb-5">
+  <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+    <div class="card shadow">
+      <img
+        src="https://jamkaroku.cz/wp-content/uploads/2019/11/hp_1.jpg"
+        alt="Jamka Roku 2021"
+        class="card-img-top"
+      />
+
+      <div class="card-body">
+        <form
+          action="/users/register"
+          method="POST"
+          class="validated-form"
+          novalidate
+        >
+          <div class="mb-3">
+            <label for="username" class="form-label fw-bold"
+              >Uživatelské jméno</label
+            >
+            <input type="text" class="form-control <%= errors.find(e => e.param
+            === "username") ? "is-invalid" : "" %>" id="username"
+            aria-describedby="usernameHelp" placeholder="nominátor"
+            name="username" required autofocus value="<%= username ? username :
+            '' %>" />
+            <div id="usernameHelp" class="form-text">
+              Vaše uživatelské jméno se bude zobrazovat v komentářové sekci.
+            </div>
+            <div class="invalid-feedback">
+              <% if (errors.find(e => e.param === 'username')) { %> <%=
+              errors.filter(e => e.param === 'username')[0].msg %> <% } else {
+              %> Prosím, zvolte si uživatelské jméno. <% } %>
+            </div>
+            <div class="valid-feedback">V pořádku!</div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control <%= errors.find(e => e.param
+            === "email") ? "is-invalid" : "" %>" id="email" name="email"
+            aria-describedby="emailHelp" placeholder="jamka@roku.cz" required
+            value="<%= email ? email : '' %>" />
+            <div id="emailHelp" class="form-text">
+              Emailová adresa bude použita pro ověření vašeho účtu a nebude s
+              nikým sdílena.
+            </div>
+            <div class="invalid-feedback">
+              <% if (errors.find(e => e.param === 'email')) { %> <%=
+              errors.filter(e => e.param === 'email')[0].msg %> <% } else { %>
+              Prosím, zadejte svou emailovou adresu. <% } %>
+            </div>
+            <div class="valid-feedback">V pořádku!</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label fw-bold">Heslo</label>
+            <input type="password" class="form-control <%= errors.find(e =>
+            e.param === "password") ? "is-invalid" : "" %>" id="password"
+            name="password" required />
+            <div id="passwordHelp" class="form-text">
+              Heslo by mělo mít alespoň 5 znaků.
+            </div>
+            <div class="invalid-feedback">
+              <% if (errors.find(e => e.param === 'password')) { %> <%=
+              errors.filter(e => e.param === 'password')[0].msg %> <% } else {
+              %> Prosím, zvolte si heslo s minimalne 5 znaky. <% } %>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="passwordConfirmation" class="form-label fw-bold"
+              >Potvrdit heslo</label
+            >
+            <input type="password" class="form-control <%= errors.find(e =>
+            e.param === "passwordConfirmation") ? "is-invalid" : "" %>"
+            id="passwordConfirmation" name="passwordConfirmation" required />
+            <div class="invalid-feedback">
+              <% if (errors.find(e => e.param === 'passwordConfirmation')) { %>
+              <%= errors.filter(e => e.param === 'passwordConfirmation')[0].msg
+              %> <% } else { %> Prosím, potvrďte své heslo. <% } %>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success w-100">
+            Registrovat se
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/validateForm.js"></script>
