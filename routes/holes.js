@@ -7,4 +7,6 @@ router
   .route("/:holeId")
   .put(isAuth.ensureAuthenticated, holesController.nominateHole);
 
+router.route("/top").get(holesController.getTopHoles);
+
 module.exports = router;
