@@ -83,6 +83,13 @@ app.use("/courses", courseRoutes);
 app.use("/users", userRoutes);
 app.use("/holes", holeRoutes);
 
+// Set the route for terms and conditions
+app.get("/terms", (req, res) => {
+  res.render("mains/terms", {
+    pageTitle: "Podmínky soutěže - Jamka Roku 2021",
+  });
+});
+
 app.get("/", (req, res) => {
   res.redirect("/courses");
 });
