@@ -28,9 +28,17 @@ Install dependencies
   npm install
 ```
 
+Seed the database
+
+```bash
+  cd seeds
+  node app.js
+```
+
 Start the server and the app
 
 ```bash
+  cd ..
   nodemon app.js
 ```
 You must have MongoDB and NodeJS installed on your PC. 
