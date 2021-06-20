@@ -76,3 +76,15 @@ module.exports.nominateHole = async (req, res) => {
   const updatedUser = await user.save();
   res.redirect(`/courses/${updatedHole.course._id}`);
 };
+
+module.exports.getTopHoles = async (req, res) => {
+  // Populate top 32 holes from the db
+  const holes = await Hole.find({ votes: { $gt: 0 } })
+    .populate("course")
+    .sort({ votes: "descending" })
+    .limit(32);
+  res.render("holes/top", {
+    holes: holes,
+    pageTitle: "Top 32 Jamek - Jamka Roku 2021",
+  });
+};
