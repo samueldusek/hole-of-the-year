@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const CourseSchema = new Schema({
   name: String,
+  slug: String,
   type: String,
   region: String,
   holes: [

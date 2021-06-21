@@ -1,5 +1,6 @@
 // Load installed packages
 const mongoose = require("mongoose");
+const slugify = require("slugify");
 
 // Load data
 const courses = require("./courses");
@@ -28,6 +29,7 @@ const seedDB = async () => {
     if (i === 0 || courses[i].CourseName !== courses[i - 1].CourseName) {
       const course = new Course({
         name: courses[i].CourseName,
+        slug: slugify(courses[i].CourseName, { lower: true }),
         type: courses[i].LayoutName,
         region: courses[i].CourseRegion,
       });

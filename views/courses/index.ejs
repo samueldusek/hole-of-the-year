@@ -4,15 +4,23 @@
 
 <div class="row mt-4">
   <div class="col-10 offset-1">
-    <form class="d-flex">
+    <form class="d-flex" method="GET" action="/courses">
       <input
         class="form-control me-2"
         type="search"
         placeholder="Napiš, které hřiště hledáš..."
         aria-label="Search"
+        name="q"
+        id="q"
+        list="courses-hints"
       />
       <button class="btn btn-outline-success" type="submit">Hledej</button>
     </form>
+    <datalist id="courses-hints">
+      <% for (let courseName of allCoursesNames){ %>
+        <option value="<%= courseName.name %>" /> 
+      <% } %>
+    </datalist>
   </div>
 </div>
 <div class="mt-4">
