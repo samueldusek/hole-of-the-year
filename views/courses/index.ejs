@@ -75,7 +75,7 @@
       <ul class="pagination justify-content-center">
         <% if(previousPage != 1 && currentPage != 1) { %>
         <li class="page-item">
-          <a class="page-link text-success" href="/courses/?page=<%= 1 %>"
+          <a class="page-link text-success" href="/courses/?page=<%= 1 %><%= searchQuery %>"
             ><%= 1 %></a
           >
         </li>
@@ -83,7 +83,7 @@
         <li class="page-item">
           <a
             class="page-link text-success"
-            href="/courses/?page=<%= previousPage %>"
+            href="/courses/?page=<%= previousPage %><%= searchQuery %>"
             ><%= previousPage %></a
           >
         </li>
@@ -91,7 +91,7 @@
         <li class="page-item">
           <a
             class="page-link text-white bg-success"
-            href="/courses/?page=<%= currentPage %>"
+            href="/courses/?page=<%= currentPage %><%= searchQuery %>"
             ><%= currentPage %></a
           >
         </li>
@@ -99,7 +99,7 @@
         <li class="page-item">
           <a
             class="page-link text-success"
-            href="/courses/?page=<%= nextPage %>"
+            href="/courses/?page=<%= nextPage %><%= searchQuery %>"
             ><%= nextPage %></a
           >
         </li>
@@ -107,7 +107,7 @@
         <li class="page-item">
           <a
             class="page-link text-success"
-            href="/courses/?page=<%= lastPage %>"
+            href="/courses/?page=<%= lastPage %><%= searchQuery %>"
             ><%= lastPage %></a
           >
         </li>
