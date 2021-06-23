@@ -1,6 +1,6 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1 class="my-3">Top 32 Jamek</h1>
+<h1 class="mb-3">Top 32 Jamek</h1>
 
 <div class="mt-4">
   <% holes.forEach((hole, idx) => { %>
@@ -59,13 +59,17 @@
             </li>
             <li class="list-group-item">
               <div class="row">
-                <div class="col-sm"><span class="fw-bold">Počet nominací:</span> <%= hole.votes %></div>
-              <% if (currentUser && currentUser.nominatedHoles.find(userHole => userHole._id.toString() === hole._id.toString())) { %>
-              <div class="col-sm-auto">
-                <span class="badge rounded-pill bg-info text-dark text-wrap">Tvá nominace</span> 
+                <div class="col-sm">
+                  <span class="fw-bold">Počet nominací:</span> <%= hole.votes %>
+                </div>
+                <% if (currentUser && currentUser.nominatedHoles.find(userHole => userHole._id.toString() === hole._id.toString())) { %>
+                <div class="col-sm-auto">
+                  <span class="badge rounded-pill bg-info text-dark text-wrap"
+                    >Tvá nominace</span
+                  >
+                </div>
+                <% } %>
               </div>
-              <% } %>
-            </div>
             </li>
           </ul>
         </div>

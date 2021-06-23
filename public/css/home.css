@@ -1,0 +1,74 @@
+.mainBox {
+  background-image: linear-gradient(
+      rgba(20, 20, 20, 0.5),
+      rgba(20, 20, 20, 0.5)
+    ),
+    url("../img/hole.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-animation: back 20s infinite; /* Safari 4+ */
+  -moz-animation:    back 20s infinite; /* Fx 5+ */
+  -o-animation:      back 20s infinite; /* Opera 12+ */
+  animation:         back 20s infinite; /* IE 10+, Fx 29+ */
+}
+
+.mainBox .title {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainBox .title .title-logo {
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.mainBox .title .title-logo img {
+  width: 100%;
+}
+
+.mainBox .title h1,
+.mainBox .title p {
+  text-align: center;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+/* The Keyframes*/
+@keyframes back {
+    0% {
+        background-image: linear-gradient(
+            rgba(20, 20, 20, 0.5),
+            rgba(20, 20, 20, 0.5)
+          ), url("../img/hole.jpg");
+      }
+    33% {
+    background-image: linear-gradient(
+        rgba(20, 20, 20, 0.5),
+        rgba(20, 20, 20, 0.5)
+      ), url("../img/hole2.jpg");
+  }
+  66% {
+    background-image: linear-gradient(
+        rgba(20, 20, 20, 0.5),
+        rgba(20, 20, 20, 0.5)
+      ), url("../img/hole3.jpg");
+  }
+  100% {
+    background-image: linear-gradient(
+        rgba(20, 20, 20, 0.5),
+        rgba(20, 20, 20, 0.5)
+      ), url("../img/hole.jpg");
+  }
+
+/* Animation Does Not End At 100% Because It Makes The Images Transition In/Out Better For Some Reason*/
+}

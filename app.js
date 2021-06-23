@@ -91,7 +91,9 @@ app.get("/terms", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.redirect("/courses");
+  res.render("mains/home", {
+    pageTitle: "Jamka Roku 2021",
+  });
 });
 
 app.listen(3000, () => {
