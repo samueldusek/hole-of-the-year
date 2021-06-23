@@ -44,6 +44,10 @@ router
       }
       return true;
     }),
+    body("terms")
+      .exists({ checkFalsy: true })
+      .isIn(["on"])
+      .withMessage("Musíš souhlasit s podmínkami soutěže."),
     usersController.registerNewUser
   );
 

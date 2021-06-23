@@ -14,7 +14,6 @@ module.exports.registerNewUser = async (req, res) => {
   // Check if any validation errors exist, if so redirect user back to register page
   const { email, username, password } = req.body;
   const errors = validationResult(req);
-  console.log(errors.array());
   if (!errors.isEmpty()) {
     return res.render("users/register", {
       pageTitle: "Registrace - Jamka Roku 2021",
