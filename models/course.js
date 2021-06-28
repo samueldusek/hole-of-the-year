@@ -6,6 +6,7 @@ const CourseSchema = new Schema({
   slug: String,
   type: String,
   region: String,
+  folderId: String,
   holes: [
     {
       type: Schema.Types.ObjectId,

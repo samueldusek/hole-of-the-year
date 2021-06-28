@@ -1,7 +1,7 @@
 module.exports = [
   {
     id: "1",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -14,7 +14,7 @@ module.exports = [
   },
   {
     id: "2",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -27,7 +27,7 @@ module.exports = [
   },
   {
     id: "3",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -40,7 +40,7 @@ module.exports = [
   },
   {
     id: "4",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -53,7 +53,7 @@ module.exports = [
   },
   {
     id: "5",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -66,7 +66,7 @@ module.exports = [
   },
   {
     id: "6",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -79,7 +79,7 @@ module.exports = [
   },
   {
     id: "7",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -92,7 +92,7 @@ module.exports = [
   },
   {
     id: "8",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -105,7 +105,7 @@ module.exports = [
   },
   {
     id: "9",
-    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice ",
+    CourseName: "BÚŘOV DISCGOLF - Valašská Bystřice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "751",
@@ -2718,7 +2718,7 @@ module.exports = [
   },
   {
     id: "207",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -2731,7 +2731,7 @@ module.exports = [
   },
   {
     id: "208",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -2744,7 +2744,7 @@ module.exports = [
   },
   {
     id: "209",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -2757,7 +2757,7 @@ module.exports = [
   },
   {
     id: "210",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -2770,7 +2770,7 @@ module.exports = [
   },
   {
     id: "211",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -2783,7 +2783,7 @@ module.exports = [
   },
   {
     id: "212",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -2796,7 +2796,7 @@ module.exports = [
   },
   {
     id: "213",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -2809,7 +2809,7 @@ module.exports = [
   },
   {
     id: "214",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -2822,7 +2822,7 @@ module.exports = [
   },
   {
     id: "215",
-    CourseName: "Discgolfové hřiště Rekovice ",
+    CourseName: "Discgolfové hřiště Rekovice",
     LayoutName: "Pevný layout",
     HolesCount: "9",
     LayoutLenght: "560",
@@ -7762,7 +7762,7 @@ module.exports = [
   },
   {
     id: "595",
-    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry   ',
+    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry',
     LayoutName: "Pevný layout",
     HolesCount: "8",
     LayoutLenght: "488",
@@ -7775,7 +7775,7 @@ module.exports = [
   },
   {
     id: "596",
-    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry   ',
+    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry',
     LayoutName: "Pevný layout",
     HolesCount: "8",
     LayoutLenght: "488",
@@ -7788,7 +7788,7 @@ module.exports = [
   },
   {
     id: "597",
-    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry   ',
+    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry',
     LayoutName: "Pevný layout",
     HolesCount: "8",
     LayoutLenght: "488",
@@ -7801,7 +7801,7 @@ module.exports = [
   },
   {
     id: "598",
-    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry   ',
+    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry',
     LayoutName: "Pevný layout",
     HolesCount: "8",
     LayoutLenght: "488",
@@ -7814,7 +7814,7 @@ module.exports = [
   },
   {
     id: "599",
-    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry   ',
+    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry',
     LayoutName: "Pevný layout",
     HolesCount: "8",
     LayoutLenght: "488",
@@ -7827,7 +7827,7 @@ module.exports = [
   },
   {
     id: "600",
-    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry   ',
+    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry',
     LayoutName: "Pevný layout",
     HolesCount: "8",
     LayoutLenght: "488",
@@ -7840,7 +7840,7 @@ module.exports = [
   },
   {
     id: "601",
-    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry   ',
+    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry',
     LayoutName: "Pevný layout",
     HolesCount: "8",
     LayoutLenght: "488",
@@ -7853,7 +7853,7 @@ module.exports = [
   },
   {
     id: "602",
-    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry   ',
+    CourseName: 'Mark "Disqman" Trubl - discgolf course Odry',
     LayoutName: "Pevný layout",
     HolesCount: "8",
     LayoutLenght: "488",

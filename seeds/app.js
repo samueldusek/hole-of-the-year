@@ -1,6 +1,7 @@
 // Load installed packages
 const mongoose = require("mongoose");
 const slugify = require("slugify");
+const fs = require("fs");
 
 // Load data
 const courses = require("./courses");
@@ -22,7 +23,16 @@ db.once("open", () => {
   console.log("Database connected");
 });
 
+fs.unlinkSync("../images/courses.csv", (err) => {
+  if (err) {
+    console.log(err);
+  }
+});
+
+const stream = fs.createWriteStream("../images/courses.csv", { flags: "a" });
+
 const seedDB = async () => {
+  let folderId = 1;
   await Course.deleteMany({});
   await Hole.deleteMany({});
   for (let i = 0; i < courses.length; i++) {
@@ -32,8 +42,11 @@ const seedDB = async () => {
         slug: slugify(courses[i].CourseName, { lower: true }),
         type: courses[i].LayoutName,
         region: courses[i].CourseRegion,
+        folderId: ("" + folderId).padStart(3, "0"),
       });
       await course.save();
+      stream.write(`${course.folderId},${course.name},\n`);
+      folderId++;
     }
     const hole = new Hole({
       number: courses[i].HoleNumber,
