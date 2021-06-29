@@ -1,5 +1,107 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1 class="mb-3">Duel #<%= duel.round %></h1>
+<h1 class="mb-3">Duel #<%= round %></h1>
 
-<div class="row mt-4"></div>
+<div class="mt-4">
+  <div class="row align-items-center">
+    <div class="col-5 text-center">
+      <h2>
+        <span class="fw-bold">Jamka #<%= holeOne.hole.number %></span></br><%= holeOne.hole.course.name %>
+      </h2>
+    </div>
+    <div class="col-2 text-center">
+      <div class="display-4">VS.</div>
+    </div>
+    <div class="col-5 text-center">
+      <h2>
+        <span class="fw-bold">Jamka #<%= holeTwo.hole.number %></span></br><%= holeTwo.hole.course.name %>
+      </h2>
+    </div>
+  </div>
+  <div class="row mt-4 align-items-center">
+    <div class="col-2 text-center"><h4 class="display-6 m-0"><%= holeOne.votes %></h4></div>
+    <div class="col-8">
+        <div class="progress shadow" style="height: 25px;">
+        <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 50%"
+            aria-valuenow="50"
+            aria-valuemin="0"
+            aria-valuemax="100"
+        ></div>
+        <div
+            class="progress-bar bg-success"
+            role="progressbar"
+            style="width: 50%"
+            aria-valuenow="50"
+            aria-valuemin="0"
+            aria-valuemax="100"
+        ></div>
+        </div>
+    </div>
+    <div class="col-2 text-center"><h4 class="display-6 m-0"><%= holeTwo.votes %></div>
+  </div>
+  <div class="row my-4">
+      <div class="col">
+        <div class="card shadow mt-3">
+            <img
+              src="/img/teesign.jpg"
+              class="card-img-top"
+              alt="<%= holeOne.hole.course.name %>"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Jamka #<%= holeOne.hole.number %> - <%= holeOne.hole.course.name %></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span class="fw-bold">Par:</span> <%= holeOne.hole.par %>
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Délka:</span> <%= holeOne.hole.length %> m
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Počet nominací v 1. kole:</span> <%= holeOne.hole.votes %>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a
+                href="#"
+                class="btn btn-primary btn-sm w-100"
+                >Hlasovat pro tuto jamku</a
+              >
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card shadow mt-3">
+            <img
+              src="/img/teesign.jpg"
+              class="card-img-top"
+              alt="<%= holeTwo.hole.course.name %>"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Jamka #<%= holeTwo.hole.number %> - <%= holeTwo.hole.course.name %></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span class="fw-bold">Par:</span> <%= holeTwo.hole.par %>
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Délka:</span> <%= holeTwo.hole.length %> m
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Počet nominací v 1. kole:</span> <%= holeTwo.hole.votes %>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a
+                href="#"
+                class="btn btn-success btn-sm w-100"
+                >Hlasovat pro tuto jamku</a
+              >
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

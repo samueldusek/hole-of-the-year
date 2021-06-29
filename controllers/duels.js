@@ -13,10 +13,20 @@ module.exports.showAllDuels = async (req, res) => {
 module.exports.showDuel = async (req, res) => {
   const { id } = req.params;
 
-  const duel = await Duel.findById(id);
+  const duel = await Duel.findById(id).populate({
+    path: "holesInDuel",
+    populate: {
+      path: "hole",
+      populate: {
+        path: "course",
+      },
+    },
+  });
 
   res.render("duels/show", {
-    duel: duel,
+    round: duel.round,
+    holeOne: duel.holesInDuel[0],
+    holeTwo: duel.holesInDuel[1],
     pageTitle: `Duel #${duel.round} - Jamka Roku 2021`,
   });
 };
