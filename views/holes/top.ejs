@@ -2,6 +2,13 @@
 
 <h1 class="mb-3">Top 32 Jamek</h1>
 
+<% if(holes.length === 0) { %>
+<h3>
+  Zatím žádná jamka nedostala žádný hlas. Žebříček 32 nejlepších jamek se začne
+  tvořit až se začne hlasovat.
+</h3>
+<% } %>
+
 <div class="mt-4">
   <% holes.forEach((hole, idx) => { %>
   <div class="row h-auto mb-4 g-0">

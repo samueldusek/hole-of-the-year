@@ -1,0 +1,11 @@
+<% layout('/layouts/mainTemplate') %>
+
+<h1 class="mb-3">Seznam všech duelů</h1>
+
+<div class="row mt-4">
+  <ul>
+    <% duels.forEach(duel => { %>
+    <li><a href="/duels/<%= duel._id %>">Duel #<%= duel.round %></a></li>
+    <% }) %>
+  </ul>
+</div>

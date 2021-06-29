@@ -10,6 +10,7 @@ console.log(courses[0].CourseName);
 // Load models
 const Course = require("../models/course");
 const Hole = require("../models/hole");
+const Duel = require("../models/duel");
 
 //Connect to MongoDB
 mongoose.connect("mongodb://localhost:27017/hole-db", {
@@ -52,12 +53,30 @@ const seedDB = async () => {
       number: courses[i].HoleNumber,
       length: courses[i].HoleLenght,
       par: courses[i].HolePar,
+      votes: Math.floor(Math.random() * 500),
     });
     const course = await Course.findOne({ name: courses[i].CourseName });
     hole.course = course;
     course.holes.push(hole);
     await course.save();
     await hole.save();
+  }
+  await Duel.deleteMany({});
+  let startDate = new Date(2021, 10, 16, 0);
+  const topHoles = await Hole.find({ votes: { $gt: 0 } })
+    .populate("course")
+    .sort({ votes: "descending" })
+    .limit(16);
+  for (let i = 0; i < 8; i++) {
+    const duel = new Duel({
+      startDate: startDate,
+      endDate: new Date(startDate.getTime() + 86340000),
+      round: i + 1,
+    });
+    duel.holesInDuel.push({ hole: topHoles[2 * i], votes: 0 });
+    duel.holesInDuel.push({ hole: topHoles[2 * i + 1], votes: 0 });
+    await duel.save();
+    startDate = new Date(startDate.getTime() + 86400000);
   }
 };
 

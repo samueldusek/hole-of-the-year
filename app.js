@@ -77,11 +77,13 @@ mongoose.connect("mongodb://localhost:27017/hole-db", {
 const courseRoutes = require("./routes/courses");
 const userRoutes = require("./routes/users");
 const holeRoutes = require("./routes/holes");
+const duelRoutes = require("./routes/duels");
 
 // Set all the routes
 app.use("/courses", courseRoutes);
 app.use("/users", userRoutes);
 app.use("/holes", holeRoutes);
+app.use("/duels", duelRoutes);
 
 // Set the route for terms and conditions
 app.get("/terms", (req, res) => {
