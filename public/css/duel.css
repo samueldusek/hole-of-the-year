@@ -1,0 +1,7 @@
+.shadow-gold {
+  box-shadow: 0rem 0rem 1.5rem rgba(255, 215, 0);
+}
+
+.img-dimmed {
+  filter: brightness(50%);
+}

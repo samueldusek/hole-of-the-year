@@ -46,8 +46,6 @@ module.exports.showDuel = async (req, res) => {
     endDate.getMonth() + 1
   }. ${endDate.getFullYear()} v ${endDate.getHours()}:${endDate.getMinutes()}`;
 
-  console.log(endDateString);
-
   res.render("duels/show", {
     startDate: startDateString,
     endDate: endDateString,
@@ -59,8 +57,10 @@ module.exports.showDuel = async (req, res) => {
     round: duel.round,
     holeOne: duel.holesInDuel[0],
     holeOnePercentage: holeOnePercentage,
+    holeOneIsWinner: duel.holesInDuel[0].votes > duel.holesInDuel[1].votes,
     holeTwo: duel.holesInDuel[1],
     holeTwoPercentage: holeTwoPercentage,
+    holeTwoIsWinner: duel.holesInDuel[0].votes < duel.holesInDuel[1].votes,
     pageTitle: `Duel #${duel.round} - Jamka Roku 2021`,
   });
 };
