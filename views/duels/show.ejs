@@ -40,10 +40,10 @@
         ></div>
         </div>
     </div>
-    <div class="col-2 text-center"><h4 class="display-6 m-0"><%= holeTwo.votes %></div>
+    <div class="col-2 text-center"><h4 class="display-6 m-0"><%= holeTwo.votes %></h4></div>
   </div>
-  <div class="row my-4">
-      <div class="col">
+  <div class="row my-4 align-items-center justify-content-center">
+      <div class="col-4">
         <div class="card shadow mt-3">
             <img
               src="/img/teesign.jpg"
@@ -51,7 +51,7 @@
               alt="<%= holeOne.hole.course.name %>"
             />
             <div class="card-body">
-              <h5 class="card-title fw-bold">Jamka #<%= holeOne.hole.number %> - <%= holeOne.hole.course.name %></h5>
+              <h5 class="card-title fw-bold text-center">Jamka #<%= holeOne.hole.number %></br><%= holeOne.hole.course.name %></h5>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -64,16 +64,17 @@
                 <span class="fw-bold">Počet nominací v 1. kole:</span> <%= holeOne.hole.votes %>
               </li>
             </ul>
-            <div class="card-footer">
-              <a
-                href="#"
-                class="btn btn-primary btn-sm w-100"
-                >Hlasovat pro tuto jamku</a
-              >
-            </div>
           </div>
+          <a
+          href="#"
+          class="btn btn-primary btn-sm w-100 my-4 fs-3 shadow"
+          >Hlasovat</a
+        >
       </div>
-      <div class="col">
+      <div class="col-3 text-center">
+        <div class="display-4">VS.</div>
+      </div>
+      <div class="col-4">
         <div class="card shadow mt-3">
             <img
               src="/img/teesign.jpg"
@@ -81,7 +82,7 @@
               alt="<%= holeTwo.hole.course.name %>"
             />
             <div class="card-body">
-              <h5 class="card-title fw-bold">Jamka #<%= holeTwo.hole.number %> - <%= holeTwo.hole.course.name %></h5>
+              <h5 class="card-title fw-bold text-center">Jamka #<%= holeTwo.hole.number %></br><%= holeTwo.hole.course.name %></h5>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -94,14 +95,12 @@
                 <span class="fw-bold">Počet nominací v 1. kole:</span> <%= holeTwo.hole.votes %>
               </li>
             </ul>
-            <div class="card-footer">
-              <a
-                href="#"
-                class="btn btn-success btn-sm w-100"
-                >Hlasovat pro tuto jamku</a
-              >
-            </div>
           </div>
+          <a
+          href="#"
+          class="btn btn-success btn-sm w-100 my-4 fs-3 shadow"
+          >Hlasovat</a
+        >
       </div>
   </div>
 </div>
