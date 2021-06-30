@@ -1,6 +1,17 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1 class="mb-3">Duel #<%= round %></h1>
+<h1 class="mb-3 text-center">Duel #<%= round %></h1>
+
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+  <% if(isOngoing) { %> 
+    <strong>Tento duel právě probíhá!</strong> Možnost hlasovat v tomto duelu skončí dnes ve 23:59! 
+    <% } else if(isAboutToStart) { %>
+      <strong>Tento duel ještě nezačal!</strong> Možnost hlasovat v tomto duelu začne <strong><%= startDate %></strong>.
+      <% } else if(isFinished) { %>
+        <strong>Tento duel skončil <%= endDate %>!</strong> Výsledky jsou konečné a nelze je změnit.
+        <% } %> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
 
 <div class="mt-4">
   <div class="row align-items-center">
@@ -25,7 +36,7 @@
         <div
             class="progress-bar"
             role="progressbar"
-            style="width: 50%"
+            style='width: <%= holeOnePercentage %>%'
             aria-valuenow="50"
             aria-valuemin="0"
             aria-valuemax="100"
@@ -33,7 +44,7 @@
         <div
             class="progress-bar bg-success"
             role="progressbar"
-            style="width: 50%"
+            style='width: <%= holeTwoPercentage %>%'
             aria-valuenow="50"
             aria-valuemin="0"
             aria-valuemax="100"
@@ -51,7 +62,7 @@
               alt="<%= holeOne.hole.course.name %>"
             />
             <div class="card-body">
-              <h5 class="card-title fw-bold text-center">Jamka #<%= holeOne.hole.number %></br><%= holeOne.hole.course.name %></h5>
+              <h5 class="card-title text-center"><span class="fw-bold">Jamka #<%= holeOne.hole.number %></span></br><%= holeOne.hole.course.name %></h5>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -82,7 +93,7 @@
               alt="<%= holeTwo.hole.course.name %>"
             />
             <div class="card-body">
-              <h5 class="card-title fw-bold text-center">Jamka #<%= holeTwo.hole.number %></br><%= holeTwo.hole.course.name %></h5>
+              <h5 class="card-title text-center"><span class="fw-bold">Jamka #<%= holeTwo.hole.number %></span></br><%= holeTwo.hole.course.name %></h5>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">

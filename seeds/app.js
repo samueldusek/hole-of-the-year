@@ -24,6 +24,9 @@ db.once("open", () => {
   console.log("Database connected");
 });
 
+// Constants
+const DUELS_START_DATE = new Date(2021, 5, 26, 0);
+
 fs.unlinkSync("../images/courses.csv", (err) => {
   if (err) {
     console.log(err);
@@ -62,7 +65,7 @@ const seedDB = async () => {
     await hole.save();
   }
   await Duel.deleteMany({});
-  let startDate = new Date(2021, 10, 16, 0);
+  let startDate = DUELS_START_DATE;
   const topHoles = await Hole.find({ votes: { $gt: 0 } })
     .populate("course")
     .sort({ votes: "descending" })
@@ -73,8 +76,14 @@ const seedDB = async () => {
       endDate: new Date(startDate.getTime() + 86340000),
       round: i + 1,
     });
-    duel.holesInDuel.push({ hole: topHoles[2 * i], votes: 0 });
-    duel.holesInDuel.push({ hole: topHoles[2 * i + 1], votes: 0 });
+    duel.holesInDuel.push({
+      hole: topHoles[2 * i],
+      votes: Math.floor(Math.random() * 300),
+    });
+    duel.holesInDuel.push({
+      hole: topHoles[2 * i + 1],
+      votes: Math.floor(Math.random() * 300),
+    });
     await duel.save();
     startDate = new Date(startDate.getTime() + 86400000);
   }
