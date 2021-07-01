@@ -1,8 +1,17 @@
 const Duel = require("../models/duel");
 const Hole = require("../models/hole");
+const { getCzechDate } = require("../utils/helpers");
 
 module.exports.showAllDuels = async (req, res) => {
-  const duels = await Duel.find({});
+  const duels = await Duel.find({}).populate({
+    path: "holesInDuel",
+    populate: {
+      path: "hole",
+      populate: {
+        path: "course",
+      },
+    },
+  });
 
   res.render("duels/index", {
     duels: duels,
@@ -38,17 +47,9 @@ module.exports.showDuel = async (req, res) => {
   const endDate = new Date(duel.endDate);
   const today = new Date();
 
-  const startDateString = `${startDate.getDate()}. ${
-    startDate.getMonth() + 1
-  }. ${startDate.getFullYear()} v ${startDate.getHours()}:${startDate.getMinutes()}`;
-
-  const endDateString = `${endDate.getDate()}. ${
-    endDate.getMonth() + 1
-  }. ${endDate.getFullYear()} v ${endDate.getHours()}:${endDate.getMinutes()}`;
-
   res.render("duels/show", {
-    startDate: startDateString,
-    endDate: endDateString,
+    startDate: getCzechDate(startDate),
+    endDate: getCzechDate(endDate),
     isFinished: today.getTime() > endDate.getTime(),
     isOngoing:
       startDate.getTime() < today.getTime() &&
