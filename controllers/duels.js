@@ -1,6 +1,6 @@
 const Duel = require("../models/duel");
 const Hole = require("../models/hole");
-const { getCzechDate } = require("../utils/helpers");
+const { getCzechDate, getCzechDatePlusTime } = require("../utils/helpers");
 
 module.exports.showAllDuels = async (req, res) => {
   const duels = await Duel.find({}).populate({
@@ -13,8 +13,24 @@ module.exports.showAllDuels = async (req, res) => {
     },
   });
 
+  const today = new Date().getTime();
+
+  const duelsToDisplay = duels.map((duel) => {
+    return {
+      ...duel._doc,
+      startDate: getCzechDate(duel.startDate),
+      endDate: getCzechDate(duel.endDate),
+      isFinished: today > duel.endDate.getTime(),
+      isOngoing:
+        duel.startDate.getTime() < today && today < duel.endDate.getTime(),
+      isAboutToStart: today < duel.startDate.getTime(),
+    };
+  });
+
+  console.log(duelsToDisplay);
+
   res.render("duels/index", {
-    duels: duels,
+    duels: duelsToDisplay,
     pageTitle: "Duely - Jamka Roku 2021",
   });
 };
@@ -48,8 +64,8 @@ module.exports.showDuel = async (req, res) => {
   const today = new Date();
 
   res.render("duels/show", {
-    startDate: getCzechDate(startDate),
-    endDate: getCzechDate(endDate),
+    startDate: getCzechDatePlusTime(startDate),
+    endDate: getCzechDatePlusTime(endDate),
     isFinished: today.getTime() > endDate.getTime(),
     isOngoing:
       startDate.getTime() < today.getTime() &&

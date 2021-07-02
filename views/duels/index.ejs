@@ -10,9 +10,9 @@
     <div class="card-body">
       <div class="row align-items-center justify-content-center">
         <div class="col-sm-4">
-          <div class="card">
+          <div class="card border-success border-3">
             <div class="card-body">
-              <h5 class="card-title fw-bold">
+              <h5 class="card-title fw-bold border-bottom pb-1 mb-3">
                 Jamka #<%= duel.holesInDuel[0].hole.number %>
               </h5>
               <p class="card-text">
@@ -23,9 +23,9 @@
         </div>
         <div class="col-sm-3 display-5">VS.</div>
         <div class="col-sm-4">
-          <div class="card">
+          <div class="card border-success border-3">
             <div class="card-body">
-              <h5 class="card-title fw-bold">
+              <h5 class="card-title fw-bold border-bottom pb-1 mb-3">
                 Jamka #<%= duel.holesInDuel[1].hole.number %>
               </h5>
               <p class="card-text">
@@ -35,11 +35,19 @@
           </div>
         </div>
       </div>
-      <a href="/duels/<%= duel._id %>" class="btn btn-success mt-2"
+      <a href="/duels/<%= duel._id %>" class="btn btn-success mt-2 shadow"
         >Vstoupit do duelu!</a
       >
     </div>
-    <div class="card-footer text-muted">Tento duel proběhl 26.7.2021</div>
+    <div class="card-footer text-muted">
+      <% if(duel.isFinished) { %>
+      Tento duel proběhl <%= duel.endDate %>
+      <% } else if(duel.isOngoing) { %>
+      Tento duel probíhá právě teď 
+      <% } else if(duel.isAboutToStart) { %>
+      Tento duel proběhne <%= duel.startDate %>
+      <% } %>
+    </div>
   </div>
   <% }) %>
 </div>
