@@ -49,7 +49,7 @@
         <div class="col">
           <div class="card-header">
             <h5 class="fw-bold d-inline">
-              <a href="/courses/<%= hole.course._id %>"
+              <a class="text-reset" href="/courses/<%= hole.course._id %>"
                 ><%= hole.course.name %></a
               >
             </h5>
@@ -83,6 +83,16 @@
       </div>
     </div>
   </div>
+  <% if(idx === 15 ) { %>
+    <div class="row justify-content-center mt-5">
+      <div class="col-auto d-flex align-items-center"><i class="em em-arrow_up" aria-role="presentation" aria-label="UPWARDS BLACK ARROW"></i><h3 class="mb-0 mx-2">Jamky postupující do finále</h3><i class="em em-arrow_up" aria-role="presentation" aria-label="UPWARDS BLACK ARROW"></i></div>
+    </div>
+    <hr class="shadow"/>
+    <div class="row justify-content-center mb-5">
+      <div class="col-auto d-flex align-items-center"><i class="em em-arrow_down" aria-role="presentation" aria-label="UPWARDS BLACK ARROW"></i><h3 class="mb-0 mx-2">Nepostupující jamky</h3><i class="em em-arrow_down" aria-role="presentation" aria-label="UPWARDS BLACK ARROW"></i></div>
+    </div>
+    </div>
+    <% } %> 
   <% }) %>
 </div>
 
