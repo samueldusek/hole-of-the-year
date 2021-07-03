@@ -89,12 +89,14 @@ app.use("/duels", duelRoutes);
 app.get("/terms", (req, res) => {
   res.render("mains/terms", {
     pageTitle: "Podmínky soutěže - Jamka Roku 2021",
+    path: "/mains/terms",
   });
 });
 
 app.get("/", (req, res) => {
   res.render("mains/home", {
     pageTitle: "Jamka Roku 2021",
+    path: "/mains/home",
   });
 });
 

@@ -86,5 +86,6 @@ module.exports.getTopHoles = async (req, res) => {
   res.render("holes/top", {
     holes: holes,
     pageTitle: "Top 32 Jamek - Jamka Roku 2021",
+    path: "/holes/top",
   });
 };

@@ -27,11 +27,10 @@ module.exports.showAllDuels = async (req, res) => {
     };
   });
 
-  console.log(duelsToDisplay);
-
   res.render("duels/index", {
     duels: duelsToDisplay,
     pageTitle: "Duely - Jamka Roku 2021",
+    path: "/duels/index",
   });
 };
 
@@ -79,5 +78,6 @@ module.exports.showDuel = async (req, res) => {
     holeTwoPercentage: holeTwoPercentage,
     holeTwoIsWinner: duel.holesInDuel[0].votes < duel.holesInDuel[1].votes,
     pageTitle: `Duel #${duel.round} - Jamka Roku 2021`,
+    path: "/duels/show",
   });
 };

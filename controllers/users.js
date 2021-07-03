@@ -7,6 +7,7 @@ module.exports.showRegisterForm = (req, res) => {
     errors: [],
     username: null,
     email: null,
+    path: "/users/register",
   });
 };
 
@@ -20,6 +21,7 @@ module.exports.registerNewUser = async (req, res) => {
       errors: errors.array(),
       username: username,
       email: email,
+      path: "/users/register",
     });
   }
 
@@ -41,7 +43,10 @@ module.exports.registerNewUser = async (req, res) => {
 };
 
 module.exports.showLoginForm = (req, res) => {
-  res.render("users/login", { pageTitle: "Přihlášení - Jamka Roku 2021" });
+  res.render("users/login", {
+    pageTitle: "Přihlášení - Jamka Roku 2021",
+    path: "/users/login",
+  });
 };
 
 module.exports.login = (req, res) => {

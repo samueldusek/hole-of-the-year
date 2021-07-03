@@ -8,15 +8,17 @@ const ITEMS_PER_PAGE = 8;
 module.exports.showAllCourses = async (req, res) => {
   let courses = [];
   let numberOfCourses;
-  let slug = '';
+  let slug = "";
 
   // Fetch all the courses names from db - wil be used latter as a hint in search bar
   const allCoursesNames = await Course.find({}, { name: 1, _id: 0 });
 
   // Find out the total number of courses to display across all pages
-  if(req.query.q){
+  if (req.query.q) {
     slug = slugify(req.query.q, { lower: true });
-    numberOfCourses = await Course.find({ slug: { $regex: slug } }).countDocuments();
+    numberOfCourses = await Course.find({
+      slug: { $regex: slug },
+    }).countDocuments();
     // Check if any course was found and if not tell the user to change his query
     if (!numberOfCourses) {
       req.flash(
@@ -41,20 +43,21 @@ module.exports.showAllCourses = async (req, res) => {
   } else {
     page = Math.floor(page);
   }
-  
+
   // Check if there is a search query and find all courses to display for related page
   if (req.query.q) {
-    courses = await Course.find({ slug: { $regex: slug } }).skip((page - 1) * ITEMS_PER_PAGE)
-    .limit(ITEMS_PER_PAGE)
-    .populate("holes");
+    courses = await Course.find({ slug: { $regex: slug } })
+      .skip((page - 1) * ITEMS_PER_PAGE)
+      .limit(ITEMS_PER_PAGE)
+      .populate("holes");
   } else {
-  // Fetch all the courses for related page if there is no search query
+    // Fetch all the courses for related page if there is no search query
     courses = await Course.find({})
       .skip((page - 1) * ITEMS_PER_PAGE)
       .limit(ITEMS_PER_PAGE)
       .populate("holes");
-       numberOfCourses = allCoursesNames.length;
-    } 
+    numberOfCourses = allCoursesNames.length;
+  }
 
   res.render("courses/index", {
     allCoursesNames: allCoursesNames,
@@ -67,7 +70,8 @@ module.exports.showAllCourses = async (req, res) => {
     previousPage: page - 1,
     currentPage: page,
     lastPage: lastPage,
-    searchQuery: slug.length > 0 ? `&q=${slug}` : slug
+    searchQuery: slug.length > 0 ? `&q=${slug}` : slug,
+    path: "/courses/index",
   });
 };
 
@@ -76,7 +80,11 @@ module.exports.showCourse = async (req, res) => {
   const course = await Course.findById(id)
     .populate("holes")
     .populate("comments");
-  res.render("courses/show", { course: course, pageTitle: course.name });
+  res.render("courses/show", {
+    course: course,
+    pageTitle: course.name,
+    path: "/courses/show",
+  });
 };
 
 module.exports.addComment = async (req, res) => {
