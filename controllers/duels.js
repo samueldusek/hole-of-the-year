@@ -1,5 +1,6 @@
 const Duel = require("../models/duel");
 const Hole = require("../models/hole");
+const User = require("../models/user");
 const { getCzechDate, getCzechDatePlusTime } = require("../utils/helpers");
 
 module.exports.showAllDuels = async (req, res) => {
@@ -70,6 +71,7 @@ module.exports.showDuel = async (req, res) => {
       startDate.getTime() < today.getTime() &&
       today.getTime() < endDate.getTime(),
     isAboutToStart: today.getTime() < startDate.getTime(),
+    duelId: duel._id,
     round: duel.round,
     holeOne: duel.holesInDuel[0],
     holeOnePercentage: holeOnePercentage,
@@ -80,4 +82,75 @@ module.exports.showDuel = async (req, res) => {
     pageTitle: `Duel #${duel.round} - Jamka Roku 2021`,
     path: "/duels/show",
   });
+};
+
+module.exports.voteInDuel = async (req, res) => {
+  // Get duel id from request params
+  const { id: duelId } = req.params;
+  // Get user and hole id from request body
+  const { userId, holeId } = req.body;
+
+  // Fetch the duel from database
+  const duel = await Duel.findById(duelId).populate({
+    path: "holesInDuel",
+    populate: {
+      path: "hole",
+    },
+  });
+
+  // Fetch the user from the database
+  const user = await User.findById(userId).populate({
+    path: "userDuels",
+    populate: {
+      path: "duel",
+    },
+  });
+
+  // Check if user has already voted in this duel
+  let userDuel = user.userDuels.find(
+    (userDuel) => userDuel.duel._id.toString() === duelId
+  );
+
+  if (!userDuel) {
+    // Add one vote in the duel for the selected hole
+    if (duel.holesInDuel[0].hole._id.toString() === holeId) {
+      duel.holesInDuel[0].votes++;
+    } else if (duel.holesInDuel[1].hole._id.toString() === holeId) {
+      duel.holesInDuel[1].votes++;
+    } else {
+      // Send error message that the selected hole is not in the duel
+      req.flash("error", "Zvolená jamka se v duelu nenachází!.");
+      return res.redirect(`/duels/${duelId}`);
+    }
+  } else {
+    // Fetch the hole the user has voted for in this duel from the database
+    const hole = await Hole.findById(userDuel.hole).populate("course");
+    // Send error message that the user has already voted in this duel
+    req.flash(
+      "error",
+      `V tomto duelu si již hlasoval/a pro jamku č. ${hole.number} z hřiště ${hole.course.name}.`
+    );
+    return res.redirect(`/duels/${duelId}`);
+  }
+
+  // Fetch the hole from the database
+  const hole = await Hole.findById(holeId).populate("course");
+
+  // Create userduel
+  userDuel = {
+    duel: duel,
+    hole: hole,
+  };
+
+  // Add userduel to users duels
+  user.userDuels.push(userDuel);
+
+  // Save the updated duel to the database
+  const updatedDuel = await duel.save();
+
+  // Save the updated user to the database
+  const updatedUser = await user.save();
+
+  console.log(duel, updatedUser, hole);
+  res.redirect(`/duels/${duelId}`);
 };

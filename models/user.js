@@ -14,6 +14,12 @@ const UserSchema = new Schema({
       ref: "Hole",
     },
   ],
+  userDuels: [
+    {
+      duel: { type: Schema.Types.ObjectId, ref: "Duel" },
+      hole: { type: Schema.Types.ObjectId, ref: "Hole" },
+    },
+  ],
 });
 
 UserSchema.plugin(passportLocalMongoose);

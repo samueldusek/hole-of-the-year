@@ -4,6 +4,9 @@ const duelsController = require("../controllers/duels");
 
 router.route("/").get(duelsController.showAllDuels);
 
-router.route("/:id").get(duelsController.showDuel);
+router
+  .route("/:id")
+  .get(duelsController.showDuel)
+  .put(duelsController.voteInDuel);
 
 module.exports = router;

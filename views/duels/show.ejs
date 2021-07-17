@@ -36,7 +36,7 @@
         <div
             class="progress-bar"
             role="progressbar"
-            style='width: <%= holeOnePercentage %>%'
+            style="width: <%= holeOnePercentage %>%"
             aria-valuenow="50"
             aria-valuemin="0"
             aria-valuemax="100"
@@ -82,12 +82,15 @@
               </li>
             </ul>
         </div>
-        <% if(!isFinished) {%> 
-        <a
-        href="#"
-        class="btn btn-primary btn-sm w-100 my-4 fs-3 shadow <% if(!isOngoing) { %>disabled<% } %>"
-        >Hlasovat</a
-        > <% } %> 
+        <% if(!isFinished) {%>
+          <form action="/duels/<%= duelId %>/?_method=PUT" method="POST">
+            <% if (currentUser) { %> 
+              <input type="hidden" name="userId" value="<%= currentUser._id %>">
+              <% } %>
+            <input type="hidden" name="holeId" value="<%= holeOne.hole._id %>"> 
+            <button class="btn btn-primary btn-sm w-100 my-4 fs-3 shadow <% if(!isOngoing || !currentUser) { %>disabled<% } %>">Hlasovat</button>
+          </form>
+       <% } %> 
       </div>
       <div class="col-3 text-center">
         <div class="display-4">VS.</div>
@@ -121,11 +124,14 @@
             </ul>
           </div>
           <% if(!isFinished) {%> 
-          <a
-          href="#"
-          class="btn btn-success btn-sm w-100 my-4 fs-3 shadow <% if(!isOngoing) { %>disabled<% } %>"
-          >Hlasovat</a
-        > <% } %> 
+            <form action="/duels/<%= duelId %>/?_method=PUT" method="POST">
+              <% if (currentUser) { %> 
+                <input type="hidden" name="userId" value="<%= currentUser._id %>">
+                <% } %>
+              <input type="hidden" name="holeId" value="<%= holeTwo.hole._id %>"> 
+              <button class="btn btn-success btn-sm w-100 my-4 fs-3 shadow <% if(!isOngoing || !currentUser) { %>disabled<% } %>">Hlasovat</button>
+            </form>
+          <% } %> 
       </div>
   </div>
 </div>
