@@ -11,18 +11,82 @@
         <div class="title-logo">
           <img src="/logo/logo19_white_1000px.png" alt="Jamka Roku 2021" />
         </div>
-        <h1>Hlasování o nejhezčí discgolfovou jamku roku 2021</h1>
+        <h1 class="fw-bold">
+          Hlasování o nejhezčí discgolfovou jamku roku 2021
+        </h1>
         <p>Anketa bude probíhat v listopadu 2021</p>
       </div>
     </div>
-    <section class="conditions">
-      <div class="container">
-        <h1>Podmínky soutěže</h1>
+    <main class="my-3">
+      <section class="guide container my-4">
+        <h2 class="display-5">Jak soutěžit?</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-3">
+          <div class="col">
+            <div class="card h-100 shadow text-center">
+              <img src="/img/reg.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-3">1.<br />Zaregistruj se</h5>
+                <p class="card-text">
+                  Abys mohl/a soutěžit a hlasovat, musíš se
+                  <a class="link-success" href="/users/register"
+                    >zaregistrovat</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow text-center">
+              <img src="/img/hole5.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-3">
+                  2.<br />Nominuj tři jamky
+                </h5>
+                <p class="card-text">
+                  Po přihlášení v
+                  <a class="link-success" href="/courses"
+                    >seznamu všech hřišť</a
+                  >
+                  vyhledej své 3 oblíbené jamky a nominuj je.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow text-center">
+              <img src="/img/duel.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-3">
+                  3.<br />Hlasuj v duelech
+                </h5>
+                <p class="card-text">
+                  Až skončí nominační fáze, začnou duely. V každém duelu můžeš
+                  hlasovat pro jamku, kterou máš raději.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow text-center">
+              <img src="/img/win.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-3">4.<br />Vyhraj</h5>
+                <p class="card-text">
+                  Díky tvé účasti v této soutěži můžeš vyhrát skvělé ceny.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="conditions container my-4">
+        <h2 class="display-5 mb-4">Podmínky soutěže</h2>
         <p>
-          Úplné znění podmínek soutěže můžete najít <a href="/terms">zde</a>
+          Úplné znění podmínek soutěže můžete najít
+          <a class="link-success" href="/terms">zde</a>
         </p>
-      </div>
-    </section>
+      </section>
+    </main>
     <%- include('../partials/footer') %>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"

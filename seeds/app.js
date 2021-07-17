@@ -25,7 +25,7 @@ db.once("open", () => {
 });
 
 // Constants
-const DUELS_START_DATE = new Date(2021, 5, 26, 0);
+const DUELS_START_DATE = new Date(2021, 6, 13, 0);
 
 fs.unlinkSync("../images/courses.csv", (err) => {
   if (err) {
