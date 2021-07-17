@@ -1,8 +1,10 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1 class="mb-3">Seznam všech duelů</h1>
+<h1 class="display-6 d-inline fw-bold border-bottom border-5 border-success">
+  Seznam všech duelů
+</h1>
 
-<div class="my-4">
+<div class="my-5">
   <% duels.forEach(duel => { %>
 
   <div class="card text-center shadow mt-5">
@@ -40,13 +42,10 @@
       >
     </div>
     <div class="card-footer text-muted">
-      <% if(duel.isFinished) { %>
-      Tento duel proběhl <%= duel.endDate %>
-      <% } else if(duel.isOngoing) { %>
-      Tento duel probíhá právě teď 
-      <% } else if(duel.isAboutToStart) { %>
-      Tento duel proběhne <%= duel.startDate %>
-      <% } %>
+      <% if(duel.isFinished) { %> Tento duel proběhl <%= duel.endDate %> <% }
+      else if(duel.isOngoing) { %> Tento duel probíhá právě teď <% } else
+      if(duel.isAboutToStart) { %> Tento duel proběhne <%= duel.startDate %> <%
+      } %>
     </div>
   </div>
   <% }) %>

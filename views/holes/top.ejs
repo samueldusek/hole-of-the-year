@@ -1,6 +1,10 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1 class="mb-3">Top 32 Jamek</h1>
+<h1 class="display-6
+d-inline
+fw-bold
+border-bottom border-5 border-success
+">Top 32 Jamek</h1>
 
 <% if(holes.length === 0) { %>
 <h3>
@@ -9,7 +13,7 @@
 </h3>
 <% } %>
 
-<div class="mt-4">
+<div class="mt-5">
   <% holes.forEach((hole, idx) => { %>
   <div class="row h-auto mb-4 g-0">
     <div class="col-auto ms-2 ms-sm-5 me-2 me-sm-5 mb-sm-3">
