@@ -98,6 +98,23 @@ module.exports.voteInDuel = async (req, res) => {
     },
   });
 
+  // Check if the duel has already finished or has not even started yet
+  const startDate = new Date(duel.startDate);
+  const endDate = new Date(duel.endDate);
+  const today = new Date();
+
+  if (today.getTime() < startDate.getTime()) {
+    // Send error message that the duel has not started yet and thus it is not possible to vote
+    req.flash("error", "Duel ještě nezačal a proto zatím nelze hlasovat.");
+    return res.redirect(`/duels/${duelId}`);
+  }
+
+  if (today.getTime() > endDate.getTime()) {
+    // Send error message that the duel is finished thus it is not possible to vote
+    req.flash("error", "Duel již skončil a nelze v něm hlasovat.");
+    return res.redirect(`/duels/${duelId}`);
+  }
+
   // Fetch the user from the database
   const user = await User.findById(userId).populate({
     path: "userDuels",

@@ -16,22 +16,24 @@
 <div class="mt-4">
   <div class="row align-items-center">
     <div class="col-5 text-center">
+      <h2 class="fw-bold border-bottom border-primary border-5 d-inline-block">Jamka #<%= holeOne.hole.number %></h2>
       <h2>
-        <span class="fw-bold">Jamka #<%= holeOne.hole.number %></span></br><%= holeOne.hole.course.name %>
+        <%= holeOne.hole.course.name %>
       </h2>
     </div>
     <div class="col-2 text-center">
       <div class="display-4">VS.</div>
     </div>
     <div class="col-5 text-center">
+      <h2 class="fw-bold border-bottom border-success border-5 d-inline-block">Jamka #<%= holeTwo.hole.number %></h2>
       <h2>
-        <span class="fw-bold">Jamka #<%= holeTwo.hole.number %></span></br><%= holeTwo.hole.course.name %>
+        <%= holeTwo.hole.course.name %>
       </h2>
     </div>
   </div>
   <div class="row mt-4 align-items-center">
-    <div class="col-2 text-center"><h4 class="display-6 m-0"><%= holeOne.votes %></h4></div>
-    <div class="col-8">
+    <div class="col-3 text-center"><h4 class="display-6 m-0"><%= holeOne.votes %></h4></div>
+    <div class="col-6">
         <div class="progress shadow" style="height: 25px;">
         <div
             class="progress-bar"
@@ -51,14 +53,14 @@
         ></div>
         </div>
     </div>
-    <div class="col-2 text-center"><h4 class="display-6 m-0"><%= holeTwo.votes %></h4></div>
+    <div class="col-3 text-center"><h4 class="display-6 m-0"><%= holeTwo.votes %></h4></div>
   </div>
   <div class="row my-4 align-items-center justify-content-center">
-      <div class="col-4">
+      <div class="col-md-4">
         <div class="card mt-3 <% if(isFinished && holeOneIsWinner) { %>shadow-gold<% } else { %>shadow<% } %>">
             <img
               src="/img/teesign.jpg"
-              class="card-img-top"
+              class="card-img-top d-none d-md-block"
               alt="<%= holeOne.hole.course.name %>"
             />
             <div class="card-body d-flex align-items-center flex-column">
@@ -68,7 +70,12 @@
                 <span class="badge rounded-pill bg-warning text-dark">Postupující jamka</span>
                 <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
               </div>
-              <% } %> 
+              <% } %>
+              <% if(currentUser.userDuels.find(userDuel => userDuel.hole._id.toString() === holeOne.hole._id.toString())) { %> 
+                <div>
+                  <span class="badge rounded-pill bg-info text-dark text-wrap">Tvá nominace</span> 
+                </div>
+                <% } %> 
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -88,18 +95,18 @@
               <input type="hidden" name="userId" value="<%= currentUser._id %>">
               <% } %>
             <input type="hidden" name="holeId" value="<%= holeOne.hole._id %>"> 
-            <button class="btn btn-primary btn-sm w-100 my-4 fs-3 shadow <% if(!isOngoing || !currentUser) { %>disabled<% } %>">Hlasovat</button>
+            <button class="btn btn-primary btn-sm w-100 my-4 fs-3 shadow <% if(!isOngoing || !currentUser || currentUser.userDuels.find((userDuel) => userDuel.duel._id.toString() === duelId.toString())) { %>disabled<% } %>">Hlasovat</button>
           </form>
        <% } %> 
       </div>
-      <div class="col-3 text-center">
+      <div class="col-md-auto text-center mx-3">
         <div class="display-4">VS.</div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4">
         <div class="card mt-3 <% if(isFinished && holeTwoIsWinner) { %>shadow-gold<% } else { %>shadow<% } %>">
             <img
               src="/img/teesign.jpg"
-              class="card-img-top"
+              class="card-img-top d-none d-md-block"
               alt="<%= holeTwo.hole.course.name %>"
             />
             <div class="card-body d-flex align-items-center flex-column">
@@ -109,7 +116,12 @@
                   <span class="badge rounded-pill bg-warning text-dark">Postupující jamka</span>
                   <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
                 </div>
-                <% } %> 
+                <% } %>
+                <% if(currentUser.userDuels.find(userDuel => userDuel.hole._id.toString() === holeTwo.hole._id.toString())) { %> 
+                  <div>
+                    <span class="badge rounded-pill bg-info text-dark text-wrap">Tvá nominace</span> 
+                  </div>
+                  <% } %> 
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -129,7 +141,7 @@
                 <input type="hidden" name="userId" value="<%= currentUser._id %>">
                 <% } %>
               <input type="hidden" name="holeId" value="<%= holeTwo.hole._id %>"> 
-              <button class="btn btn-success btn-sm w-100 my-4 fs-3 shadow <% if(!isOngoing || !currentUser) { %>disabled<% } %>">Hlasovat</button>
+              <button class="btn btn-success btn-sm w-100 my-4 fs-3 shadow <% if(!isOngoing || !currentUser || currentUser.userDuels.find((userDuel) => userDuel.duel._id.toString() === duelId.toString())) { %>disabled<% } %>">Hlasovat</button>
             </form>
           <% } %> 
       </div>
