@@ -32,14 +32,15 @@ border-bottom border-5 border-success
     </div>
     <!-- Comment section  -->
     <h3 class="my-4">Komentáře</h3>
-    <% if (course.comments.length == 0) { %>
-    <p class="lead">
-      K tomuto hřišti ještě nikdo nepřidal komentář, buď první! Sdílej svůj
-      příběh, který se váže k tomuto hřišti a vyhraj zajímavé ceny!
-    </p>
-    <% } else { %> <% for (let comment of course.comments ) { %>
-    <div class="card mb-3">
-      <div class="card-header">Honza Novák, 9.5.2021</div>
+    <% if (comments.length == 0) { %>
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        K tomuto hřišti ještě nikdo nepřidal komentář, buď první! Sdílej svůj
+        příběh, který se váže k tomuto hřišti a vyhraj zajímavé ceny!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% } else { %> <% for (let comment of comments ) { %>
+    <div class="card mb-3 shadow">
+      <div class="card-header"><%= comment.author.username %>, <%= comment.date %></div>
       <div class="card-body">
         <p class="card-text"><%= comment.text %></p>
         <a href="#" class="btn btn-success btn-sm">Like!</a>
@@ -65,6 +66,9 @@ border-bottom border-5 border-success
         <div class="valid-feedback">To vypadá dobře!</div>
         <div class="invalid-feedback">Zapoměl jsi zadat text!</div>
       </div>
+      <% if (currentUser) { %> 
+        <input type="hidden" name="userId" value="<%= currentUser._id %>">
+      <% } %> 
       <button class="btn btn-success btn-sm" type="submit" <%= currentUser ? '' : 'disabled' %>>Přidat</button>
     </form>
   </div>

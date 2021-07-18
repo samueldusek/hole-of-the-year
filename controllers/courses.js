@@ -1,7 +1,9 @@
 const Course = require("../models/course");
 const Hole = require("../models/hole");
 const Comment = require("../models/comment");
+const User = require("../models/user");
 const slugify = require("slugify");
+const { getCzechDate, getCzechDatePlusTime } = require("../utils/helpers");
 
 const ITEMS_PER_PAGE = 8;
 
@@ -79,22 +81,57 @@ module.exports.showCourse = async (req, res) => {
   const { id } = req.params;
   const course = await Course.findById(id)
     .populate("holes")
-    .populate("comments");
+    .populate({
+      path: "comments",
+      populate: {
+        path: "author",
+      },
+    });
+
+  // Convert all the dates in comments to human readable czech format
+  const comments = course.comments.map((comment) => {
+    return {
+      author: comment.author,
+      date: getCzechDatePlusTime(comment.date),
+      text: comment.text,
+    };
+  });
+
   res.render("courses/show", {
     course: course,
+    comments: comments,
     pageTitle: course.name,
     path: "/courses/show",
   });
 };
 
 module.exports.addComment = async (req, res) => {
+  // Get the course id
   const { id: courseId } = req.params;
-  const { comment } = req.body;
-  const newComment = new Comment({ text: comment });
+  // Get the comment text and user id
+  const { comment, userId } = req.body;
+
+  // Fetch the user from the database
+  const user = await User.findById(userId);
+
+  // Create new comment with given text and attach user to it
+  const newComment = new Comment({
+    text: comment,
+    date: new Date(),
+    author: user,
+  });
+
+  // Save the comment to the database
   await newComment.save();
+
+  // Fetch the course from the database and add comment to it
   const course = await Course.findById(courseId);
   course.comments.push(newComment);
+
+  // Save the course to the database
   await course.save();
+
+  // Send message to the user that the comment was added successfully
   req.flash("success", `Tvůj komentář byl přidán!`);
   res.redirect(`/courses/${course._id}`);
 };

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CommentSchema = new Schema({
+  date: Date,
   text: String,
   author: {
     type: Schema.Types.ObjectId,

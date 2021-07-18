@@ -51,7 +51,6 @@ module.exports.showLoginForm = (req, res) => {
 
 module.exports.login = (req, res) => {
   req.flash("success", "Byli jste úspěšně přihlášeni.");
-  console.log(req.user);
   res.redirect("/courses");
 };
 
