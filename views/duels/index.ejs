@@ -36,9 +36,9 @@
               >
                 Jamka #<%= duel.holesInDuel[0].hole.number %>
               </h5>
-              <p class="card-text">
+              <a href="/courses/<%= duel.holesInDuel[0].hole.course._id %>" class="d-block card-text text-dark text-decoration-none">
                 <%= duel.holesInDuel[0].hole.course.name %>
-              </p>
+              </a>
             </div>
           </div>
         </div>
@@ -58,9 +58,9 @@
               >
                 Jamka #<%= duel.holesInDuel[1].hole.number %>
               </h5>
-              <p class="card-text">
+              <a href="/courses/<%= duel.holesInDuel[1].hole.course._id %>" class="d-block card-text text-dark text-decoration-none">
                 <%= duel.holesInDuel[1].hole.course.name %>
-              </p>
+              </a>
             </div>
           </div>
         </div>

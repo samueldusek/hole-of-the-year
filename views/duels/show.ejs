@@ -18,7 +18,7 @@
     <div class="col-5 text-center">
       <h2 class="fw-bold border-bottom border-primary border-5 d-inline-block">Jamka #<%= holeOne.hole.number %></h2>
       <h2>
-        <%= holeOne.hole.course.name %>
+        <a class="text-decoration-none text-dark" href="/courses/<%= holeOne.hole.course._id %>"><%= holeOne.hole.course.name %></a>
       </h2>
     </div>
     <div class="col-2 text-center">
@@ -27,7 +27,9 @@
     <div class="col-5 text-center">
       <h2 class="fw-bold border-bottom border-success border-5 d-inline-block">Jamka #<%= holeTwo.hole.number %></h2>
       <h2>
-        <%= holeTwo.hole.course.name %>
+        <a class="text-decoration-none text-dark" href="/courses/<%= holeTwo.hole.course._id %>">
+          <%= holeTwo.hole.course.name %>
+        </a>
       </h2>
     </div>
   </div>
@@ -65,7 +67,11 @@
             />
             <div class="card-body d-flex align-items-center flex-column">
               <h5 class="card-title text-center fw-bold border-bottom border-primary border-5">Jamka #<%= holeOne.hole.number %></h5>
-              <h5 class="card-title text-center"><%= holeOne.hole.course.name %></h5>
+              <h5 class="card-title text-center">
+                <a class="text-decoration-none text-dark" href="/courses/<%= holeOne.hole.course._id %>">
+                  <%= holeOne.hole.course.name %>
+                </a>
+              </h5>
               <% if(holeOneIsWinner && !isAboutToStart) { %> 
               <div class="d-flex flex-column align-items-center">
                 <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
@@ -112,11 +118,15 @@
             />
             <div class="card-body d-flex align-items-center flex-column">
               <h5 class="card-title text-center fw-bold border-bottom border-success border-5">Jamka #<%= holeTwo.hole.number %></h5>
-              <h5 class="card-title text-center"><%= holeTwo.hole.course.name %></h5>
+              <h5 class="card-title text-center">
+                <a class="text-decoration-none text-dark" href="/courses/<%= holeTwo.hole.course._id %>">
+                  <%= holeTwo.hole.course.name %>
+                </a>
+              </h5>
               <% if(holeTwoIsWinner && !isAboutToStart) { %> 
-                <div>
-                  <span class="badge rounded-pill bg-warning text-dark">Postupující jamka</span>
+                <div class="d-flex flex-column align-items-center">
                   <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
+                  <span class="badge rounded-pill bg-warning text-dark mt-1">Postupující jamka</span>
                 </div>
                 <% } %>
                 <% if(currentUser && currentUser.userDuels.find(userDuel => userDuel.hole._id.toString() === holeTwo.hole._id.toString())) { %> 
