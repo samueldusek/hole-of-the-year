@@ -7,14 +7,33 @@
 <div class="my-5">
   <% duels.forEach(duel => { %>
 
-  <div class="card text-center shadow mt-5">
-    <div class="card-header fw-bold">Duel #<%= duel.round %></div>
+  <div class="card text-center mt-5 <% if(duel.isOngoing) { %>shadow-gold<% } else { %>shadow<% } %>">
+    <div class="card-header">
+      <h2>Duel #<%= duel.round %></h2>
+      <% if(duel.isFinished) { %> 
+        <span class="badge rounded-pill bg-dark text-white text-wrap">Již skončil</span> 
+      <% } else if(duel.isOngoing) { %> 
+        <span class="badge rounded-pill bg-warning text-dark text-wrap">Právě probíhá</span>  
+      <% } else if(duel.isAboutToStart) { %> 
+        <span class="badge rounded-pill bg-primary text-white text-wrap">Ještě nezačal</span> 
+      <% } %>
+      
+    </div>
     <div class="card-body">
       <div class="row align-items-center justify-content-center">
-        <div class="col-sm-4">
-          <div class="card border-success border-3">
+        <div class="col-md-4">
+          <div class="card shadow">
             <div class="card-body">
-              <h5 class="card-title fw-bold border-bottom pb-1 mb-3">
+              <h5
+                class="
+                  card-title
+                  fw-bold
+                  d-inline-block
+                  border-bottom border-primary border-5
+                  pb-1
+                  mb-3
+                "
+              >
                 Jamka #<%= duel.holesInDuel[0].hole.number %>
               </h5>
               <p class="card-text">
@@ -23,11 +42,20 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-3 display-5">VS.</div>
-        <div class="col-sm-4">
-          <div class="card border-success border-3">
+        <div class="col-md-3 display-5 my-2 my-md-0">VS.</div>
+        <div class="col-md-4">
+          <div class="card shadow">
             <div class="card-body">
-              <h5 class="card-title fw-bold border-bottom pb-1 mb-3">
+              <h5
+                class="
+                  card-title
+                  fw-bold
+                  d-inline-block
+                  border-bottom border-success border-5
+                  pb-1
+                  mb-3
+                "
+              >
                 Jamka #<%= duel.holesInDuel[1].hole.number %>
               </h5>
               <p class="card-text">
@@ -37,15 +65,21 @@
           </div>
         </div>
       </div>
-      <a href="/duels/<%= duel._id %>" class="btn btn-success mt-2 shadow"
-        >Vstoupit do duelu!</a
-      >
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-auto">      
+          <a href="/duels/<%= duel._id %>" class="btn btn-outline-dark mt-4 mt-lg-2 shadow w-100">Vstoupit do duelu</a>
+        </div>
+      </div>
+
     </div>
     <div class="card-footer text-muted">
-      <% if(duel.isFinished) { %> Tento duel proběhl <%= duel.endDate %> <% }
-      else if(duel.isOngoing) { %> Tento duel probíhá právě teď <% } else
-      if(duel.isAboutToStart) { %> Tento duel proběhne <%= duel.startDate %> <%
-      } %>
+      <% if(duel.isFinished) { %> 
+        Tento duel proběhl <%= duel.endDate %> 
+      <% } else if(duel.isOngoing) { %> 
+        Tento duel probíhá právě teď 
+      <% } else if(duel.isAboutToStart) { %> 
+        Tento duel proběhne <%= duel.startDate %> 
+      <% } %>
     </div>
   </div>
   <% }) %>
