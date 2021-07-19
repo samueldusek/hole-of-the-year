@@ -8,7 +8,7 @@ border-bottom border-5 border-success
 
 <div class="row mt-5">
   <div class="col-lg-6 mb-md-4">
-    <h3 class="mb-4">Základní informace</h3>
+    <h3 class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block">Základní informace</h3>
     <div class="card shadow">
       <img src="../img/hole.jpg" class="card-img-top" alt="Náhodná jamka" />
       <ul class="list-group list-group-flush">
@@ -31,7 +31,7 @@ border-bottom border-5 border-success
       </ul>
     </div>
     <!-- Comment section  -->
-    <h3 class="my-4">Komentáře</h3>
+    <h3 class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block mt-5">Komentáře</h3>
     <% if (comments.length == 0) { %>
       <div class="alert alert-info alert-dismissible fade show" role="alert">
         K tomuto hřišti ještě nikdo nepřidal komentář, buď první! Sdílej svůj
@@ -40,41 +40,50 @@ border-bottom border-5 border-success
       </div>
     <% } else { %> <% for (let comment of comments ) { %>
     <div class="card mb-3 shadow">
-      <div class="card-header"><%= comment.author.username %>, <%= comment.date %></div>
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold"><%= comment.author.username %></span>
+        <span class="badge rounded-pill bg-success text-white text-wrap"><%= comment.date %></span>
+      </div>
       <div class="card-body">
         <p class="card-text"><%= comment.text %></p>
-        <a href="#" class="btn btn-success btn-sm">Like!</a>
+        <!-- <a href="#" class="btn btn-success btn-sm">Like!</a> -->
       </div>
     </div>
     <% } }%>
-    <form
-      class="validated-form mb-3"
+    <div class="card mb-3 shadow">
+      <form
+      class="validated-form"
       action="/courses/<%= course._id %>/comments"
       method="POST"
       novalidate
-    >
-      <div class="mb-3">
-        <label class="form-label" for="comment">Přidej komentář</label>
-        <textarea
-          class="form-control"
-          name="comment"
-          id="comment"
-          cols="30"
-          rows="3"
-          required
-        ></textarea>
-        <div class="valid-feedback">To vypadá dobře!</div>
-        <div class="invalid-feedback">Zapoměl jsi zadat text!</div>
+      >
+        <div class="card-header">
+          <label class="form-label fw-bold" for="comment">Přidej komentář</label>
+        </div>
+          <div class="card-body">
+            <textarea
+              class="form-control"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="3"
+              required
+            ></textarea>
+            <div class="valid-feedback">To vypadá dobře!</div>
+            <div class="invalid-feedback">Zapoměl jsi zadat text!</div>
+          </div>
+          <% if (currentUser) { %> 
+            <input type="hidden" name="userId" value="<%= currentUser._id %>">
+          <% } %> 
+            <div class="card-footer">
+              <button class="btn btn-success btn-sm" type="submit" <%= currentUser ? '' : 'disabled' %>>Přidat Komentář</button>
+            </div>
+        </form> 
       </div>
-      <% if (currentUser) { %> 
-        <input type="hidden" name="userId" value="<%= currentUser._id %>">
-      <% } %> 
-      <button class="btn btn-success btn-sm" type="submit" <%= currentUser ? '' : 'disabled' %>>Přidat</button>
-    </form>
-  </div>
+    </div>
   <!-- Hole section -->
   <div class="col-lg-6">
-    <h3 class="mb-4 mt-4 mt-md-0">Seznam všech jamek</h3>
+    <h3 class="mb-4 mt-4 mt-md-0 fw-bold border-bottom border-3 border-success d-inline-block">Seznam všech jamek</h3>
     <% for (let hole of course.holes) { %>
       <div class="card shadow mb-3">
         <div class="row g-0">
@@ -82,7 +91,7 @@ border-bottom border-5 border-success
             <img
               src="/img/teesign.jpg"
               alt="Random teesign"
-              class="img-fluid"
+              class="img-fluid rounded-start border-0"
               style="max-width: 150px"
             />
           </div>
