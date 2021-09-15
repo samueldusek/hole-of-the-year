@@ -1,3 +1,5 @@
+// Require .env file
+require("dotenv").config({ path: "../.env" });
 // Load installed packages
 const mongoose = require("mongoose");
 const slugify = require("slugify");
@@ -13,7 +15,7 @@ const Hole = require("../models/hole");
 const Duel = require("../models/duel");
 
 //Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/hole-db", {
+mongoose.connect(process.env.DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -25,7 +27,7 @@ db.once("open", () => {
 });
 
 // Constants
-const DUELS_START_DATE = new Date(2021, 6, 13, 0);
+const DUELS_START_DATE = new Date(2021, 9, 13, 0);
 
 fs.unlinkSync("../images/courses.csv", (err) => {
   if (err) {

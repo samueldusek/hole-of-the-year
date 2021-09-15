@@ -1,3 +1,5 @@
+// Require .env file
+require("dotenv").config();
 // Require nodejs-native packages
 const path = require("path");
 // Require express
@@ -26,15 +28,15 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 // Set url parsing
 app.use(express.urlencoded({ extended: true }));
-// Set posfix of method override
+// Set postfix of method override
 app.use(methodOverride("_method"));
 // Set static serving of the public folder content
 app.use(express.static(path.join(__dirname, "public")));
 // Set sessions
 app.use(
   session({
-    name: "session",
-    secret: "secret",
+    name: process.env.SESSION_NAME,
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -42,8 +44,8 @@ app.use(
       maxAge: 1000 * 60 * 60,
     },
     store: MongoStore.create({
-      mongoUrl: "mongodb://localhost:27017/hole-db",
-      dbName: "hole-db",
+      mongoUrl: process.env.DB_URL,
+      dbName: process.env.DB_NAME,
     }),
   })
 );
@@ -67,7 +69,7 @@ app.use((req, res, next) => {
 });
 
 // Connect to db
-mongoose.connect("mongodb://localhost:27017/hole-db", {
+mongoose.connect(process.env.DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -100,6 +102,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log(`The app is listening on port 3000`);
+const port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log(`The app is listening on port ${port}`);
 });
