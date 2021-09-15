@@ -36,7 +36,7 @@ module.exports.showAllCourses = async (req, res) => {
   // Calculate the last page and check whether the query.page exceeds calculated value
   const lastPage = Math.ceil(numberOfCourses / ITEMS_PER_PAGE);
 
-  // Check if the request is comming from page different from 1st
+  // Check if the request is coming from page different from 1st
   let page = req.query.page;
   if (!page || !parseInt(page) || page < 1) {
     page = 1;

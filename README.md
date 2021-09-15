@@ -26,6 +26,16 @@ Install dependencies
   npm install
 ```
 
+Create .env file in root and set all the environment variables
+
+```bash
+  DB_URL =
+  DB_NAME =
+  SESSION_NAME =
+  SESSION_SECRET =
+  PORT =
+```
+
 Seed the database
 
 ```bash

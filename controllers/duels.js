@@ -168,6 +168,5 @@ module.exports.voteInDuel = async (req, res) => {
   // Save the updated user to the database
   const updatedUser = await user.save();
 
-  console.log(duel, updatedUser, hole);
   res.redirect(`/duels/${duelId}`);
 };

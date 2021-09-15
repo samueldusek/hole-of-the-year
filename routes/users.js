@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/users");
 const passport = require("passport");
-const { body, validationResult } = require("express-validator");
+const { body } = require("express-validator");
 const User = require("../models/user");
 
 router
@@ -57,7 +57,7 @@ router
   .post(
     passport.authenticate("local", {
       failureFlash:
-        "Zadaj jsi špatné uživatelské jméno nebo heslo. Zkus to prosím znovu.",
+        "Zadal jsi špatné uživatelské jméno nebo heslo. Zkus to prosím znovu.",
       failureRedirect: "/users/login",
     }),
     usersController.login

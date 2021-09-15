@@ -10,7 +10,7 @@ module.exports.nominateHole = async (req, res) => {
   const hole = await Hole.findById(holeId).populate("course");
   // Find user in db and populate its nominated holes
   const user = await User.findById(userId).populate("nominatedHoles");
-  // Decide wheter to nominate or denominate the hole
+  // Decide whether to nominate or denominate the hole
   if (nomination === "select") {
     // Check if user reached nomination limit (3)
     if (user.nominatedHoles.length <= 3) {
