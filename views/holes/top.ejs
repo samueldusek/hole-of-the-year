@@ -7,7 +7,7 @@ border-bottom border-5 border-success
 ">Top 32 Jamek</h1>
 
 <% if(holes.length === 0) { %>
-<h3>
+<h3 class="mt-5">
   Zatím žádná jamka nedostala žádný hlas. Žebříček 32 nejlepších jamek se začne
   tvořit až se začne hlasovat.
 </h3>
@@ -44,7 +44,7 @@ border-bottom border-5 border-success
       <div class="row g-0">
         <div class="col-auto d-none d-md-inline">
           <img
-            src="/img/teesign.jpg"
+            src="<%= hole.image.url %>"
             alt="Random teesign"
             class="img-fluid"
             style="max-width: 150px"

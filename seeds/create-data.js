@@ -37,7 +37,7 @@ const createData = async () => {
         url: "link",
       },
       image: {
-        url: "link",
+        url: "https://res.cloudinary.com/dnlt6jw53/image/upload/v1632246638/courses/001/photo.jpg",
         author: {
           name: "Author's name",
           tag: "Author's tag",
@@ -49,7 +49,7 @@ const createData = async () => {
         length: hole.length,
         par: hole.par,
         image: {
-          url: "link",
+          url: "https://res.cloudinary.com/dnlt6jw53/image/upload/v1632246786/courses/001/holes/1.jpg",
         },
       })),
     });

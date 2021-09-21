@@ -10,7 +10,7 @@ border-bottom border-5 border-success
   <div class="col-lg-6 mb-md-4">
     <h3 class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block">Základní informace</h3>
     <div class="card shadow">
-      <img src="../img/hole.jpg" class="card-img-top" alt="Náhodná jamka" />
+      <img src="<%= course.image.url %> " class="card-img-top" alt="<%= course.name %>" />
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <span class="fw-bold">Lokace:</span> <%= course.region %>
@@ -89,8 +89,8 @@ border-bottom border-5 border-success
         <div class="row g-0">
           <div class="col-auto d-none d-md-inline">
             <img
-              src="/img/teesign.jpg"
-              alt="Random teesign"
+              src="<%= hole.image.url %>"
+              alt="Teesign jamky číslo <%= hole.number %>. na hřišti <%= course.name %>."
               class="img-fluid rounded-start border-0"
               style="max-width: 150px"
             />
