@@ -5,6 +5,9 @@ const HoleSchema = new Schema({
   number: Number,
   length: Number,
   par: Number,
+  image: {
+    url: String,
+  },
   course: {
     type: Schema.Types.ObjectId,
     ref: "Course",

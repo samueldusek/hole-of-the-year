@@ -7,6 +7,19 @@ const CourseSchema = new Schema({
   type: String,
   region: String,
   folderId: String,
+  url: String,
+  company: {
+    name: String,
+    url: String,
+  },
+  image: {
+    url: String,
+    author: {
+      name: String,
+      tag: String,
+      url: String,
+    },
+  },
   holes: [
     {
       type: Schema.Types.ObjectId,
