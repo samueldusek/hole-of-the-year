@@ -1,0 +1,2490 @@
+[
+  {
+    "name": "BÚŘOV DISCGOLF - Valašská Bystřice",
+    "slug": "burov-discgolf-valasska-bystrice",
+    "type": "Pevný layout",
+    "region": "Zlínský kraj",
+    "folderId": "001",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 140, "par": 4, "image": { "url": "link" } },
+      { "number": 2, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 95, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 86, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 130, "par": 4, "image": { "url": "link" } },
+      { "number": 7, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 74, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DG Myslivna Cheb",
+    "slug": "dg-myslivna-cheb",
+    "type": "Pevný layout",
+    "region": "Karlovarský kraj",
+    "folderId": "002",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 131, "par": 4, "image": { "url": "link" } },
+      { "number": 2, "length": 99, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 161, "par": 4, "image": { "url": "link" } },
+      { "number": 4, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 87, "par": 4, "image": { "url": "link" } },
+      { "number": 7, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 106, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 91, "par": 4, "image": { "url": "link" } },
+      { "number": 11, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 14, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 92, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 103, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 106, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 107, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DG Na Vysoké Tachov",
+    "slug": "dg-na-vysoke-tachov",
+    "type": "Pevný layout",
+    "region": "Plzeňský kraj",
+    "folderId": "003",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 107, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 100, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 74, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 14, "length": 188, "par": 4, "image": { "url": "link" } },
+      { "number": 15, "length": 94, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 100, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 92, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 69, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Kadaň",
+    "slug": "discgolfpark-kadan",
+    "type": "Pevný layout",
+    "region": "Ústecký kraj",
+    "folderId": "004",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 98, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 88, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 91, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 88, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 96, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 132, "par": 4, "image": { "url": "link" } },
+      { "number": 10, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 88, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 85, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 14, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 122, "par": 4, "image": { "url": "link" } },
+      { "number": 18, "length": 61, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Bocheta Nový Jičín",
+    "slug": "discgolfpark-bocheta-novy-jicin",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "005",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 95, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 73, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 91, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 59, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Dolní Žandov",
+    "slug": "discgolfpark-dolni-zandov",
+    "type": "Pevný layout",
+    "region": "Karlovarský kraj",
+    "folderId": "006",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 74, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 86, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 60, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Týn nad Bečvou",
+    "slug": "discgolfpark-tyn-nad-becvou",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "007",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 97, "par": 9, "image": { "url": "link" } },
+      { "number": 2, "length": 120, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 202, "par": 4, "image": { "url": "link" } },
+      { "number": 6, "length": 95, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 97, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 77, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolf Pohořelice",
+    "slug": "discgolf-pohorelice",
+    "type": "Pevný layout",
+    "region": "Jihomoravský kraj",
+    "folderId": "008",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 92, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 149, "par": 4, "image": { "url": "link" } },
+      { "number": 7, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 50, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfové hřiště - Kladno - Lesík",
+    "slug": "discgolfove-hriste-kladno-lesik",
+    "type": "Pevný layout",
+    "region": "Středočeský kraj",
+    "folderId": "009",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 73, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 59, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Česká Lípa",
+    "slug": "discgolfove-hriste-ceska-lipa",
+    "type": "Pevný layout",
+    "region": "Liberecký kraj",
+    "folderId": "010",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 71, "par": 4, "image": { "url": "link" } },
+      { "number": 6, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 85, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Duchcov",
+    "slug": "discgolfove-hriste-duchcov",
+    "type": "Pevný layout",
+    "region": "Ústecký kraj",
+    "folderId": "011",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 106, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 81, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Choltice",
+    "slug": "discgolfove-hriste-choltice",
+    "type": "Pevný layout",
+    "region": "Pardubický kraj",
+    "folderId": "012",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 133, "par": 4, "image": { "url": "link" } },
+      { "number": 7, "length": 115, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 119, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 174, "par": 4, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Konopiště Nová Mysli",
+    "slug": "discgolfove-hriste-konopiste-nova-mysli",
+    "type": "Pevný layout",
+    "region": "Středočeský kraj",
+    "folderId": "013",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 121, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 146, "par": 4, "image": { "url": "link" } },
+      { "number": 4, "length": 139, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 112, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 74, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Krnov",
+    "slug": "discgolfove-hriste-krnov",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "014",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 103, "par": 4, "image": { "url": "link" } },
+      { "number": 8, "length": 85, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 77, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Liberec - Vesec",
+    "slug": "discgolfove-hriste-liberec-vesec",
+    "type": "Pevný layout",
+    "region": "Liberecký kraj",
+    "folderId": "015",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 69, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 132, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 39, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Město Osek",
+    "slug": "discgolfove-hriste-mesto-osek",
+    "type": "Pevný layout",
+    "region": "Ústecký kraj",
+    "folderId": "016",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 107, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 42, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 50, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Moravský Krumlov",
+    "slug": "discgolfove-hriste-moravsky-krumlov",
+    "type": "Pevný layout",
+    "region": "Jihomoravský kraj",
+    "folderId": "017",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 86, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 95, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 85, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 101, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 108, "par": 4, "image": { "url": "link" } },
+      { "number": 7, "length": 73, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 103, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 132, "par": 4, "image": { "url": "link" } },
+      { "number": 11, "length": 161, "par": 4, "image": { "url": "link" } },
+      { "number": 12, "length": 105, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 142, "par": 4, "image": { "url": "link" } },
+      { "number": 14, "length": 74, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 86, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 84, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 73, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 63, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Park Na Letné - Teplice",
+    "slug": "discgolfove-hriste-park-na-letne-teplice",
+    "type": "Pevný layout",
+    "region": "Ústecký kraj",
+    "folderId": "018",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 103, "par": 4, "image": { "url": "link" } },
+      { "number": 4, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 105, "par": 4, "image": { "url": "link" } },
+      { "number": 6, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 70, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Pohádková Chaloupka",
+    "slug": "discgolfove-hriste-pohadkova-chaloupka",
+    "type": "Pevný layout",
+    "region": "Liberecký kraj",
+    "folderId": "019",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 28, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 39, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Rekovice",
+    "slug": "discgolfove-hriste-rekovice",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "020",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 85, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 100, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 40, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Šumperk",
+    "slug": "discgolfove-hriste-sumperk",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "021",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 134, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 85, "par": 4, "image": { "url": "link" } },
+      { "number": 6, "length": 84, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 44, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 66, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Uničov",
+    "slug": "discgolfove-hriste-unicov",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "022",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 84, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 86, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 105, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 92, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 84, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 131, "par": 4, "image": { "url": "link" } },
+      { "number": 10, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 85, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 73, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 108, "par": 4, "image": { "url": "link" } },
+      { "number": 14, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 97, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 74, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 89, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfové hřiště Úsov Křížová hora",
+    "slug": "discgolfove-hriste-usov-krizova-hora",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "023",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 75, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Amfiteátr Mikulov",
+    "slug": "discgolfpark-amfiteatr-mikulov",
+    "type": "Pevný layout",
+    "region": "Jihomoravský kraj",
+    "folderId": "024",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 108, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 93, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 65, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfpark Brno Mikuláškovo náměstí",
+    "slug": "discgolfpark-brno-mikulaskovo-namesti",
+    "type": "Pevný layout",
+    "region": "Jihomoravský kraj",
+    "folderId": "025",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 82, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 43, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Brno-Střed",
+    "slug": "discgolfpark-brno-stred",
+    "type": "Pevný layout",
+    "region": "Jihomoravský kraj",
+    "folderId": "026",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 100, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 42, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 33, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Budišov nad Budišovkou",
+    "slug": "discgolfpark-budisov-nad-budisovkou",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "027",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 89, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 92, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 89, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 97, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 132, "par": 4, "image": { "url": "link" } },
+      { "number": 10, "length": 82, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 169, "par": 4, "image": { "url": "link" } },
+      { "number": 13, "length": 201, "par": 4, "image": { "url": "link" } },
+      { "number": 14, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 171, "par": 4, "image": { "url": "link" } },
+      { "number": 16, "length": 85, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 78, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Dubina v Karviné",
+    "slug": "discgolfpark-dubina-v-karvine",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "028",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 96, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 71, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Europark Štěrboholy",
+    "slug": "discgolfpark-europark-sterboholy",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "029",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 81, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Hostačov",
+    "slug": "discgolfpark-hostacov",
+    "type": "Pevný layout",
+    "region": "Kraj Vysočina",
+    "folderId": "030",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 175, "par": 4, "image": { "url": "link" } },
+      { "number": 2, "length": 88, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 103, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 123, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 110, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 160, "par": 4, "image": { "url": "link" } },
+      { "number": 8, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 224, "par": 4, "image": { "url": "link" } },
+      { "number": 10, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 133, "par": 4, "image": { "url": "link" } },
+      { "number": 12, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 248, "par": 4, "image": { "url": "link" } },
+      { "number": 14, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 98, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 136, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 129, "par": 4, "image": { "url": "link" } },
+      { "number": 18, "length": 87, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Hrochův Týnec",
+    "slug": "discgolfpark-hrochuv-tynec",
+    "type": "Pevný layout",
+    "region": "Pardubický kraj",
+    "folderId": "031",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 154, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 143, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 75, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfpark Chodov",
+    "slug": "discgolfpark-chodov",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "032",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 66, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Jižní Svahy Zlín",
+    "slug": "discgolfpark-jizni-svahy-zlin",
+    "type": "Pevný layout",
+    "region": "Zlínský kraj",
+    "folderId": "033",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 95, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 74, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 66, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Kmochův Ostrov",
+    "slug": "discgolfpark-kmochuv-ostrov",
+    "type": "Pevný layout",
+    "region": "Středočeský kraj",
+    "folderId": "034",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 34, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 88, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 135, "par": 4, "image": { "url": "link" } },
+      { "number": 7, "length": 79, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 59, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Kobylí",
+    "slug": "discgolfpark-kobyli",
+    "type": "Pevný layout",
+    "region": "Jihomoravský kraj",
+    "folderId": "035",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 124, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 91, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 110, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 119, "par": 3, "image": { "url": "link" } },
+      { "number": 14, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 60, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Králíky",
+    "slug": "discgolfpark-kraliky",
+    "type": "Pevný layout",
+    "region": "Pardubický kraj",
+    "folderId": "036",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 101, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 86, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 96, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 134, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 106, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 105, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 201, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 132, "par": 4, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Křivec - Třinec",
+    "slug": "discgolfpark-krivec-trinec",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "037",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 46, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 41, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Kunovský Les",
+    "slug": "discgolfpark-kunovsky-les",
+    "type": "Pevný layout",
+    "region": "Zlínský kraj",
+    "folderId": "038",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 82, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 35, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 97, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 93, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 90, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 141, "par": 4, "image": { "url": "link" } },
+      { "number": 12, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 33, "par": 3, "image": { "url": "link" } },
+      { "number": 14, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 100, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 76, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Ladronka",
+    "slug": "discgolfpark-ladronka",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "039",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 97, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 112, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 152, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 128, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 100, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Mertovy sady",
+    "slug": "discgolfpark-mertovy-sady",
+    "type": "Pevný layout",
+    "region": "Jihočeský kraj",
+    "folderId": "040",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 101, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 90, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 14, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 67, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Milénova",
+    "slug": "discgolfpark-milenova",
+    "type": "Pevný layout",
+    "region": "Jihomoravský kraj",
+    "folderId": "041",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 44, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 91, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 66, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Otaslavice",
+    "slug": "discgolfpark-otaslavice",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "042",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 74, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 81, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 102, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 59, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Podhrad",
+    "slug": "discgolfpark-podhrad",
+    "type": "Pevný layout",
+    "region": "Kraj Vysočina",
+    "folderId": "043",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 201, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 141, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 101, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 89, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 144, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 104, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Poličná",
+    "slug": "discgolfpark-policna",
+    "type": "Pevný layout",
+    "region": "Zlínský kraj",
+    "folderId": "044",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 88, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 74, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 90, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 80, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Priessnitz",
+    "slug": "discgolfpark-priessnitz",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "045",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 51, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfpark Smržovka",
+    "slug": "discgolfpark-smrzovka",
+    "type": "Pevný layout",
+    "region": "Liberecký kraj",
+    "folderId": "046",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 74, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 73, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 52, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Stromovka - České Budějovice",
+    "slug": "discgolfpark-stromovka-ceske-budejovice",
+    "type": "Pevný layout",
+    "region": "Jihočeský kraj",
+    "folderId": "047",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 115, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 88, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 126, "par": 4, "image": { "url": "link" } },
+      { "number": 4, "length": 138, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 123, "par": 4, "image": { "url": "link" } },
+      { "number": 6, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 140, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 151, "par": 4, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Svitavy",
+    "slug": "discgolfpark-svitavy",
+    "type": "Pevný layout",
+    "region": "Pardubický kraj",
+    "folderId": "048",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 97, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 151, "par": 4, "image": { "url": "link" } },
+      { "number": 6, "length": 106, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 190, "par": 4, "image": { "url": "link" } },
+      { "number": 8, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 99, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 121, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 90, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Štěpánka",
+    "slug": "discgolfpark-stepanka",
+    "type": "Pevný layout",
+    "region": "Středočeský kraj",
+    "folderId": "049",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 85, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 112, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 60, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Tošovice",
+    "slug": "discgolfpark-tosovice",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "050",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 133, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 154, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 82, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 169, "par": 4, "image": { "url": "link" } },
+      { "number": 6, "length": 99, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 88, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 176, "par": 4, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Tučín",
+    "slug": "discgolfpark-tucin",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "051",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 92, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 42, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 145, "par": 4, "image": { "url": "link" } },
+      { "number": 8, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 59, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark U Rakety",
+    "slug": "discgolfpark-u-rakety",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "052",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 1, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 1, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Valašské Meziříčí",
+    "slug": "discgolfpark-valasske-mezirici",
+    "type": "Pevný layout",
+    "region": "Zlínský kraj",
+    "folderId": "053",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 100, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 116, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 82, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 84, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 95, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Vyškov",
+    "slug": "discgolfpark-vyskov",
+    "type": "Pevný layout",
+    "region": "Jihomoravský kraj",
+    "folderId": "054",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 96, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 11, "length": 91, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 104, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 14, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 15, "length": 105, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 91, "par": 3, "image": { "url": "link" } },
+      { "number": 17, "length": 91, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 61, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Krejcárek",
+    "slug": "discgolfpark-krejcarek",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "055",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 73, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Mark \"Disqman\" Trubl - discgolf course Odry",
+    "slug": "mark-\"disqman\"-trubl-discgolf-course-odry",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "056",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 76, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Stromovka - Havířov",
+    "slug": "discgolfpark-stromovka-havirov",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "057",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 110, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 70, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Poruba",
+    "slug": "discgolfpark-poruba",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "058",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 101, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 75, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 40, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Šterkovna Hlučín",
+    "slug": "discgolfpark-sterkovna-hlucin",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "059",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 108, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 105, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 124, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 103, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 92, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Stříbrné jezero Opava",
+    "slug": "discgolfpark-stribrne-jezero-opava",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "060",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 89, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 50, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Kopřivnice",
+    "slug": "discgolfpark-koprivnice",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "061",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 62, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Laguna Přerov",
+    "slug": "discgolfpark-laguna-prerov",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "062",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 46, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 55, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Park sportu - Hrubá Voda",
+    "slug": "discgolfpark-park-sportu-hruba-voda",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "063",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 3, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 86, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 124, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 1, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 51, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Erbenovo nábřeží",
+    "slug": "discgolfpark-erbenovo-nabrezi",
+    "type": "Pevný layout",
+    "region": "Zlínský kraj",
+    "folderId": "064",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 46, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 46, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 42, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 46, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 51, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Dolní Němčí",
+    "slug": "discgolfpark-dolni-nemci",
+    "type": "Pevný layout",
+    "region": "Zlínský kraj",
+    "folderId": "065",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 46, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 36, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 61, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Dlouhá Loučka",
+    "slug": "discgolfove-hriste-dlouha-loucka",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "066",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 75, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 47, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Kouty",
+    "slug": "discgolfpark-kouty",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "067",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 38, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 69, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Hotel Helios",
+    "slug": "discgolfove-hriste-hotel-helios",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "068",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 47, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 44, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 39, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Račí Údolí",
+    "slug": "discgolfove-hriste-raci-udoli",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "069",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 38, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 47, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Seč",
+    "slug": "discgolfpark-sec",
+    "type": "Pevný layout",
+    "region": "Pardubický kraj",
+    "folderId": "070",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 95, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 150, "par": 4, "image": { "url": "link" } },
+      { "number": 4, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 181, "par": 4, "image": { "url": "link" } },
+      { "number": 7, "length": 85, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 139, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Lhota-Vlasenice",
+    "slug": "discgolfpark-lhota-vlasenice",
+    "type": "Pevný layout",
+    "region": "Kraj Vysočina",
+    "folderId": "071",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 126, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 148, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 68, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Kunšovec",
+    "slug": "discgolfpark-kunsovec",
+    "type": "Pevný layout",
+    "region": "Kraj Vysočina",
+    "folderId": "072",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 70, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Třešť",
+    "slug": "discgolfpark-trest",
+    "type": "Pevný layout",
+    "region": "Kraj Vysočina",
+    "folderId": "073",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 103, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 92, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 128, "par": 4, "image": { "url": "link" } },
+      { "number": 4, "length": 108, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 84, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 109, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 117, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Konferenční hotel LUNA",
+    "slug": "discgolfove-hriste-konferencni-hotel-luna",
+    "type": "Pevný layout",
+    "region": "Kraj Vysočina",
+    "folderId": "074",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 95, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 61, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 58, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Vajgar",
+    "slug": "discgolfpark-vajgar",
+    "type": "Pevný layout",
+    "region": "Jihočeský kraj",
+    "folderId": "075",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 50, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Kubova huť",
+    "slug": "discgolfove-hriste-kubova-hut",
+    "type": "Pevný layout",
+    "region": "Jihočeský kraj",
+    "folderId": "076",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 64, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 69, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 85, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 10, "length": 78, "par": 3, "image": { "url": "link" } },
+      { "number": 13, "length": 96, "par": 4, "image": { "url": "link" } },
+      { "number": 14, "length": 102, "par": 4, "image": { "url": "link" } },
+      { "number": 15, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 16, "length": 105, "par": 4, "image": { "url": "link" } },
+      { "number": 17, "length": 89, "par": 3, "image": { "url": "link" } },
+      { "number": 18, "length": 107, "par": 4, "image": { "url": "link" } },
+      { "number": 11, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 12, "length": 55, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Tábor",
+    "slug": "discgolfove-hriste-tabor",
+    "type": "Pevný layout",
+    "region": "Jihočeský kraj",
+    "folderId": "077",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 109, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 103, "par": 4, "image": { "url": "link" } },
+      { "number": 6, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 101, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 89, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Strakonice",
+    "slug": "discgolfpark-strakonice",
+    "type": "Pevný layout",
+    "region": "Jihočeský kraj",
+    "folderId": "078",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 95, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 66, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 93, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Břasy",
+    "slug": "discgolfpark-brasy",
+    "type": "Pevný layout",
+    "region": "Plzeňský kraj",
+    "folderId": "079",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 73, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 68, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 68, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Křimice",
+    "slug": "discgolfpark-krimice",
+    "type": "Pevný layout",
+    "region": "Plzeňský kraj",
+    "folderId": "080",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 39, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 46, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 48, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 41, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 38, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Tréninkové hřiště Skalka Liberec",
+    "slug": "treninkove-hriste-skalka-liberec",
+    "type": "Pevný layout",
+    "region": "Liberecký kraj",
+    "folderId": "081",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 37, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 38, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 28, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 36, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolf Bedřichov",
+    "slug": "discgolf-bedrichov",
+    "type": "Pevný layout",
+    "region": "Liberecký kraj",
+    "folderId": "082",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 50, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 42, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 106, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 49, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 33, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark U Čápa Příchovice",
+    "slug": "discgolfpark-u-capa-prichovice",
+    "type": "Pevný layout",
+    "region": "Liberecký kraj",
+    "folderId": "083",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 44, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 38, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 57, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 59, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 83, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 53, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Orlice - Hradec Králové",
+    "slug": "discgolfpark-orlice-hradec-kralove",
+    "type": "Pevný layout",
+    "region": "Královehradecký kraj",
+    "folderId": "084",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 56, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 42, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 80, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 64, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Green Valley",
+    "slug": "discgolfove-hriste-green-valley",
+    "type": "Pevný layout",
+    "region": "Středočeský kraj",
+    "folderId": "085",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 70, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 38, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 63, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 87, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 72, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 62, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolf Benice",
+    "slug": "discgolf-benice",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "086",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 45, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 33, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 67, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 56, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Běchovice",
+    "slug": "discgolfpark-bechovice",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "087",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 62, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 227, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 76, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 176, "par": 4, "image": { "url": "link" } },
+      { "number": 5, "length": 65, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 155, "par": 4, "image": { "url": "link" } },
+      { "number": 7, "length": 155, "par": 4, "image": { "url": "link" } },
+      { "number": 8, "length": 196, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 94, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Areál Interlovu",
+    "slug": "discgolfove-hriste-areal-interlovu",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "088",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 60, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 41, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Praha 4",
+    "slug": "discgolfpark-praha-4",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "089",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 71, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 51, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Centrální Park Studůlky",
+    "slug": "discgolfove-hriste-centralni-park-studulky",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "090",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 55, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 92, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 53, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "Discgolfové hřiště Nučice",
+    "slug": "discgolfove-hriste-nucice",
+    "type": "Pevný layout",
+    "region": "Hlavní město Praha",
+    "folderId": "091",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 54, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 45, "par": 4, "image": { "url": "link" } },
+      { "number": 3, "length": 51, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 31, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 34, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 40, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 36, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 59, "par": 4, "image": { "url": "link" } },
+      { "number": 9, "length": 71, "par": 4, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Hloučela",
+    "slug": "discgolfpark-hloucela",
+    "type": "Pevný layout",
+    "region": "Olomoucký kraj",
+    "folderId": "092",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 44, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 53, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 4, "length": 58, "par": 3, "image": { "url": "link" } },
+      { "number": 5, "length": 77, "par": 3, "image": { "url": "link" } },
+      { "number": 6, "length": 52, "par": 3, "image": { "url": "link" } },
+      { "number": 7, "length": 42, "par": 3, "image": { "url": "link" } },
+      { "number": 8, "length": 73, "par": 3, "image": { "url": "link" } },
+      { "number": 9, "length": 64, "par": 3, "image": { "url": "link" } }
+    ]
+  },
+  {
+    "name": "DiscGolfPark Příbor",
+    "slug": "discgolfpark-pribor",
+    "type": "Pevný layout",
+    "region": "Moravskoslezský kraj",
+    "folderId": "093",
+    "image": {
+      "url": "link",
+      "author": {
+        "name": "Author's name",
+        "tag": "Author's tag",
+        "url": "link"
+      }
+    },
+    "holes": [
+      { "number": 1, "length": 43, "par": 3, "image": { "url": "link" } },
+      { "number": 2, "length": 38, "par": 3, "image": { "url": "link" } },
+      { "number": 3, "length": 62, "par": 3, "image": { "url": "link" } }
+    ]
+  }
+]
