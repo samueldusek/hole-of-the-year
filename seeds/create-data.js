@@ -7,6 +7,7 @@ const fs = require("fs");
 
 // Load models
 const Course = require("../models/course");
+const Hole = require("../models/hole");
 
 // Connect to MongoDB
 mongoose.connect(process.env.DB_URL, {
@@ -30,6 +31,11 @@ const createData = async () => {
       type: course.type,
       region: course.region,
       folderId: course.folderId,
+      url: "link",
+      company: {
+        name: "Company's name",
+        url: "link",
+      },
       image: {
         url: "link",
         author: {

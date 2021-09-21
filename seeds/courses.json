@@ -5,6 +5,8 @@
     "type": "Pevný layout",
     "region": "Zlínský kraj",
     "folderId": "001",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -31,6 +33,8 @@
     "type": "Pevný layout",
     "region": "Karlovarský kraj",
     "folderId": "002",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -66,6 +70,8 @@
     "type": "Pevný layout",
     "region": "Plzeňský kraj",
     "folderId": "003",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -101,6 +107,8 @@
     "type": "Pevný layout",
     "region": "Ústecký kraj",
     "folderId": "004",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -136,6 +144,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "005",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -162,6 +172,8 @@
     "type": "Pevný layout",
     "region": "Karlovarský kraj",
     "folderId": "006",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -188,6 +200,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "007",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -214,6 +228,8 @@
     "type": "Pevný layout",
     "region": "Jihomoravský kraj",
     "folderId": "008",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -241,6 +257,8 @@
     "type": "Pevný layout",
     "region": "Středočeský kraj",
     "folderId": "009",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -267,6 +285,8 @@
     "type": "Pevný layout",
     "region": "Liberecký kraj",
     "folderId": "010",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -293,6 +313,8 @@
     "type": "Pevný layout",
     "region": "Ústecký kraj",
     "folderId": "011",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -317,6 +339,8 @@
     "type": "Pevný layout",
     "region": "Pardubický kraj",
     "folderId": "012",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -343,6 +367,8 @@
     "type": "Pevný layout",
     "region": "Středočeský kraj",
     "folderId": "013",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -369,6 +395,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "014",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -398,6 +426,8 @@
     "type": "Pevný layout",
     "region": "Liberecký kraj",
     "folderId": "015",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -424,6 +454,8 @@
     "type": "Pevný layout",
     "region": "Ústecký kraj",
     "folderId": "016",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -450,6 +482,8 @@
     "type": "Pevný layout",
     "region": "Jihomoravský kraj",
     "folderId": "017",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -485,6 +519,8 @@
     "type": "Pevný layout",
     "region": "Ústecký kraj",
     "folderId": "018",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -511,6 +547,8 @@
     "type": "Pevný layout",
     "region": "Liberecký kraj",
     "folderId": "019",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -537,6 +575,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "020",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -563,6 +603,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "021",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -590,6 +632,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "022",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -625,6 +669,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "023",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -651,6 +697,8 @@
     "type": "Pevný layout",
     "region": "Jihomoravský kraj",
     "folderId": "024",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -674,6 +722,8 @@
     "type": "Pevný layout",
     "region": "Jihomoravský kraj",
     "folderId": "025",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -700,6 +750,8 @@
     "type": "Pevný layout",
     "region": "Jihomoravský kraj",
     "folderId": "026",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -726,6 +778,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "027",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -761,6 +815,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "028",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -787,6 +843,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "029",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -813,6 +871,8 @@
     "type": "Pevný layout",
     "region": "Kraj Vysočina",
     "folderId": "030",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -848,6 +908,8 @@
     "type": "Pevný layout",
     "region": "Pardubický kraj",
     "folderId": "031",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -874,6 +936,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "032",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -900,6 +964,8 @@
     "type": "Pevný layout",
     "region": "Zlínský kraj",
     "folderId": "033",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -926,6 +992,8 @@
     "type": "Pevný layout",
     "region": "Středočeský kraj",
     "folderId": "034",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -952,6 +1020,8 @@
     "type": "Pevný layout",
     "region": "Jihomoravský kraj",
     "folderId": "035",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -984,6 +1054,8 @@
     "type": "Pevný layout",
     "region": "Pardubický kraj",
     "folderId": "036",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1010,6 +1082,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "037",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1036,6 +1110,8 @@
     "type": "Pevný layout",
     "region": "Zlínský kraj",
     "folderId": "038",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1071,6 +1147,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "039",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1097,6 +1175,8 @@
     "type": "Pevný layout",
     "region": "Jihočeský kraj",
     "folderId": "040",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1132,6 +1212,8 @@
     "type": "Pevný layout",
     "region": "Jihomoravský kraj",
     "folderId": "041",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1158,6 +1240,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "042",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1184,6 +1268,8 @@
     "type": "Pevný layout",
     "region": "Kraj Vysočina",
     "folderId": "043",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1210,6 +1296,8 @@
     "type": "Pevný layout",
     "region": "Zlínský kraj",
     "folderId": "044",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1236,6 +1324,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "045",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1262,6 +1352,8 @@
     "type": "Pevný layout",
     "region": "Liberecký kraj",
     "folderId": "046",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1288,6 +1380,8 @@
     "type": "Pevný layout",
     "region": "Jihočeský kraj",
     "folderId": "047",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1314,6 +1408,8 @@
     "type": "Pevný layout",
     "region": "Pardubický kraj",
     "folderId": "048",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1343,6 +1439,8 @@
     "type": "Pevný layout",
     "region": "Středočeský kraj",
     "folderId": "049",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1369,6 +1467,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "050",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1395,6 +1495,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "051",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1422,6 +1524,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "052",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1451,6 +1555,8 @@
     "type": "Pevný layout",
     "region": "Zlínský kraj",
     "folderId": "053",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1480,6 +1586,8 @@
     "type": "Pevný layout",
     "region": "Jihomoravský kraj",
     "folderId": "054",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1515,6 +1623,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "055",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1538,6 +1648,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "056",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1563,6 +1675,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "057",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1589,6 +1703,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "058",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1615,6 +1731,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "059",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1641,6 +1759,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "060",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1667,6 +1787,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "061",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1693,6 +1815,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "062",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1719,6 +1843,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "063",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1745,6 +1871,8 @@
     "type": "Pevný layout",
     "region": "Zlínský kraj",
     "folderId": "064",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1771,6 +1899,8 @@
     "type": "Pevný layout",
     "region": "Zlínský kraj",
     "folderId": "065",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1797,6 +1927,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "066",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1819,6 +1951,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "067",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1845,6 +1979,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "068",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1869,6 +2005,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "069",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1895,6 +2033,8 @@
     "type": "Pevný layout",
     "region": "Pardubický kraj",
     "folderId": "070",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1921,6 +2061,8 @@
     "type": "Pevný layout",
     "region": "Kraj Vysočina",
     "folderId": "071",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1947,6 +2089,8 @@
     "type": "Pevný layout",
     "region": "Kraj Vysočina",
     "folderId": "072",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1973,6 +2117,8 @@
     "type": "Pevný layout",
     "region": "Kraj Vysočina",
     "folderId": "073",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -1999,6 +2145,8 @@
     "type": "Pevný layout",
     "region": "Kraj Vysočina",
     "folderId": "074",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2025,6 +2173,8 @@
     "type": "Pevný layout",
     "region": "Jihočeský kraj",
     "folderId": "075",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2045,6 +2195,8 @@
     "type": "Pevný layout",
     "region": "Jihočeský kraj",
     "folderId": "076",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2080,6 +2232,8 @@
     "type": "Pevný layout",
     "region": "Jihočeský kraj",
     "folderId": "077",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2106,6 +2260,8 @@
     "type": "Pevný layout",
     "region": "Jihočeský kraj",
     "folderId": "078",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2132,6 +2288,8 @@
     "type": "Pevný layout",
     "region": "Plzeňský kraj",
     "folderId": "079",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2158,6 +2316,8 @@
     "type": "Pevný layout",
     "region": "Plzeňský kraj",
     "folderId": "080",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2184,6 +2344,8 @@
     "type": "Pevný layout",
     "region": "Liberecký kraj",
     "folderId": "081",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2207,6 +2369,8 @@
     "type": "Pevný layout",
     "region": "Liberecký kraj",
     "folderId": "082",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2233,6 +2397,8 @@
     "type": "Pevný layout",
     "region": "Liberecký kraj",
     "folderId": "083",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2259,6 +2425,8 @@
     "type": "Pevný layout",
     "region": "Královehradecký kraj",
     "folderId": "084",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2282,6 +2450,8 @@
     "type": "Pevný layout",
     "region": "Středočeský kraj",
     "folderId": "085",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2308,6 +2478,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "086",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2331,6 +2503,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "087",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2357,6 +2531,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "088",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2378,6 +2554,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "089",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2400,6 +2578,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "090",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2421,6 +2601,8 @@
     "type": "Pevný layout",
     "region": "Hlavní město Praha",
     "folderId": "091",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2447,6 +2629,8 @@
     "type": "Pevný layout",
     "region": "Olomoucký kraj",
     "folderId": "092",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
@@ -2473,6 +2657,8 @@
     "type": "Pevný layout",
     "region": "Moravskoslezský kraj",
     "folderId": "093",
+    "url": "link",
+    "company": { "name": "Company's name", "url": "link" },
     "image": {
       "url": "link",
       "author": {
