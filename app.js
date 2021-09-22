@@ -81,12 +81,14 @@ const courseRoutes = require("./routes/courses");
 const userRoutes = require("./routes/users");
 const holeRoutes = require("./routes/holes");
 const duelRoutes = require("./routes/duels");
+const commentRoutes = require("./routes/comments");
 
 // Set all the routes
 app.use("/courses", courseRoutes);
 app.use("/users", userRoutes);
 app.use("/holes", holeRoutes);
 app.use("/duels", duelRoutes);
+app.use("/comments", commentRoutes);
 
 // Set the route for terms and conditions
 app.get("/terms", (req, res) => {

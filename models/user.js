@@ -20,6 +20,12 @@ const UserSchema = new Schema({
       hole: { type: Schema.Types.ObjectId, ref: "Hole" },
     },
   ],
+  likedComments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
 });
 
 UserSchema.plugin(passportLocalMongoose);

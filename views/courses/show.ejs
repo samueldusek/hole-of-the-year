@@ -54,8 +54,11 @@ border-bottom border-5 border-success
             <span class="ms-1 fs-6"><%= comment.votes %></span>
           </div>
           <form class="d-inline-block" action="/comments/<%= comment.id %>/?_method=PUT" method="POST">
-            <input type="hidden" value="<%= comment.id %>" name="commentId" />
-            <button type="submit" class="btn btn-success btn-sm fw-bold">
+            <% if (currentUser) { %> 
+              <input type="hidden" name="userId" value="<%= currentUser._id %>">
+              <% } %> 
+            <input type="hidden" name="courseId" value="<%= course._id %>">
+            <button type="submit" class="btn btn-success btn-sm fw-bold" <% if (!currentUser) { %>disabled<% } %>>
               Like
             </button>
           </form>
