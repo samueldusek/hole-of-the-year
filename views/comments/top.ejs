@@ -1,0 +1,49 @@
+<% layout('/layouts/mainTemplate') %>
+
+<h1 class="display-6 d-inline fw-bold border-bottom border-5 border-success">
+  Top 10 Komentářů
+</h1>
+
+<% if(comments.length === 0) { %>
+<h3 class="mt-5">
+  Zatím žádný komentář nedostal ani jeden Like. Žebříček 10 nejlepších komentářů
+  se začne tvořit až aspoň jeden komentář dostane aspoň jeden Like.
+</h3>
+<% } %>
+
+<div class="row mt-5">
+  <div class="col col-sm-8 offset-sm-2 col-md-6 offset-md-3">
+    <% comments.forEach((comment, idx) => { %>
+    <div class="card mb-3 shadow">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold"><%= comment.author.username %></span>
+        <span class="badge rounded-pill bg-secondary text-white text-wrap"
+          ><%= comment.date %></span
+        >
+      </div>
+      <div class="card-body">
+        <p class="card-text"><%= comment.text %></p>
+        <div class="d-flex justify-content-end">
+          <div class="me-1 badge bg-success d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            <span class="ms-1 fs-6"><%= comment.votes %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

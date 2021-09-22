@@ -97,8 +97,7 @@ module.exports.getTopComments = async (req, res) => {
         date: getCzechDatePlusTime(comment.date),
       }));
     }
-    console.log(formattedComments);
-    res.render("/comments/top", {
+    res.render("comments/top", {
       comments: formattedComments,
       pageTitle: "Top 10 komentářů - Jamka Roku 2021",
       path: "/comments/top",
