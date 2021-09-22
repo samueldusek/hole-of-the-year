@@ -58,12 +58,11 @@ border-bottom border-5 border-success
               <input type="hidden" name="userId" value="<%= currentUser._id %>">
               <% } %> 
             <input type="hidden" name="courseId" value="<%= course._id %>">
-            <button type="submit" class="btn btn-success btn-sm fw-bold" <% if (!currentUser) { %>disabled<% } %>>
+            <button type="submit" class="btn btn-success btn-sm fw-bold" <% if (!currentUser || currentUser.likedComments.find(commentId => commentId.toString() === comment.id.toString())) { %>disabled<% } %>>
               Like
             </button>
           </form>
         </div>
-        <!-- <a href="#" class="btn btn-success btn-sm">Like!</a> -->
       </div>
     </div>
     <% } }%>
