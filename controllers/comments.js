@@ -1,6 +1,7 @@
 const User = require("../models/user");
 const Comment = require("../models/comment");
 const Course = require("../models/course");
+const { getCzechDate, getCzechDatePlusTime } = require("../utils/helpers");
 
 module.exports.likeComment = async (req, res) => {
   // Deconstruct comment id from the url
@@ -82,4 +83,25 @@ module.exports.likeComment = async (req, res) => {
   }
 };
 
-module.exports.getTopComments = async (req, res) => {};
+module.exports.getTopComments = async (req, res) => {
+  try {
+    // Find top 10 comments in the db and sort them from the best to the worst
+    const comments = await Comment.find({ votes: { $gt: 0 } })
+      .populate("author", "username")
+      .sort({ votes: "descending" })
+      .limit(10);
+    let formattedComments = [];
+    if (comments) {
+      formattedComments = comments.map((comment) => ({
+        ...comment._doc,
+        date: getCzechDatePlusTime(comment.date),
+      }));
+    }
+    console.log(formattedComments);
+    res.render("/comments/top", {
+      comments: formattedComments,
+      pageTitle: "Top 10 komentářů - Jamka Roku 2021",
+      path: "/comments/top",
+    });
+  } catch (error) {}
+};
