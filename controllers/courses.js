@@ -91,9 +91,11 @@ module.exports.showCourse = async (req, res) => {
   // Convert all the dates in comments to human readable czech format
   const comments = course.comments.map((comment) => {
     return {
+      id: comment._id,
       author: comment.author,
       date: getCzechDatePlusTime(comment.date),
       text: comment.text,
+      votes: comment.votes,
     };
   });
 

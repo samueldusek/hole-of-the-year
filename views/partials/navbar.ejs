@@ -33,9 +33,11 @@
         <li class="nav-item ms-lg-3">
           <a class="nav-link <%= path==="/holes/top" ? "active" : "" %>" href="/holes/top">Top 32 jamek</a>
         </li>
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link <%= path==="/duels/index" ? "active" : "" %>" href="/duels/">Duely</a>
-        </li>
+        <% if(showDuelsLink) { %>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link <%= path==="/duels/index" ? "active" : "" %>" href="/duels/">Duely</a>
+          </li>
+        <% } %> 
         <% if (!currentUser) { %>
         <li class="nav-item ms-lg-3">
           <a class="nav-link <%= path==="/users/register" ? "active" : "" %>" href="/users/register">Registrovat</a>

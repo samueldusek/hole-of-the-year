@@ -63,6 +63,7 @@ passport.deserializeUser(User.deserializeUser());
 // Set local variables - will come with every response in res object
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
+  res.locals.showDuelsLink = Date.now() / 1000 > process.env.DATE_PLAYOFF_START;
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
   next();
