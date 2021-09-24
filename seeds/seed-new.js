@@ -24,7 +24,7 @@ db.once("open", () => {
 
 // Load data
 const loadData = async () => {
-  const data = await fs.readFile("./courses.json");
+  const data = await fs.readFile("./courses_formatted.json");
   const courses = JSON.parse(data);
   return courses;
 };
