@@ -102,5 +102,11 @@ module.exports.getTopComments = async (req, res) => {
       pageTitle: "Top 10 komentářů - Jamka Roku 2021",
       path: "/comments/top",
     });
-  } catch (error) {}
+  } catch (error) {
+    req.flash(
+      "error",
+      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+    );
+    return res.redirect("/courses");
+  }
 };

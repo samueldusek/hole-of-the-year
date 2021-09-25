@@ -24,7 +24,7 @@ db.once("open", () => {
 
 // Load data
 const loadData = async () => {
-  const data = await fs.readFile("./courses_formatted.json");
+  const data = await fs.readFile("./courses.json");
   const courses = JSON.parse(data);
   return courses;
 };
@@ -41,7 +41,7 @@ const seedDb = async () => {
   for (let course of courses) {
     const newCourse = new Course({
       name: course.name,
-      slug: course.name,
+      slug: course.slug,
       type: course.type,
       region: course.region,
       folderId: course.folderId,

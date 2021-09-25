@@ -1,9 +1,5 @@
 const fs = require("fs/promises");
 
-// Load models
-const Course = require("../models/course");
-const Hole = require("../models/hole");
-
 // Load data
 const loadData = async () => {
   const data = await fs.readFile("./courses_new.json");
