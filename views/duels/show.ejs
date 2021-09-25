@@ -1,6 +1,6 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1 class="mb-3 text-center">Duel #<%= round %></h1>
+<h1 class="mb-3 text-center lh-base">Duel #<%= round %></h1>
 
 <div class="alert alert-info alert-dismissible fade show" role="alert">
   <% if(isOngoing) { %> 
@@ -40,7 +40,7 @@
         <div
             class="progress-bar"
             role="progressbar"
-            style="width: <%= holeOnePercentage %>%"
+            style=<%= `width: ${holeOnePercentage}%` %>
             aria-valuenow="50"
             aria-valuemin="0"
             aria-valuemax="100"
@@ -48,7 +48,7 @@
         <div
             class="progress-bar bg-success"
             role="progressbar"
-            style='width: <%= holeTwoPercentage %>%'
+            style=<%= `width: ${holeOnePercentage}%` %>
             aria-valuenow="50"
             aria-valuemin="0"
             aria-valuemax="100"
