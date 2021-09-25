@@ -50,6 +50,8 @@ module.exports.nominateHole = async (req, res) => {
         if (!isNominated) {
           // Increase the number of votes for the selected hole
           hole.votes++;
+          // Save time stamp
+          hole.lastVoteTimeStamp = Date.now();
           // Add new hole to users nominated hole
           user.nominatedHoles.push(hole);
           // Count votes left and tell user his nomination process was successful
@@ -118,7 +120,7 @@ module.exports.getTopHoles = async (req, res) => {
     // Populate top 32 holes from the db
     const holes = await Hole.find({ votes: { $gt: 0 } })
       .populate("course")
-      .sort({ votes: "descending" })
+      .sort({ votes: "descending", timestamp: "ascending" })
       .limit(32);
     res.render("holes/top", {
       holes: holes,

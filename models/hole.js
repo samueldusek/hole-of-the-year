@@ -16,6 +16,10 @@ const HoleSchema = new Schema({
     type: Number,
     default: 0,
   },
+  lastVoteTimeStamp: {
+    type: Number,
+    default: 0,
+  },
 });
 
 module.exports = mongoose.model("Hole", HoleSchema);
