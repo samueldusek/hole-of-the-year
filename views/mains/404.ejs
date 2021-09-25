@@ -1,2 +1,53 @@
 <% layout('/layouts/mainTemplate') %>
-<h1 class="mb-3">Stránka nebyla nalezena. :-(</h1>
+
+<h1
+  class="display-6 d-inline-block fw-bold border-bottom border-5 border-success"
+>
+  404: Jsi v OB! :-(
+</h1>
+
+<div class="mt-4 fs-5">
+  <p><%= currentUser ? `Ahoj ${currentUser.username},` : "Ahoj," %></p>
+  <p>
+    Bohužel si se nějak dostal/a mimo hřiště
+    <a class="link-success" href="/">Jamky Roku 2021</a>. Ale nevadí! Na trestné
+    hody mi tady nehrajeme. Vrať se zpátky do hry kliknutím na jeden z odkazů
+    níže.
+  </p>
+  <p>Ať to lítá! :-)</p>
+</div>
+
+<ul
+  class="
+    nav
+    flex-column
+    align-items-center
+    flex-sm-row
+    justify-content-center
+    fs-5
+  "
+>
+  <li class="nav-item">
+    <a class="nav-link link-success" href="/">Domů</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-success" href="/courses">Hřiště</a>
+  </li>
+  <% if(showDuelsLink) { %>
+  <li class="nav-item">
+    <a class="nav-link link-success" href="/duels">Duely</a>
+  </li>
+  <% } %>
+  <li class="nav-item">
+    <a class="nav-link link-success" href="/holes/top">Top jamky</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-success" href="/comments/top">Top komentáře</a>
+  </li>
+</ul>
+
+<img
+  src="/img/ob.jpg"
+  alt="OB Jamky Roku 2021"
+  class="img-fluid shadow mt-4 mb-5 rounded"
+/>

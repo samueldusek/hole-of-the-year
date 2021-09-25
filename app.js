@@ -98,10 +98,19 @@ app.get("/terms", (req, res) => {
   });
 });
 
+// Set the route for the home page
 app.get("/", (req, res) => {
   res.render("mains/home", {
     pageTitle: "Jamka Roku 2021",
     path: "/mains/home",
+  });
+});
+
+// Set the route for the error page
+app.get("*", (req, res) => {
+  res.status(404).render("mains/404", {
+    pageTitle: "Jamka Roku 2021 - Nenalezeno",
+    path: "/mains/404",
   });
 });
 
