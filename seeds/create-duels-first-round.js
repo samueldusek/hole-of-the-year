@@ -7,7 +7,6 @@ const mongoose = require("mongoose");
 // Load models
 const Hole = require("../models/hole");
 const Duel = require("../models/duel");
-const Course = require("../models/course");
 
 // Connect to MongoDB
 mongoose.connect(process.env.DB_URL, {
@@ -24,7 +23,6 @@ db.once("open", () => {
 const seedDb = async () => {
   // Get top 16 holes
   const holes = await Hole.find({ votes: { $gt: 0 } })
-    .populate("course")
     .sort({ votes: "desc", lastVoteTimeStamp: "asc" })
     .limit(16);
 
@@ -40,7 +38,7 @@ const seedDb = async () => {
     const duel = new Duel({
       startDate: startDate,
       endDate: new Date(startDate.getTime() + ONE_DAY_MINUS_MINUTE_IN_MS),
-      round: 1,
+      round: i + 1,
     });
     duel.holesInDuel.push({
       hole: holes.shift(),
