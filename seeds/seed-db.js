@@ -6,9 +6,11 @@ const mongoose = require("mongoose");
 const fs = require("fs/promises");
 
 // Load models
+const User = require("../models/user");
 const Course = require("../models/course");
 const Hole = require("../models/hole");
 const Duel = require("../models/duel");
+const Comment = require("../models/comment");
 
 // Connect to MongoDB
 mongoose.connect(process.env.DB_URL, {
@@ -33,6 +35,11 @@ const seedDb = async () => {
   // Delete everything from the db
   await Course.deleteMany({});
   await Hole.deleteMany({});
+  await User.deleteMany({});
+  await Comment.deleteMany({});
+  await Duel.deleteMany({});
+
+  const HAS_RANDOM_VOTES = true;
 
   // Load data from the file
   const courses = await loadData();
@@ -55,6 +62,8 @@ const seedDb = async () => {
         length: hole.length,
         par: hole.par,
         image: hole.image,
+        votes: HAS_RANDOM_VOTES ? Math.floor(Math.random() * 1000) : 0,
+        lastVoteTimeStamp: Date.now(),
       });
       newHole.course = newCourse;
       newCourse.holes.push(newHole);

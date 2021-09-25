@@ -18,7 +18,7 @@ const formatData = async () => {
       type: course.type,
       region: course.region,
       folderId: course.folderId,
-      url: course.image.url,
+      url: course.url,
       company: {
         name: course.company.name,
         url: course.company.url,

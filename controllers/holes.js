@@ -120,7 +120,7 @@ module.exports.getTopHoles = async (req, res) => {
     // Populate top 32 holes from the db
     const holes = await Hole.find({ votes: { $gt: 0 } })
       .populate("course")
-      .sort({ votes: "descending", timestamp: "ascending" })
+      .sort({ votes: "desc", lastVoteTimeStamp: "asc" })
       .limit(32);
     res.render("holes/top", {
       holes: holes,
