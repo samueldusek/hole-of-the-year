@@ -1,7 +1,67 @@
 const User = require("../models/user");
 const Comment = require("../models/comment");
 const Course = require("../models/course");
-const { getCzechDate, getCzechDatePlusTime } = require("../utils/helpers");
+const { getCzechDatePlusTime } = require("../utils/helpers");
+
+module.exports.addComment = async (req, res) => {
+  // Get the comment text, user and course ids
+  const { comment, userId, courseId } = req.body;
+
+  // Check for user id and course id
+  if (!userId || !courseId || !comment) {
+    let errorMsg = "";
+    if (!userId) errorMsg = "Nelze přidat komentář bez uživatelského id.";
+    if (!courseId) errorMsg = "Nelze přidat komentář bez id hřiště.";
+    if (!comment) errorMsg = "Nelze přidat prázdný komentář.";
+    req.flash("error", errorMsg);
+    return res.redirect("/courses");
+  }
+
+  try {
+    // Fetch the user from the database
+    const user = await User.findById(userId);
+    if (!user) {
+      req.flash(
+        "error",
+        "Pro přidání komentáře musíš být přihlášen pod existujícím účtem."
+      );
+      return res.redirect(`/users/login`);
+    }
+
+    // Fetch the course from the database and add comment to it
+    const course = await Course.findById(courseId);
+    if (!course) {
+      req.flash("error", "Přidat komentář lze pouze k existujícímu hřišti.");
+      return res.redirect(`/courses`);
+    }
+
+    // Create new comment with given text and attach user to it
+    const newComment = new Comment({
+      text: comment,
+      date: new Date(),
+      author: user,
+    });
+
+    // Save the comment to the database
+    await newComment.save();
+
+    // Add comment to course
+    course.comments.push(newComment);
+
+    // Save the course to the database
+    await course.save();
+
+    // Send message to the user that the comment was added successfully
+    req.flash("success", `Tvůj komentář byl přidán.`);
+    res.redirect(`/courses/${courseId}`);
+  } catch (error) {
+    req.flash(
+      "error",
+      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+    );
+    return res.redirect("/courses");
+  }
+};
 
 module.exports.likeComment = async (req, res) => {
   // Deconstruct comment id from the url

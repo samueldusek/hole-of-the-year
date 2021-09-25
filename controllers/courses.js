@@ -121,34 +121,3 @@ module.exports.showCourse = async (req, res) => {
     res.redirect("/courses");
   }
 };
-
-module.exports.addComment = async (req, res) => {
-  // Get the course id
-  const { id: courseId } = req.params;
-  // Get the comment text and user id
-  const { comment, userId } = req.body;
-
-  // Fetch the user from the database
-  const user = await User.findById(userId);
-
-  // Create new comment with given text and attach user to it
-  const newComment = new Comment({
-    text: comment,
-    date: new Date(),
-    author: user,
-  });
-
-  // Save the comment to the database
-  await newComment.save();
-
-  // Fetch the course from the database and add comment to it
-  const course = await Course.findById(courseId);
-  course.comments.push(newComment);
-
-  // Save the course to the database
-  await course.save();
-
-  // Send message to the user that the comment was added successfully
-  req.flash("success", `Tvůj komentář byl přidán!`);
-  res.redirect(`/courses/${course._id}`);
-};

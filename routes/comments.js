@@ -4,6 +4,10 @@ const commentsController = require("../controllers/comments");
 const isAuth = require("../utils/isAuth");
 
 router
+  .route("/")
+  .post(isAuth.ensureAuthenticated, commentsController.addComment);
+
+router
   .route("/:commentId")
   .put(isAuth.ensureAuthenticated, commentsController.likeComment);
 

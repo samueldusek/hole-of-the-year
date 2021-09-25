@@ -69,7 +69,7 @@ border-bottom border-5 border-success
     <div class="card mb-3 shadow">
       <form
       class="validated-form"
-      action="/courses/<%= course._id %>/comments"
+      action="/comments"
       method="POST"
       novalidate
       >
@@ -90,6 +90,7 @@ border-bottom border-5 border-success
           </div>
           <% if (currentUser) { %> 
             <input type="hidden" name="userId" value="<%= currentUser._id %>">
+            <input type="hidden" name="courseId" value="<%= course._id %>">
           <% } %> 
             <div class="card-footer">
               <button class="btn btn-success btn-sm" type="submit" <%= currentUser ? '' : 'disabled' %>>Přidat Komentář</button>
