@@ -134,9 +134,15 @@ border-bottom border-5 border-success
                 </div>
               </li>
             </ul>
-            <div class="card-footer d-flex justify-content-start">
+            <div class="card-footer d-flex justify-content-end">
+              <% if (currentUser && currentUser.nominatedHoles.some(userHole => userHole._id.toString() === hole._id.toString())) { %>
+                <form class="me-2" action="/holes/<%= hole._id %>/?_method=PUT" method="POST">
+                  <input type="hidden" name="userId" value="<%= currentUser._id %>">
+                  <input type="hidden" name="nomination" value="deselect">
+                  <button class="btn btn-danger btn-sm" >Zrušit nominaci</button>
+                </form>
+              <% } %>
               <form
-                class="me-2"
                 action="/holes/<%= hole._id %>/?_method=PUT"
                 method="POST"
               >
@@ -145,13 +151,6 @@ border-bottom border-5 border-success
                 <input type="hidden" name="userId" value="<%= currentUser._id %>">
                 <% } %> 
                 <button class="btn btn-success btn-sm" <% if (!currentUser || currentUser.nominatedHoles.length >= 3) { %>disabled<% } %>>Nominovat</button>
-              </form>
-              <form action="/holes/<%= hole._id %>/?_method=PUT" method="POST">
-                <% if (currentUser) { %> 
-                  <input type="hidden" name="userId" value="<%= currentUser._id %>">
-                  <% } %> 
-                <input type="hidden" name="nomination" value="deselect">
-                <button class="btn btn-danger btn-sm" <% if (!currentUser || !currentUser.nominatedHoles.find(userHole => userHole._id.toString() === hole._id.toString())) { %>disabled<% } %>>Zrušit nominaci</button>
               </form>
             </div>
           </div>
