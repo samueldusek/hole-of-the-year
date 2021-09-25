@@ -12,6 +12,14 @@ lh-base
     <h3 class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block">Základní informace</h3>
     <div class="card shadow">
       <img src="<%= course.image.url %> " class="card-img-top" alt="<%= course.name %>" />
+      <h6 class="card-subtitle my-2 ms-3 text-muted text-start">
+        <% if(course.image.author.name === "UDisc") { %>
+          Fotografii poskytl <a class="link-success" href=<%= course.image.author.url %>>UDisc.com</a>, fotografem je <%= course.image.author.tag %>.
+        <% } %>
+        <% if(course.image.author.name === "proDiscgolf.cz") { %>
+          Fotografii poskytl proDiscgolf.cz, fotografem je <a class="link-success" href=<%= course.image.author.url %>><%= course.image.author.tag %></a>.
+        <% } %> 
+      </h6>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <span class="fw-bold">Lokace:</span> <%= course.region %>
