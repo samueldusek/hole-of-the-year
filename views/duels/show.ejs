@@ -61,7 +61,7 @@
       <div class="col-md-5">
         <div class="card mt-3 <% if(isFinished && holeOneIsWinner) { %>shadow-gold<% } else { %>shadow<% } %>">
             <img
-              src="/img/teesign.jpg"
+              src=<%= holeOne.hole.image.url %>
               class="card-img-top d-none d-md-block"
               alt="<%= holeOne.hole.course.name %>"
             />
@@ -102,7 +102,12 @@
               <input type="hidden" name="userId" value="<%= currentUser._id %>">
               <% } %>
             <input type="hidden" name="holeId" value="<%= holeOne.hole._id %>"> 
-            <button class="btn btn-primary btn-sm w-100 mt-4 fs-3 shadow <% if(!isOngoing || !currentUser || currentUser.userDuels.find((userDuel) => userDuel.duel._id.toString() === duelId.toString())) { %>disabled<% } %>">Hlasovat</button>
+            <button class="btn btn-primary btn-sm w-100 mt-4 fs-3 shadow d-flex justify-content-center align-items-center <% if(!isOngoing || !currentUser || currentUser.userDuels.find((userDuel) => userDuel.duel._id.toString() === duelId.toString())) { %>disabled<% } %>">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="ms-1">Hlasovat</span>
+            </button>
           </form>
        <% } %> 
       </div>
@@ -112,7 +117,7 @@
       <div class="col-md-5">
         <div class="card mt-0 mt-md-3 <% if(isFinished && holeTwoIsWinner) { %>shadow-gold<% } else { %>shadow<% } %>">
             <img
-              src="/img/teesign.jpg"
+              src=<%= holeTwo.hole.image.url %>
               class="card-img-top d-none d-md-block"
               alt="<%= holeTwo.hole.course.name %>"
             />
@@ -153,7 +158,12 @@
                 <input type="hidden" name="userId" value="<%= currentUser._id %>">
                 <% } %>
               <input type="hidden" name="holeId" value="<%= holeTwo.hole._id %>"> 
-              <button class="btn btn-success btn-sm w-100 mt-4 fs-3 shadow <% if(!isOngoing || !currentUser || currentUser.userDuels.find((userDuel) => userDuel.duel._id.toString() === duelId.toString())) { %>disabled<% } %>">Hlasovat</button>
+              <button class="btn btn-success btn-sm w-100 mt-4 fs-3 shadow d-flex justify-content-center align-items-center <% if(!isOngoing || !currentUser || currentUser.userDuels.find((userDuel) => userDuel.duel._id.toString() === duelId.toString())) { %>disabled<% } %>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="ms-1">Hlasovat</span>
+              </button>
             </form>
           <% } %> 
       </div>

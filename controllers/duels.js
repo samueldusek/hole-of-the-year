@@ -1,7 +1,7 @@
 const Duel = require("../models/duel");
 const Hole = require("../models/hole");
 const User = require("../models/user");
-const { getCzechDate, getCzechDatePlusTime } = require("../utils/helpers");
+const format = require("date-fns/format");
 
 module.exports.showAllDuels = async (req, res) => {
   try {
@@ -25,8 +25,8 @@ module.exports.showAllDuels = async (req, res) => {
       duelsToDisplay = duels.map((duel) => {
         return {
           ...duel._doc,
-          startDate: getCzechDate(duel.startDate),
-          endDate: getCzechDate(duel.endDate),
+          startDate: format(duel.startDate, "d.M.y"),
+          endDate: format(duel.endDate, "d.M.y"),
           isFinished: today > duel.endDate.getTime(),
           isOngoing:
             duel.startDate.getTime() < today && today < duel.endDate.getTime(),
@@ -84,8 +84,8 @@ module.exports.showDuel = async (req, res) => {
     const today = new Date();
 
     res.render("duels/show", {
-      startDate: getCzechDatePlusTime(startDate),
-      endDate: getCzechDatePlusTime(endDate),
+      startDate: format(startDate, "d.M.y, HH:mm"),
+      endDate: format(endDate, "d.M.y, HH:mm"),
       isFinished: today.getTime() > endDate.getTime(),
       isOngoing:
         startDate.getTime() < today.getTime() &&
