@@ -732,5 +732,76 @@
   </div>
   <div class="mt-5">
     <h2 class="text-center fw-bold lh-base">Tabulka všech duelů</h2>
+    <div class="row mt-3 justify-content-center">
+      <div class="col-11">
+        <table class="table">
+          <thead class="table-success">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Začátek</th>
+              <th scope="col"></th>
+              <th scope="col" class="text-end">Jamka 1</th>
+              <th scope="col">              
+                <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
+              </th>
+              <th scope="col">Jamka 2</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (let duel of duels){ %>
+            <tr>
+              <th scope="row"><%= duel.round %></th>
+              <td><time><%= duel.startDate %></time></td>
+              <td>
+                <a class="badge bg-success text-white text-decoration-none" href="/duels/<%= duel._id %>">
+                  Vstoupit
+                </a>
+              </td>
+              <td class="text-end">
+                <a class="link-success text-decoration-none" href="/courses/<%= duel.holesInDuel[0].hole.course._id %>">
+                  <%= duel.holesInDuel[0].hole.course.name %>
+                </a>
+                <span class="fw-bold">
+                  <%= duel.holesInDuel[0].hole.number %>#
+                </span>
+                <% if(duel.isFinished) { %>
+                  <% if(duel.holesInDuel[0].votes > duel.holesInDuel[1].votes) { %>
+                    <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
+                  <% } else { %>
+                    <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
+                  <% } %> 
+                <% } %> 
+              </td>
+              <td class="text-center">vs.</td>
+              <td>
+                <% if(duel.isFinished) { %>
+                  <% if(duel.holesInDuel[1].votes > duel.holesInDuel[0].votes) { %>
+                    <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
+                  <% } else { %>
+                    <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
+                  <% } %> 
+                <% } %> 
+                <span class="fw-bold"
+                  ><%= duel.holesInDuel[1].hole.number %>#</span
+                >
+                <a class="link-success text-decoration-none" href="/courses/<%= duel.holesInDuel[1].hole.course._id %>">
+                  <%= duel.holesInDuel[1].hole.course.name %>
+                </a>
+              </td>
+              <td>
+                <% if(duel.isOngoing) { %> 
+                  <span class="badge rounded-pill bg-warning text-dark text-wrap">Probíhá</span>
+                <% } %> 
+                <% if(duel.isFinished) { %> 
+                  <span class="badge rounded-pill bg-secondary text-white text-wrap">Skončil</span>
+                <% } %> 
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

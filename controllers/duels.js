@@ -18,15 +18,15 @@ module.exports.showAllDuels = async (req, res) => {
 
     const today = new Date().getTime();
 
-    const duelsToDisplay = [];
+    const formattedDuels = [];
     let heroDuel;
 
     // Format duels if any duels fetched
     if (duels) {
       duels.forEach((duel) => {
-        duelsToDisplay.push({
+        formattedDuels.push({
           ...duel._doc,
-          startDate: format(duel.startDate, "d.M.y"),
+          startDate: format(duel.startDate, "d.M.y, HH:mm"),
           endDate: format(duel.endDate, "d.M.y"),
           isFinished: today > duel.endDate.getTime(),
           isOngoing:
@@ -42,7 +42,7 @@ module.exports.showAllDuels = async (req, res) => {
 
     res.render("duels/index", {
       heroDuel,
-      duels: duelsToDisplay,
+      duels: formattedDuels,
       pageTitle: "Duely - Jamka Roku 2021",
       path: "/duels/index",
     });
