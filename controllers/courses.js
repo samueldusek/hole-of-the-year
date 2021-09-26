@@ -1,8 +1,6 @@
 const Course = require("../models/course");
-const Comment = require("../models/comment");
-const User = require("../models/user");
 const slugify = require("slugify");
-const { getCzechDatePlusTime } = require("../utils/helpers");
+const format = require("date-fns/format");
 
 const ITEMS_PER_PAGE = 8;
 
@@ -101,7 +99,7 @@ module.exports.showCourse = async (req, res) => {
       return {
         id: comment._id,
         author: comment.author,
-        date: getCzechDatePlusTime(comment.date),
+        date: format(comment.date, "d.M.y, HH:mm"),
         text: comment.text,
         votes: comment.votes,
       };

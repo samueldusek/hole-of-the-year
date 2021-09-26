@@ -1,7 +1,7 @@
 const User = require("../models/user");
 const Comment = require("../models/comment");
 const Course = require("../models/course");
-const { getCzechDatePlusTime } = require("../utils/helpers");
+const format = require("date-fns/format");
 
 module.exports.addComment = async (req, res) => {
   // Get the comment text, user and course ids
@@ -154,7 +154,7 @@ module.exports.getTopComments = async (req, res) => {
     if (comments) {
       formattedComments = comments.map((comment) => ({
         ...comment._doc,
-        date: getCzechDatePlusTime(comment.date),
+        date: format(comment.date, "d.M.y, HH:mm"),
       }));
     }
     res.render("comments/top", {
