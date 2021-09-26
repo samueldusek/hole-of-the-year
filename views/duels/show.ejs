@@ -1,6 +1,18 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1 class="mb-3 text-center lh-base">Duel #<%= round %></h1>
+<div class="d-flex justify-content-center">
+  <h1
+    class="
+      display-6
+      d-inline-block
+      fw-bold
+      border-bottom border-5 border-success
+      lh-base
+    "
+  >
+  Duel #<%= round %>
+  </h1>
+</div>
 
 <div class="alert alert-info alert-dismissible fade show" role="alert">
   <% if(isOngoing) { %> 

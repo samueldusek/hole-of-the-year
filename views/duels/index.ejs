@@ -1,99 +1,98 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1
-  class="
-    display-6
-    d-inline
-    fw-bold
-    border-bottom border-5 border-success
-    lh-base
-  "
->
-  Duely nominovaných jamek
-</h1>
+<div class="d-flex justify-content-center">
+  <h1
+    class="
+      display-6
+      d-inline-block
+      fw-bold
+      border-bottom border-5 border-success
+      lh-base
+    "
+  >
+    Duely nominovaných jamek
+  </h1>
+</div>
 
 <div class="my-3">
   <% if(heroDuel) { %>
-  <div class="mt-3">
-    <h2 class="d-inline fw-bold border-bottom border-5 border-success lh-base">
-      Právě probíhající duel
-    </h2>
-    <div class="card text-center my-3 shadow">
-      <div class="card-header">
-        <h2>Duel #<%= heroDuel.round %></h2>
-        <span class="badge rounded-pill bg-warning text-dark text-wrap"
-          >Právě probíhá</span
-        >
-      </div>
-      <div class="card-body">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-md-4">
-            <div class="card shadow">
-              <div class="card-body">
-                <h5
-                  class="
-                    card-title
-                    fw-bold
-                    d-inline-block
-                    border-bottom border-primary border-5
-                    pb-1
-                    mb-3
-                  "
-                >
-                  Jamka #<%= heroDuel.holesInDuel[0].hole.number %>
-                </h5>
-                <a
-                  href="/courses/<%= heroDuel.holesInDuel[0].hole.course._id %>"
-                  class="d-block card-text text-dark text-decoration-none"
-                >
-                  <%= heroDuel.holesInDuel[0].hole.course.name %>
-                </a>
+  <div class="mt-5">
+    <h2 class="fw-bold lh-base text-center">Probíhající duel</h2>
+    <div class="row justify-content-center">
+      <div class="col-7">
+        <div class="card text-center my-3 shadow">
+          <div class="card-header bg-success">
+            <h3 class="text-white fw-bold mb-0">Duel #<%= heroDuel.round %></h3>
+          </div>
+          <div class="card-body">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <h5
+                      class="
+                        card-title
+                        fw-bold
+                        d-inline-block
+                        border-bottom border-primary border-5
+                        pb-1
+                        mb-3
+                      "
+                    >
+                      Jamka #<%= heroDuel.holesInDuel[0].hole.number %>
+                    </h5>
+                    <a
+                      href="/courses/<%= heroDuel.holesInDuel[0].hole.course._id %>"
+                      class="d-block card-text text-dark text-decoration-none"
+                    >
+                      <%= heroDuel.holesInDuel[0].hole.course.name %>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 display-5 my-4 my-md-0">VS.</div>
+              <div class="col-md-4">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <h5
+                      class="
+                        card-title
+                        fw-bold
+                        d-inline-block
+                        border-bottom border-success border-5
+                        pb-1
+                        mb-3
+                      "
+                    >
+                      Jamka #<%= heroDuel.holesInDuel[1].hole.number %>
+                    </h5>
+                    <a
+                      href="/courses/<%= heroDuel.holesInDuel[1].hole.course._id %>"
+                      class="d-block card-text text-dark text-decoration-none"
+                    >
+                      <%= heroDuel.holesInDuel[1].hole.course.name %>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 display-5 my-4 my-md-0">VS.</div>
-          <div class="col-md-4">
-            <div class="card shadow">
-              <div class="card-body">
-                <h5
-                  class="
-                    card-title
-                    fw-bold
-                    d-inline-block
-                    border-bottom border-success border-5
-                    pb-1
-                    mb-3
-                  "
-                >
-                  Jamka #<%= heroDuel.holesInDuel[1].hole.number %>
-                </h5>
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-auto">
                 <a
-                  href="/courses/<%= heroDuel.holesInDuel[1].hole.course._id %>"
-                  class="d-block card-text text-dark text-decoration-none"
+                  href="/duels/<%= heroDuel._id %>"
+                  class="btn btn-outline-success mt-4 mt-lg-2 shadow w-100"
+                  >Vstoupit do duelu</a
                 >
-                  <%= heroDuel.holesInDuel[1].hole.course.name %>
-                </a>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-auto">
-            <a
-              href="/duels/<%= heroDuel._id %>"
-              class="btn btn-outline-success mt-4 mt-lg-2 shadow w-100"
-              >Vstoupit do duelu</a
-            >
           </div>
         </div>
       </div>
     </div>
   </div>
   <% } %>
-  <div class="mt-3">
-    <h2 class="d-inline fw-bold border-bottom border-5 border-success lh-base">
-      Soutěžní pavouk
-    </h2>
+  <div class="mt-5">
+    <h2 class="text-center fw-bold lh-base">Soutěžní pavouk</h2>
     <div class="row mt-3">
       <div class="col px-4 d-flex flex-column justify-content-evenly">
         <div class="text-center mb-3">
@@ -731,9 +730,7 @@
       </div>
     </div>
   </div>
-  <div class="mt-3">
-    <h2 class="d-inline fw-bold border-bottom border-5 border-success lh-base">
-      Tabulka všech duelů
-    </h2>
+  <div class="mt-5">
+    <h2 class="text-center fw-bold lh-base">Tabulka všech duelů</h2>
   </div>
 </div>
