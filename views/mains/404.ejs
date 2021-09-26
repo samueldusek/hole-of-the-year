@@ -1,17 +1,23 @@
 <% layout('/layouts/mainTemplate') %>
 
-<h1
-  class="
-    display-6
-    d-inline-block
-    fw-bold
-    border-bottom border-5 border-success
-    lh-base
-  "
->
-  404: Jsi v OB! :-(
-</h1>
-
+<div class="d-flex align-items-center">
+  <h1
+    class="
+      display-6
+      d-inline-block
+      fw-bold
+      border-bottom border-5 border-success
+      lh-base
+    "
+  >
+    404: Jsi v OB!
+  </h1>
+  <i
+    class="em em-triangular_flag_on_post fs-2 ms-2"
+    aria-role="presentation"
+    aria-label="TRIANGULAR FLAG ON POST"
+  ></i>
+</div>
 <div class="mt-4 fs-5">
   <p><%= currentUser ? `Ahoj ${currentUser.username},` : "Ahoj," %></p>
   <p>
