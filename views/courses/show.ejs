@@ -48,9 +48,14 @@ lh-base
       </div>
     <% } else { %> <% for (let comment of comments ) { %>
     <div class="card mb-3 shadow">
-      <div class="card-header d-flex justify-content-between">
+      <div class="card-header d-flex">
         <span class="fw-bold"><%= comment.author.username %></span>
-        <span class="badge rounded-pill bg-secondary text-white text-wrap lh-sm"><%= comment.date %></span>
+        <div class="ms-auto">
+          <time
+            class="badge rounded-pill bg-secondary text-white text-wrap lh-1"
+            ><%= comment.date %></time
+          >
+        </div>
       </div>
       <div class="card-body">
         <p class="card-text"><%= comment.text %></p>

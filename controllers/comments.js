@@ -150,15 +150,22 @@ module.exports.getTopComments = async (req, res) => {
       .populate("author", "username")
       .sort({ votes: "descending" })
       .limit(10);
-    let formattedComments = [];
+    const firstColComments = [];
+    const secondColComments = [];
     if (comments) {
-      formattedComments = comments.map((comment) => ({
-        ...comment._doc,
-        date: format(comment.date, "d.M.y, HH:mm"),
-      }));
+      comments.forEach((comment, idx) => {
+        const formattedComment = {
+          ...comment._doc,
+          date: format(comment.date, "d.M.y, HH:mm"),
+        };
+        idx < 5
+          ? firstColComments.push(formattedComment)
+          : secondColComments.push(formattedComment);
+      });
     }
     res.render("comments/top", {
-      comments: formattedComments,
+      firstColComments,
+      secondColComments,
       pageTitle: "Top 10 komentářů - Jamka Roku 2021",
       path: "/comments/top",
     });
