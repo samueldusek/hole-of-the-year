@@ -39,6 +39,7 @@ const seedDb = async () => {
       startDate: startDate,
       endDate: new Date(startDate.getTime() + ONE_DAY_MINUS_MINUTE_IN_MS),
       round: i + 1,
+      phase: "eight",
     });
     duel.holesInDuel.push({
       hole: holes.shift(),

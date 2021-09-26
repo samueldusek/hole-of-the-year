@@ -29,6 +29,7 @@ const NEXT_DUEL_ROUND = 9;
 const NEXT_DUEL_START_DATE = new Date(
   process.env.DATE_PLAYOFF_START * 1000 + (NEXT_DUEL_ROUND - 1) * ONE_DAY_IN_MS
 );
+const NEXT_DUEL_PHASE = "quarter"; // "eight", "quarter", "semi", "final"
 
 const seedDb = async () => {
   // Get duels
@@ -52,6 +53,7 @@ const seedDb = async () => {
       NEXT_DUEL_START_DATE.getTime() + ONE_DAY_MINUS_MINUTE_IN_MS
     ),
     round: NEXT_DUEL_ROUND,
+    phase: NEXT_DUEL_PHASE,
   });
   duel.holesInDuel.push({
     hole: holes.shift(),

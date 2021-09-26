@@ -9,335 +9,731 @@
     lh-base
   "
 >
-  Seznam všech duelů
+  Duely nominovaných jamek
 </h1>
 
-<div class="my-5"">
-  <div class="row">
-    <div class="col px-4 d-flex flex-column justify-content-evenly">
-      <div class="text-center mb-3">
-        <h4 class="border-bottom border-4 border-success d-inline mx-auto lh-base">Osmifinále</h4>
+<div class="my-3">
+  <% if(heroDuel) { %>
+  <div class="mt-3">
+    <h2 class="d-inline fw-bold border-bottom border-5 border-success lh-base">
+      Právě probíhající duel
+    </h2>
+    <div class="card text-center my-3 shadow">
+      <div class="card-header">
+        <h2>Duel #<%= heroDuel.round %></h2>
+        <span class="badge rounded-pill bg-warning text-dark text-wrap"
+          >Právě probíhá</span
+        >
       </div>
-      <div class="d-flex flex-column justify-content-evenly h-100">
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2 border border-success border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Bocheta</h6>
-            <h5 class="mb-0 fw-bold fs-4">#4</h5>
+      <div class="card-body">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5
+                  class="
+                    card-title
+                    fw-bold
+                    d-inline-block
+                    border-bottom border-primary border-5
+                    pb-1
+                    mb-3
+                  "
+                >
+                  Jamka #<%= heroDuel.holesInDuel[0].hole.number %>
+                </h5>
+                <a
+                  href="/courses/<%= heroDuel.holesInDuel[0].hole.course._id %>"
+                  class="d-block card-text text-dark text-decoration-none"
+                >
+                  <%= heroDuel.holesInDuel[0].hole.course.name %>
+                </a>
+              </div>
+            </div>
           </div>
-          <time class="text-black-50 text-center">11.11.2021</time>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1 text-muted text-decoration-line-through">DiscgolfPark Mertovy Sady</h6>
-            <h5 class="mb-0 fw-bold fs-4 text-muted">#2</h5></div>
+          <div class="col-md-3 display-5 my-4 my-md-0">VS.</div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5
+                  class="
+                    card-title
+                    fw-bold
+                    d-inline-block
+                    border-bottom border-success border-5
+                    pb-1
+                    mb-3
+                  "
+                >
+                  Jamka #<%= heroDuel.holesInDuel[1].hole.number %>
+                </h5>
+                <a
+                  href="/courses/<%= heroDuel.holesInDuel[1].hole.course._id %>"
+                  class="d-block card-text text-dark text-decoration-none"
+                >
+                  <%= heroDuel.holesInDuel[1].hole.course.name %>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2 border border-success border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1 text-muted text-decoration-line-through">DiscgolfPark Kopřivnice</h6>
-            <h5 class="mb-0 fw-bold fs-4 text-muted">#3</h5>
-          </div>
-          <time class="text-black-50 text-center">12.11.2021</time>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Tošovice</h6>
-            <h5 class="mb-0 fw-bold fs-4">#1</h5></div>
-          </div>
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2 border border-warning border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Bocheta</h6>
-            <h5 class="mb-0 fw-bold fs-4">#4</h5>
-          </div>
-          <time class="text-black-50 text-center">13.11.2021</time>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Mertovy Sady</h6>
-            <h5 class="mb-0 fw-bold fs-4">#2</h5></div>
-        </div>
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2 border border-success border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Bocheta</h6>
-            <h5 class="mb-0 fw-bold fs-4">#4</h5>
-          </div>
-          <time class="text-black-50 text-center">14.11.2021</time>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Mertovy Sady</h6>
-            <h5 class="mb-0 fw-bold fs-4">#2</h5></div>
-        </div>
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2 border border-success border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Bocheta</h6>
-            <h5 class="mb-0 fw-bold fs-4">#4</h5>
-          </div>
-          <time class="text-black-50 text-center">15.11.2021</time>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Mertovy Sady</h6>
-            <h5 class="mb-0 fw-bold fs-4">#2</h5></div>
-        </div>
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2 border border-success border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Bocheta</h6>
-            <h5 class="mb-0 fw-bold fs-4">#4</h5>
-          </div>
-          <time class="text-black-50 text-center">16.11.2021</time>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Mertovy Sady</h6>
-            <h5 class="mb-0 fw-bold fs-4">#2</h5></div>
-        </div>
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2 border border-success border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Bocheta</h6>
-            <h5 class="mb-0 fw-bold fs-4">#4</h5>
-          </div>
-          <time class="text-black-50 text-center">17.11.2021</time>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Mertovy Sady</h6>
-            <h5 class="mb-0 fw-bold fs-4">#2</h5></div>
-        </div>
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2 border border-success border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Bocheta</h6>
-            <h5 class="mb-0 fw-bold fs-4">#4</h5>
-          </div>
-          <time class="text-black-50 text-center">18.11.2021</time>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-            <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Mertovy Sady</h6>
-            <h5 class="mb-0 fw-bold fs-4">#2</h5>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-auto">
+            <a
+              href="/duels/<%= heroDuel._id %>"
+              class="btn btn-outline-success mt-4 mt-lg-2 shadow w-100"
+              >Vstoupit do duelu</a
+            >
           </div>
         </div>
       </div>
     </div>
-    <div class="col px-4 d-flex flex-column justify-content-evenly">
-      <div class="text-center mb-3">
-        <h4 class="border-bottom border-4 border-success d-inline mx-auto lh-base">Čtvrtfinále</h4>
-      </div>
-      <div class="d-flex flex-column justify-content-evenly h-100">
-        <div class="flex-grow-1 flex-shrink-1 d-flex flex-column justify-content-center my-2" style="flex-basis: 0;">
-          <div class="border border-success border-3 p-2 d-flex flex-column shadow rounded">
+  </div>
+  <% } %>
+  <div class="mt-3">
+    <h2 class="d-inline fw-bold border-bottom border-5 border-success lh-base">
+      Soutěžní pavouk
+    </h2>
+    <div class="row mt-3">
+      <div class="col px-4 d-flex flex-column justify-content-evenly">
+        <div class="text-center mb-3">
+          <h4
+            class="
+              border-bottom border-4 border-success
+              d-inline
+              mx-auto
+              lh-base
+            "
+          >
+            Osmifinále
+          </h4>
+        </div>
+        <div class="d-flex flex-column justify-content-evenly h-100">
+          <div
+            class="
+              flex-grow-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-success border-3
+              p-2
+            "
+          >
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-              <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Bocheta</h6>
+              <i
+                class="em em-trophy"
+                aria-role="presentation"
+                aria-label="TROPHY"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Bocheta
+              </h6>
               <h5 class="mb-0 fw-bold fs-4">#4</h5>
             </div>
-            <time class="text-black-50 text-center">19.11.2021</time>
+            <time class="text-black-50 text-center">11.11.2021</time>
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-              <h6 class="mb-0 text-center fw-bold mx-1">DiscgolfPark Tošovice</h6>
+              <i
+                class="em em-x"
+                aria-role="presentation"
+                aria-label="CROSS MARK"
+              ></i>
+              <h6
+                class="
+                  mb-0
+                  text-center
+                  fw-bold
+                  mx-1
+                  text-muted text-decoration-line-through
+                "
+              >
+                DiscgolfPark Mertovy Sady
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4 text-muted">#2</h5>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-success border-3
+              p-2
+            "
+          >
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <i
+                class="em em-x"
+                aria-role="presentation"
+                aria-label="CROSS MARK"
+              ></i>
+              <h6
+                class="
+                  mb-0
+                  text-center
+                  fw-bold
+                  mx-1
+                  text-muted text-decoration-line-through
+                "
+              >
+                DiscgolfPark Kopřivnice
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4 text-muted">#3</h5>
+            </div>
+            <time class="text-black-50 text-center">12.11.2021</time>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <i
+                class="em em-trophy"
+                aria-role="presentation"
+                aria-label="TROPHY"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Tošovice
+              </h6>
               <h5 class="mb-0 fw-bold fs-4">#1</h5>
             </div>
           </div>
-        </div>
-        <div class="flex-grow-1 flex-shrink-1 d-flex flex-column justify-content-center my-2" style="flex-basis: 0;">
-          <div class="border border-success border-3 p-2 d-flex flex-column shadow rounded">
-            <div class="d-flex justify-content-center align-items-center mb-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-            <time class="text-black-50 text-center">20.11.2021</time>
-            <div class="d-flex justify-content-center align-items-center mt-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-          </div>
-        </div>
-        <div class="flex-grow-1 flex-shrink-1 d-flex flex-column justify-content-center my-2" style="flex-basis: 0;">
-          <div class="border border-success border-3 p-2 d-flex flex-column shadow rounded">
-            <div class="d-flex justify-content-center align-items-center mb-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-            <time class="text-black-50 text-center">21.11.2021</time>
-            <div class="d-flex justify-content-center align-items-center mt-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-          </div>
-        </div>
-        <div class="flex-grow-1 flex-shrink-1 d-flex flex-column justify-content-center my-2" style="flex-basis: 0;">
-          <div class="border border-success border-3 p-2 d-flex flex-column shadow rounded">
-            <div class="d-flex justify-content-center align-items-center mb-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-            <time class="text-black-50 text-center">22.11.2021</time>
-            <div class="d-flex justify-content-center align-items-center mt-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-          </div>
-        </div>        
-      </div>
-    </div>
-    <div class="col px-4 d-flex flex-column justify-content-evenly">
-      <div class="text-center mb-3">
-        <h4 class="border-bottom border-4 border-success d-inline mx-auto lh-base">Semifinále</h4>
-      </div>
-      <div class="d-flex flex-column justify-content-evenly h-100">
-        <div class="flex-grow-1 flex-shrink-1 d-flex flex-column justify-content-center my-2" style="flex-basis: 0;">
-          <div class="border border-success border-3 p-2 d-flex flex-column shadow rounded">
-            <div class="d-flex justify-content-center align-items-center mb-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-            <time class="text-black-50 text-center">23.11.2021</time>
-            <div class="d-flex justify-content-center align-items-center mt-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-          </div>
-        </div>
-        <div class="flex-grow-1 flex-shrink-1 d-flex flex-column justify-content-center my-2" style="flex-basis: 0;">
-          <div class="border border-success border-3 p-2 d-flex flex-column shadow rounded">
-            <div class="d-flex justify-content-center align-items-center mb-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-            <time class="text-black-50 text-center">24.11.2021</time>
-            <div class="d-flex justify-content-center align-items-center mt-2">
-              <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-            </div>
-          </div>
-        </div>    
-      </div>
-    </div>
-    <div class="col px-4 d-flex flex-column justify-content-evenly">
-      <div class="text-center mb-3">
-        <h4 class="border-bottom border-4 border-success d-inline mx-auto lh-base">Finále</h4>
-      </div>
-      <div class="d-flex flex-column justify-content-evenly h-100">
-        <div class="d-flex flex-column justify-content-center my-2 border border-success border-3 p-2 shadow rounded">
-          <div class="d-flex justify-content-center align-items-center mb-2">
-            <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-          </div>
-          <time class="text-black-50 text-center">25.11.2021</time>
-          <div class="d-flex justify-content-center align-items-center mt-2">
-            <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-          </div>        
-        </div>  
-      </div>
-    </div>
-    <div class="col px-4 d-flex flex-column justify-content-evenly">
-      <div class="text-center mb-3">
-        <h4 class="border-bottom border-4 border-success d-inline mx-auto lh-base">Vítězná jamka</h4>
-      </div>
-      <div class="d-flex flex-column justify-content-evenly h-100">
-        <div class="flex-grow-1 d-flex flex-column justify-content-center my-2">
-          <div class="d-flex justify-content-center align-items-center mb-2 border border-success border-3 p-2 shadow rounded">
-            <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-          </div>
-        </div>  
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="my-5">
-  <% duels.forEach(duel => { %>
-
-  <div
-    class="
-      card
-      text-center
-      mt-5
-      <%
-      if(duel.isOngoing)
-      {
-      %>shadow-gold<%
-      }
-      else
-      {
-      %>shadow<%
-      }
-      %>
-    "
-  >
-    <div class="card-header">
-      <h2>Duel #<%= duel.round %></h2>
-      <% if(duel.isFinished) { %>
-      <span class="badge rounded-pill bg-dark text-white text-wrap"
-        >Již skončil</span
-      >
-      <% } else if(duel.isOngoing) { %>
-      <span class="badge rounded-pill bg-warning text-dark text-wrap"
-        >Právě probíhá</span
-      >
-      <% } else if(duel.isAboutToStart) { %>
-      <span class="badge rounded-pill bg-primary text-white text-wrap"
-        >Ještě nezačal</span
-      >
-      <% } %>
-    </div>
-    <div class="card-body">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-4">
-          <div class="card shadow">
-            <div class="card-body">
-              <h5
-                class="
-                  card-title
-                  fw-bold
-                  d-inline-block
-                  border-bottom border-primary border-5
-                  pb-1
-                  mb-3
-                "
-              >
-                Jamka #<%= duel.holesInDuel[0].hole.number %>
-              </h5>
-              <a
-                href="/courses/<%= duel.holesInDuel[0].hole.course._id %>"
-                class="d-block card-text text-dark text-decoration-none"
-              >
-                <%= duel.holesInDuel[0].hole.course.name %>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 display-5 my-2 my-md-0">VS.</div>
-        <div class="col-md-4">
-          <div class="card shadow">
-            <div class="card-body">
-              <h5
-                class="
-                  card-title
-                  fw-bold
-                  d-inline-block
-                  border-bottom border-success border-5
-                  pb-1
-                  mb-3
-                "
-              >
-                Jamka #<%= duel.holesInDuel[1].hole.number %>
-              </h5>
-              <a
-                href="/courses/<%= duel.holesInDuel[1].hole.course._id %>"
-                class="d-block card-text text-dark text-decoration-none"
-              >
-                <%= duel.holesInDuel[1].hole.course.name %>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-auto">
-          <a
-            href="/duels/<%= duel._id %>"
-            class="btn btn-outline-dark mt-4 mt-lg-2 shadow w-100"
-            >Vstoupit do duelu</a
+          <div
+            class="
+              flex-grow-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-warning border-3
+              p-2
+            "
           >
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <i
+                class="em em-crossed_swords"
+                aria-role="presentation"
+                aria-label=""
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Bocheta
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#4</h5>
+            </div>
+            <time class="text-black-50 text-center">13.11.2021</time>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <i
+                class="em em-crossed_swords"
+                aria-role="presentation"
+                aria-label=""
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Mertovy Sady
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#2</h5>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-success border-3
+              p-2
+            "
+          >
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Bocheta
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#4</h5>
+            </div>
+            <time class="text-black-50 text-center">14.11.2021</time>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Mertovy Sady
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#2</h5>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-success border-3
+              p-2
+            "
+          >
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Bocheta
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#4</h5>
+            </div>
+            <time class="text-black-50 text-center">15.11.2021</time>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Mertovy Sady
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#2</h5>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-success border-3
+              p-2
+            "
+          >
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Bocheta
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#4</h5>
+            </div>
+            <time class="text-black-50 text-center">16.11.2021</time>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Mertovy Sady
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#2</h5>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-success border-3
+              p-2
+            "
+          >
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Bocheta
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#4</h5>
+            </div>
+            <time class="text-black-50 text-center">17.11.2021</time>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Mertovy Sady
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#2</h5>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-success border-3
+              p-2
+            "
+          >
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Bocheta
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#4</h5>
+            </div>
+            <time class="text-black-50 text-center">18.11.2021</time>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <i
+                class="em em-grey_question"
+                aria-role="presentation"
+                aria-label="WHITE QUESTION MARK ORNAMENT"
+              ></i>
+              <h6 class="mb-0 text-center fw-bold mx-1">
+                DiscgolfPark Mertovy Sady
+              </h6>
+              <h5 class="mb-0 fw-bold fs-4">#2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col px-4 d-flex flex-column justify-content-evenly">
+        <div class="text-center mb-3">
+          <h4
+            class="
+              border-bottom border-4 border-success
+              d-inline
+              mx-auto
+              lh-base
+            "
+          >
+            Čtvrtfinále
+          </h4>
+        </div>
+        <div class="d-flex flex-column justify-content-evenly h-100">
+          <div
+            class="
+              flex-grow-1 flex-shrink-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+            "
+            style="flex-basis: 0"
+          >
+            <div
+              class="border-end border-success border-3 p-2 d-flex flex-column"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <i
+                  class="em em-grey_question"
+                  aria-role="presentation"
+                  aria-label="WHITE QUESTION MARK ORNAMENT"
+                ></i>
+                <h6 class="mb-0 text-center fw-bold mx-1">
+                  DiscgolfPark Bocheta
+                </h6>
+                <h5 class="mb-0 fw-bold fs-4">#4</h5>
+              </div>
+              <time class="text-black-50 text-center">19.11.2021</time>
+              <div
+                class="d-flex justify-content-between align-items-center mt-2"
+              >
+                <i
+                  class="em em-grey_question"
+                  aria-role="presentation"
+                  aria-label="WHITE QUESTION MARK ORNAMENT"
+                ></i>
+                <h6 class="mb-0 text-center fw-bold mx-1">
+                  DiscgolfPark Tošovice
+                </h6>
+                <h5 class="mb-0 fw-bold fs-4">#1</h5>
+              </div>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1 flex-shrink-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+            "
+            style="flex-basis: 0"
+          >
+            <div
+              class="border-end border-success border-3 p-2 d-flex flex-column"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center mb-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+              <time class="text-black-50 text-center">20.11.2021</time>
+              <div
+                class="d-flex justify-content-center align-items-center mt-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1 flex-shrink-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+            "
+            style="flex-basis: 0"
+          >
+            <div
+              class="border-end border-success border-3 p-2 d-flex flex-column"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center mb-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+              <time class="text-black-50 text-center">21.11.2021</time>
+              <div
+                class="d-flex justify-content-center align-items-center mt-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1 flex-shrink-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+            "
+            style="flex-basis: 0"
+          >
+            <div
+              class="border-end border-success border-3 p-2 d-flex flex-column"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center mb-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+              <time class="text-black-50 text-center">22.11.2021</time>
+              <div
+                class="d-flex justify-content-center align-items-center mt-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col px-4 d-flex flex-column justify-content-evenly">
+        <div class="text-center mb-3">
+          <h4
+            class="
+              border-bottom border-4 border-success
+              d-inline
+              mx-auto
+              lh-base
+            "
+          >
+            Semifinále
+          </h4>
+        </div>
+        <div class="d-flex flex-column justify-content-evenly h-100">
+          <div
+            class="
+              flex-grow-1 flex-shrink-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+            "
+            style="flex-basis: 0"
+          >
+            <div
+              class="border-end border-success border-3 p-2 d-flex flex-column"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center mb-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+              <time class="text-black-50 text-center">23.11.2021</time>
+              <div
+                class="d-flex justify-content-center align-items-center mt-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="
+              flex-grow-1 flex-shrink-1
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+            "
+            style="flex-basis: 0"
+          >
+            <div
+              class="border-end border-success border-3 p-2 d-flex flex-column"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center mb-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+              <time class="text-black-50 text-center">24.11.2021</time>
+              <div
+                class="d-flex justify-content-center align-items-center mt-2"
+              >
+                <i
+                  class="em em-question"
+                  aria-role="presentation"
+                  aria-label="BLACK QUESTION MARK ORNAMENT"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col px-4 d-flex flex-column justify-content-evenly">
+        <div class="text-center mb-3">
+          <h4
+            class="
+              border-bottom border-4 border-success
+              d-inline
+              mx-auto
+              lh-base
+            "
+          >
+            Finále
+          </h4>
+        </div>
+        <div class="d-flex flex-column justify-content-evenly h-100">
+          <div
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              my-4
+              border-end border-success border-3
+              p-2
+            "
+          >
+            <div class="d-flex justify-content-center align-items-center mb-2">
+              <i
+                class="em em-question"
+                aria-role="presentation"
+                aria-label="BLACK QUESTION MARK ORNAMENT"
+              ></i>
+            </div>
+            <time class="text-black-50 text-center">25.11.2021</time>
+            <div class="d-flex justify-content-center align-items-center mt-2">
+              <i
+                class="em em-question"
+                aria-role="presentation"
+                aria-label="BLACK QUESTION MARK ORNAMENT"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col px-4 d-flex flex-column justify-content-evenly">
+        <div class="text-center mb-3">
+          <h4
+            class="
+              border-bottom border-4 border-success
+              d-inline
+              mx-auto
+              lh-base
+            "
+          >
+            Vítězná jamka
+          </h4>
+        </div>
+        <div class="d-flex flex-column justify-content-evenly h-100">
+          <div
+            class="flex-grow-1 d-flex flex-column justify-content-center my-4"
+          >
+            <div
+              class="
+                d-flex
+                justify-content-center
+                align-items-center
+                mb-2
+                border-end border-success border-3
+                p-2
+              "
+            >
+              <i
+                class="em em-question"
+                aria-role="presentation"
+                aria-label="BLACK QUESTION MARK ORNAMENT"
+              ></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="card-footer text-muted">
-      <% if(duel.isFinished) { %> Tento duel proběhl <%= duel.endDate %> <% }
-      else if(duel.isOngoing) { %> Tento duel probíhá právě teď <% } else
-      if(duel.isAboutToStart) { %> Tento duel proběhne <%= duel.startDate %> <%
-      } %>
-    </div>
   </div>
-  <% }) %>
+  <div class="mt-3">
+    <h2 class="d-inline fw-bold border-bottom border-5 border-success lh-base">
+      Tabulka všech duelů
+    </h2>
+  </div>
 </div>
-

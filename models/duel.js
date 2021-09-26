@@ -4,6 +4,10 @@ const Schema = mongoose.Schema;
 const DuelSchema = new Schema({
   startDate: Date,
   endDate: Date,
+  phase: {
+    type: String,
+    default: "eight",
+  },
   round: {
     type: Number,
     default: 0,
