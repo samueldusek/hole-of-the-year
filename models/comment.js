@@ -8,7 +8,15 @@ const CommentSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
+  course: {
+    type: Schema.Types.ObjectId,
+    ref: "Course",
+  },
   votes: {
+    type: Number,
+    default: 0,
+  },
+  lastVoteTimeStamp: {
     type: Number,
     default: 0,
   },

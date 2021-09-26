@@ -52,14 +52,23 @@
         <% } %>
         <span class="fw-bold"><%= comment.author.username %></span>
         <div class="ms-auto">
-          <time class="badge rounded-pill bg-secondary text-white text-wrap"
+          <time
+            class="
+              badge
+              rounded-pill
+              bg-secondary
+              text-white text-wrap
+              px-2
+              py-1
+            "
             ><%= comment.date %></time
           >
         </div>
       </div>
       <div class="card-body">
         <p class="card-text"><%= comment.text %></p>
-        <div class="d-flex justify-content-end">
+        <div class="border-top d-flex justify-content-between pt-3">
+          <a class="link-success" href=<%= `/courses/${comment.course._id}` %>><%= comment.course.name %></a>
           <div class="me-1 badge bg-success d-flex align-items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,20 +92,29 @@
     <% }) %>
   </div>
   <div class="col-md">
-    <% firstColComments.forEach((comment, idx) => { %>
+    <% secondColComments.forEach((comment, idx) => { %>
     <div class="card mb-3 shadow">
       <div class="card-header d-flex">
         <span class="fw-bold me-1"><%= idx+6 %>.</span>
         <span class="fw-bold"><%= comment.author.username %></span>
         <div class="ms-auto">
-          <time class="badge rounded-pill bg-secondary text-white text-wrap"
+          <time
+            class="
+              badge
+              rounded-pill
+              bg-secondary
+              text-white text-wrap
+              px-2
+              py-1
+            "
             ><%= comment.date %></time
           >
         </div>
       </div>
       <div class="card-body">
         <p class="card-text"><%= comment.text %></p>
-        <div class="d-flex justify-content-end">
+        <div class="border-top d-flex justify-content-between pt-3">
+          <a class="link-success" href=<%= `/courses/${comment.course._id}` %>><%= comment.course.name %></a>
           <div class="me-1 badge bg-success d-flex align-items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

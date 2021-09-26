@@ -40,6 +40,7 @@ module.exports.addComment = async (req, res) => {
       text: comment,
       date: new Date(),
       author: user,
+      course: course,
     });
 
     // Save the comment to the database
@@ -125,6 +126,7 @@ module.exports.likeComment = async (req, res) => {
 
     // Give comment a like and save it to the db
     comment.votes++;
+    comment.lastVoteTimeStamp = Date.now();
     await comment.save();
 
     // Save liked comment to the user's liked comments array and save it to the db
@@ -148,7 +150,8 @@ module.exports.getTopComments = async (req, res) => {
     // Find top 10 comments in the db and sort them from the best to the worst
     const comments = await Comment.find({ votes: { $gt: 0 } })
       .populate("author", "username")
-      .sort({ votes: "descending" })
+      .populate("course", "name")
+      .sort({ votes: "desc", lastVoteTimeStamp: "asc" })
       .limit(10);
     const firstColComments = [];
     const secondColComments = [];
