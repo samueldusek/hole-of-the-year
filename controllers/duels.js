@@ -18,21 +18,39 @@ module.exports.showAllDuels = async (req, res) => {
 
     const today = new Date().getTime();
 
+    // "eight", "quarter", "semi", "final"
     const formattedDuels = [];
+    const bracketDuels = {
+      eight: [],
+      quarter: [],
+      semi: [],
+      final: [],
+    };
     let heroDuel;
 
     // Format duels if any duels fetched
     if (duels) {
       duels.forEach((duel) => {
+        const startDate = format(duel.startDate, "d.M.y, HH:mm");
+        const isOngoing =
+          duel.startDate.getTime() < today && today < duel.endDate.getTime();
         formattedDuels.push({
           ...duel._doc,
-          startDate: format(duel.startDate, "d.M.y, HH:mm"),
+          startDate,
+          isOngoing,
           endDate: format(duel.endDate, "d.M.y"),
           isFinished: today > duel.endDate.getTime(),
-          isOngoing:
-            duel.startDate.getTime() < today && today < duel.endDate.getTime(),
           isAboutToStart: today < duel.startDate.getTime(),
         });
+        const bracketDuel = {
+          ...duel._doc,
+          startDate,
+          isOngoing,
+        };
+        if (duel.phase === "eight") bracketDuels.eight.push(bracketDuel);
+        if (duel.phase === "quarter") bracketDuels.quarter.push(bracketDuel);
+        if (duel.phase === "semi") bracketDuels.semi.push(bracketDuel);
+        if (duel.phase === "final") bracketDuels.final.push(bracketDuel);
       });
       heroDuel = duels.find(
         (duel) =>
@@ -40,8 +58,11 @@ module.exports.showAllDuels = async (req, res) => {
       );
     }
 
+    console.log(bracketDuels.eight[0].holesInDuel);
+
     res.render("duels/index", {
       heroDuel,
+      bracketDuels,
       duels: formattedDuels,
       pageTitle: "Duely - Jamka Roku 2021",
       path: "/duels/index",
