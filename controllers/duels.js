@@ -34,18 +34,22 @@ module.exports.showAllDuels = async (req, res) => {
         const startDate = format(duel.startDate, "d.M.y, HH:mm");
         const isOngoing =
           duel.startDate.getTime() < today && today < duel.endDate.getTime();
+        const isFinished = today > duel.endDate.getTime();
+        const isAboutToStart = today < duel.startDate.getTime();
         formattedDuels.push({
           ...duel._doc,
           startDate,
           isOngoing,
+          isFinished,
+          isAboutToStart,
           endDate: format(duel.endDate, "d.M.y"),
-          isFinished: today > duel.endDate.getTime(),
-          isAboutToStart: today < duel.startDate.getTime(),
         });
         const bracketDuel = {
           ...duel._doc,
           startDate,
           isOngoing,
+          isFinished,
+          isAboutToStart,
         };
         if (duel.phase === "eight") bracketDuels.eight.push(bracketDuel);
         if (duel.phase === "quarter") bracketDuels.quarter.push(bracketDuel);
@@ -57,8 +61,6 @@ module.exports.showAllDuels = async (req, res) => {
           duel.startDate.getTime() < today && duel.endDate.getTime() > today
       );
     }
-
-    console.log(bracketDuels.eight[0].holesInDuel);
 
     res.render("duels/index", {
       heroDuel,

@@ -94,7 +94,7 @@
   <div class="mt-5">
     <h2 class="text-center fw-bold lh-base">Soutěžní pavouk</h2>
     <div class="row mt-3">
-      <div class="col px-4 d-flex flex-column justify-content-evenly">
+      <div class="col px-3 d-flex flex-column justify-content-evenly">
         <div class="text-center mb-3">
           <h4
             class="
@@ -121,16 +121,26 @@
             "
           >
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <% if(bracketDuels.eight[idx]) { %> 
-              <i
-                class="em em-trophy"
-                aria-role="presentation"
-                aria-label="TROPHY"
-              ></i>
-                <h6 class="mb-0 text-center fw-bold mx-1">
+              <% if(bracketDuels.eight[idx]) { %>
+                <div class="flex-shrink-0">
+                  <% if(bracketDuels.eight[idx].isOngoing) { %>
+                    <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
+                  <% } %>
+                  <% if(bracketDuels.eight[idx].isAboutToStart) { %>
+                    <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
+                  <% } %>
+                  <% if(bracketDuels.eight[idx].isFinished) { %>
+                    <% if(bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes) { %>
+                      <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
+                    <% } else { %>
+                      <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
+                    <% } %> 
+                  <% } %>
+                </div>
+                <h6 class="mb-0 text-center fw-bold mx-1 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>">
                   <%= bracketDuels.eight[idx].holesInDuel[0].hole.course.name %> 
                 </h6>
-                <h5 class="mb-0 fw-bold fs-4">#<%= bracketDuels.eight[idx].holesInDuel[0].hole.number %></h5>
+                <h5 class="mb-0 fw-bold fs-4 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted") %>">#<%= bracketDuels.eight[idx].holesInDuel[0].hole.number %></h5>
               <% } else { %>
                 <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
               <% } %> 
@@ -138,15 +148,25 @@
             <time class="text-black-50 text-center"><%= bracketDuels.eight[idx].startDate.slice(0,9) %></time>
             <div class="d-flex justify-content-between align-items-center mt-2">
               <% if(bracketDuels.eight[idx]) { %> 
-              <i
-                class="em em-x"
-                aria-role="presentation"
-                aria-label="CROSS MARK"
-              ></i>
-                <h6 class="mb-0 text-center fw-bold mx-1">
+                <div class="flex-shrink-0">
+                  <% if(bracketDuels.eight[idx].isOngoing) { %>
+                    <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
+                  <% } %>
+                  <% if(bracketDuels.eight[idx].isAboutToStart) { %>
+                    <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
+                  <% } %>
+                  <% if(bracketDuels.eight[idx].isFinished) { %>
+                    <% if(bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes) { %>
+                      <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
+                    <% } else { %>
+                      <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
+                    <% } %> 
+                  <% } %>
+                </div>
+                <h6 class="mb-0 text-center fw-bold mx-1 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>">
                   <%= bracketDuels.eight[idx].holesInDuel[1].hole.course.name %> 
                 </h6>
-                <h5 class="mb-0 fw-bold fs-4">#<%= bracketDuels.eight[idx].holesInDuel[1].hole.number %></h5>
+                <h5 class="mb-0 fw-bold fs-4 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted") %>">#<%= bracketDuels.eight[idx].holesInDuel[1].hole.number %></h5>
               <% } else { %>
                 <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
               <% } %> 
@@ -408,7 +428,7 @@
           </div> -->
         </div>
       </div>
-      <div class="col px-4 d-flex flex-column justify-content-evenly">
+      <div class="col px-3 d-flex flex-column justify-content-evenly">
         <div class="text-center mb-3">
           <h4
             class="
@@ -568,7 +588,7 @@
           </div>
         </div>
       </div>
-      <div class="col px-4 d-flex flex-column justify-content-evenly">
+      <div class="col px-3 d-flex flex-column justify-content-evenly">
         <div class="text-center mb-3">
           <h4
             class="
@@ -652,7 +672,7 @@
           </div>
         </div>
       </div>
-      <div class="col px-4 d-flex flex-column justify-content-evenly">
+      <div class="col px-3 d-flex flex-column justify-content-evenly">
         <div class="text-center mb-3">
           <h4
             class="
@@ -694,7 +714,7 @@
           </div>
         </div>
       </div>
-      <div class="col px-4 d-flex flex-column justify-content-evenly">
+      <div class="col px-3 d-flex flex-column justify-content-evenly">
         <div class="text-center mb-3">
           <h4
             class="
