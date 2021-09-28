@@ -19,17 +19,40 @@ db.once("open", () => {
   console.log("Database connected");
 });
 
-const HAS_RANDOM_VOTES = true;
+const HAS_RANDOM_VOTES = true; // <--- SET: true, false
 const ONE_DAY_MINUS_MINUTE_IN_MS = 86340000;
 const ONE_DAY_IN_MS = 86400000;
 
-const FIRST_DUEL_ROUND = 1;
+const NEXT_DUEL_ROUND = 9; // <--- SET: 9, 10, 11, 12, 13, 14, 15
+
+const DUEL_ROUNDS = {
+  9: 1,
+  10: 3,
+  11: 5,
+  12: 7,
+  13: 9,
+  14: 11,
+  15: 13,
+};
+
+const getDuelPhase = (round) => {
+  if (round >= 9 && round <= 12) {
+    return "quarter";
+  }
+  if (round === 13 || round === 14) {
+    return "semi";
+  }
+  if (round === 15) {
+    return "final";
+  }
+};
+
+const FIRST_DUEL_ROUND = DUEL_ROUNDS[NEXT_DUEL_ROUND.toString()];
 const SECOND_DUEL_ROUND = FIRST_DUEL_ROUND + 1;
-const NEXT_DUEL_ROUND = 9;
 const NEXT_DUEL_START_DATE = new Date(
   process.env.DATE_PLAYOFF_START * 1000 + (NEXT_DUEL_ROUND - 1) * ONE_DAY_IN_MS
 );
-const NEXT_DUEL_PHASE = "quarter"; // "eight", "quarter", "semi", "final"
+const NEXT_DUEL_PHASE = getDuelPhase(NEXT_DUEL_ROUND);
 
 const seedDb = async () => {
   // Get duels
