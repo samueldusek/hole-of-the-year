@@ -17,6 +17,8 @@ module.exports.showAllDuels = async (req, res) => {
     });
 
     const today = new Date().getTime();
+    const playOffStartDate = process.env.DATE_PLAYOFF_START;
+    const ONE_DAY_IN_MS = 86400000;
 
     // "eight", "quarter", "semi", "final"
     const formattedDuels = [];
@@ -26,7 +28,29 @@ module.exports.showAllDuels = async (req, res) => {
       semi: [],
       final: [],
     };
+    const bracketStartDates = {
+      eight: [],
+      quarter: [],
+      semi: [],
+      final: [],
+    };
     let heroDuel;
+
+    for (let i = 0; i < 16; i++) {
+      const startDate = format(
+        new Date(playOffStartDate * 1000 + i * ONE_DAY_IN_MS),
+        "d.M.y"
+      );
+      if (i < 8) {
+        bracketStartDates.eight.push(startDate);
+      } else if (i < 12) {
+        bracketStartDates.quarter.push(startDate);
+      } else if (i < 14) {
+        bracketStartDates.semi.push(startDate);
+      } else {
+        bracketStartDates.final.push(startDate);
+      }
+    }
 
     // Format duels if any duels fetched
     if (duels) {
@@ -65,6 +89,7 @@ module.exports.showAllDuels = async (req, res) => {
     res.render("duels/index", {
       heroDuel,
       bracketDuels,
+      bracketStartDates,
       duels: formattedDuels,
       pageTitle: "Duely - Jamka Roku 2021",
       path: "/duels/index",
@@ -149,9 +174,9 @@ module.exports.voteInDuel = async (req, res) => {
   // Check for all ids
   if (!userId || !holeId || !duelId) {
     let errorMsg = "";
-    if (!userId) errorMsg = "Nelze přidat komentář bez uživatelského id.";
-    if (!holeId) errorMsg = "Nelze přidat komentář bez id jamky.";
-    if (!duelId) errorMsg = "Nelze přidat komentář bez id duelu.";
+    if (!userId) errorMsg = "Nelze přidat hlas bez uživatelského id.";
+    if (!holeId) errorMsg = "Nelze přidat hlas bez id jamky.";
+    if (!duelId) errorMsg = "Nelze přidat hlas bez id duelu.";
     req.flash("error", errorMsg);
     return res.redirect("/duels");
   }

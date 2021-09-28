@@ -147,7 +147,7 @@
                 <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
               <% } %> 
             </div>
-            <time class="text-black-50 text-center"><%= bracketDuels.eight[idx].startDate.slice(0,9) %></time>
+            <time class="text-black-50 text-center"><%= bracketStartDates.eight[idx] %></time>
             <div class="d-flex justify-content-between align-items-center mt-2">
               <% if(bracketDuels.eight[idx]) { %> 
                 <div class="flex-shrink-0">
@@ -475,7 +475,7 @@
                     <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
                   <% } %> 
                 </div>
-                <time class="text-black-50 text-center"><%= bracketDuels.quarter[idx] ? bracketDuels.quarter[idx].startDate.slice(0,9) : "" %></time>
+                <time class="text-black-50 text-center"><%= bracketStartDates.quarter[idx] %></time>
                 <div class="d-flex justify-content-between align-items-center mt-2">
                   <% if(bracketDuels.quarter[idx]) { %> 
                     <div class="flex-shrink-0">
