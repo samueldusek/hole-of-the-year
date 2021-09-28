@@ -55,7 +55,7 @@ module.exports.showAllDuels = async (req, res) => {
     // Format duels if any duels fetched
     if (duels) {
       duels.forEach((duel) => {
-        const startDate = format(duel.startDate, "d.M.y, HH:mm");
+        const startDate = format(duel.startDate, "d.M., HH:mm");
         const isOngoing =
           duel.startDate.getTime() < today && today < duel.endDate.getTime();
         const isFinished = today > duel.endDate.getTime();
@@ -70,7 +70,6 @@ module.exports.showAllDuels = async (req, res) => {
         });
         const bracketDuel = {
           ...duel._doc,
-          startDate,
           isOngoing,
           isFinished,
           isAboutToStart,
