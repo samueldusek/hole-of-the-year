@@ -108,16 +108,18 @@
           </h4>
         </div>
         <div class="d-flex flex-column justify-content-evenly h-100">
-          <% for(let idx = 0; idx < 8; idx++) { %> 
-          <div
+          <% for(let idx = 0; idx < 8; idx++) { %>
+            <a href="/duels/<%= bracketDuels.eight[idx]._id %>" class="text-decoration-none text-body">
+              <div
             class="
               flex-grow-1
               d-flex
               flex-column
               justify-content-center
               my-4
-              border-end border-success border-3
               p-2
+              border-end border-3 rounded
+              <%= bracketDuels.eight[idx].isOngoing ? "border-warning shadow-sm rounded bg-light bg-gradient" : "border-success" %> 
             "
           >
             <div class="d-flex justify-content-between align-items-center mb-2">
@@ -137,7 +139,7 @@
                     <% } %> 
                   <% } %>
                 </div>
-                <h6 class="mb-0 text-center fw-bold mx-1 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>">
+                <h6 class="mb-0 text-center fw-bold mx-1 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>" style="font-size: 0.8rem;">
                   <%= bracketDuels.eight[idx].holesInDuel[0].hole.course.name %> 
                 </h6>
                 <h5 class="mb-0 fw-bold fs-4 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted") %>">#<%= bracketDuels.eight[idx].holesInDuel[0].hole.number %></h5>
@@ -163,7 +165,7 @@
                     <% } %> 
                   <% } %>
                 </div>
-                <h6 class="mb-0 text-center fw-bold mx-1 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>">
+                <h6 class="mb-0 text-center fw-bold mx-1 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>" style="font-size: 0.8rem;">
                   <%= bracketDuels.eight[idx].holesInDuel[1].hole.course.name %> 
                 </h6>
                 <h5 class="mb-0 fw-bold fs-4 <%= (!bracketDuels.eight[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted") %>">#<%= bracketDuels.eight[idx].holesInDuel[1].hole.number %></h5>
@@ -171,7 +173,8 @@
                 <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
               <% } %> 
             </div>
-          </div>
+              </div>
+            </a>
           <% } %> 
           <!-- <div
             class="
