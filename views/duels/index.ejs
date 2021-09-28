@@ -91,7 +91,7 @@
     </div>
   </div>
   <% } %>
-  <div class="mt-5 shadow rounded pt-4 px-3">
+  <div class="mt-5 shadow rounded pt-4 px-3 bg-light bg-gradient">
     <h2 class="text-center fw-bold lh-base">Soutěžní pavouk</h2>
     <div class="row mt-3">
       <div class="col px-3 d-flex flex-column justify-content-evenly">
@@ -198,8 +198,8 @@
               <div
               class="border-end border-3 rounded p-2 d-flex flex-column position-relative shadow <%= (bracketDuels.quarter[idx] && bracketDuels.quarter[idx].isOngoing) ? "bg-white border-warning border-5 border-start" : "bg-light border-success" %>"
               >
+                <div class="position-absolute end-50 w-50 h-25 border-top border-end border-success border-3" style="top: -25%;"></div>
                 <a href="<%= bracketDuels.quarter[idx] ? `/duels/${bracketDuels.quarter[idx]._id}` : "#" %>" class="d-flex flex-column justify-content-center text-decoration-none text-body">
-                  <div class="position-absolute end-50 w-50 h-25 border-top border-end border-success border-3" style="top: -25%;"></div>
                   <div class="d-flex justify-content-center align-items-center mb-2">
                     <% if(bracketDuels.quarter[idx]) { %>
                       <div class="flex-shrink-0">
@@ -251,8 +251,8 @@
                       <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
                     <% } %> 
                   </div>
-                  <div class="position-absolute end-50 w-50 h-25 border-bottom border-end border-success border-3" style="bottom: -25%;"></div>
                 </a>
+                <div class="position-absolute end-50 w-50 h-25 border-bottom border-end border-success border-3" style="bottom: -25%;"></div>
               </div>
             </div>
           <% } %> 
@@ -277,8 +277,8 @@
               <div
               class="border-end border-3 rounded p-2 d-flex flex-column position-relative shadow <%= (bracketDuels.semi[idx] && bracketDuels.semi[idx].isOngoing) ? "bg-white border-warning border-5 border-start" : "bg-light border-success" %>"
               >
+              <div class="position-absolute end-50 w-50 h-100 border-top border-end border-success border-3" style="top: -100%;"></div>
                 <a href="<%= bracketDuels.semi[idx] ? `/duels/${bracketDuels.semi[idx]._id}` : "#" %>" class="d-flex flex-column justify-content-center text-decoration-none text-body">
-                  <div class="position-absolute end-50 w-50 h-100 border-top border-end border-success border-3" style="top: -100%;"></div>
                   <div class="d-flex justify-content-center align-items-center mb-2">
                     <% if(bracketDuels.semi[idx]) { %>
                       <div class="flex-shrink-0">
@@ -330,8 +330,8 @@
                       <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
                     <% } %> 
                   </div>
-                  <div class="position-absolute end-50 w-50 h-100 border-bottom border-end border-success border-3" style="bottom: -100%;"></div>
                 </a>
+                <div class="position-absolute end-50 w-50 h-100 border-bottom border-end border-success border-3" style="bottom: -100%;"></div>
               </div>
             </div>
           <% } %> 
@@ -423,61 +423,61 @@
             <div
             class="border-end border-3 rounded p-2 d-flex flex-column position-relative shadow <%= (bracketDuels.final[idx] && bracketDuels.final[idx].isOngoing) ? "bg-white border-warning border-5 border-start" : "bg-light border-success" %>"
             >
-              <a href="<%= bracketDuels.final[idx] ? `/duels/${bracketDuels.final[idx]._id}` : "#" %>" class="d-flex flex-column justify-content-center text-decoration-none text-body">
-                <div class="position-absolute end-50 w-50 border-top border-end border-success border-3" style="top: -260%; height: 260%;"></div>
-                <div class="d-flex justify-content-center align-items-center mb-2">
-                  <% if(bracketDuels.final[idx]) { %>
-                    <div class="flex-shrink-0">
-                      <% if(bracketDuels.final[idx].isOngoing) { %>
-                        <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
-                      <% } %>
-                      <% if(bracketDuels.final[idx].isAboutToStart) { %>
-                        <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-                      <% } %>
-                      <% if(bracketDuels.final[idx].isFinished) { %>
-                        <% if(bracketDuels.final[idx].holesInDuel[0].votes > bracketDuels.final[idx].holesInDuel[1].votes) { %>
-                          <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
-                        <% } else { %>
-                          <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
-                        <% } %> 
-                      <% } %>
-                    </div>
-                    <h6 class="mb-0 text-center fw-bold mx-1 flex-grow-1 <%= (!bracketDuels.final[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>" style="font-size: 0.8rem;">
-                      <%= bracketDuels.final[idx].holesInDuel[0].hole.course.name %> 
-                    </h6>
-                    <h5 class="mb-0 fw-bold fs-4 <%= (!bracketDuels.final[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted") %>">#<%= bracketDuels.eight[idx].holesInDuel[0].hole.number %></h5>
-                  <% } else { %>
-                    <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-                  <% } %> 
-                </div>
-                <time class="text-black-50 text-center"><%= bracketStartDates.final[idx] %></time>
-                <div class="d-flex justify-content-center align-items-center mt-2">
-                  <% if(bracketDuels.final[idx]) { %> 
-                    <div class="flex-shrink-0">
-                      <% if(bracketDuels.final[idx].isOngoing) { %>
-                        <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
-                      <% } %>
-                      <% if(bracketDuels.final[idx].isAboutToStart) { %>
-                        <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
-                      <% } %>
-                      <% if(bracketDuels.final[idx].isFinished) { %>
-                        <% if(bracketDuels.final[idx].holesInDuel[0].votes < bracketDuels.final[idx].holesInDuel[1].votes) { %>
-                          <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
-                        <% } else { %>
-                          <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
-                        <% } %> 
-                      <% } %>
-                    </div>
-                    <h6 class="mb-0 text-center fw-bold mx-1 flex-grow-1 <%= (!bracketDuels.final[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>" style="font-size: 0.8rem;">
-                      <%= bracketDuels.final[idx].holesInDuel[1].hole.course.name %> 
-                    </h6>
-                    <h5 class="mb-0 fw-bold fs-4 <%= (!bracketDuels.final[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted") %>">#<%= bracketDuels.eight[idx].holesInDuel[1].hole.number %></h5>
-                  <% } else { %>
-                    <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
-                  <% } %> 
-                </div>
-                <div class="position-absolute end-50 w-50 border-bottom border-end border-success border-3" style="bottom: -260%; height: 260%;"></div>
-              </a>
+              <div class="position-absolute end-50 w-50 border-top border-end border-success border-3" style="top: -270%; height: 270%;"></div>
+                <a href="<%= bracketDuels.final[idx] ? `/duels/${bracketDuels.final[idx]._id}` : "#" %>" class="d-flex flex-column justify-content-center text-decoration-none text-body">
+                  <div class="d-flex justify-content-center align-items-center mb-2">
+                    <% if(bracketDuels.final[idx]) { %>
+                      <div class="flex-shrink-0">
+                        <% if(bracketDuels.final[idx].isOngoing) { %>
+                          <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
+                        <% } %>
+                        <% if(bracketDuels.final[idx].isAboutToStart) { %>
+                          <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
+                        <% } %>
+                        <% if(bracketDuels.final[idx].isFinished) { %>
+                          <% if(bracketDuels.final[idx].holesInDuel[0].votes > bracketDuels.final[idx].holesInDuel[1].votes) { %>
+                            <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
+                          <% } else { %>
+                            <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
+                          <% } %> 
+                        <% } %>
+                      </div>
+                      <h6 class="mb-0 text-center fw-bold mx-1 flex-grow-1 <%= (!bracketDuels.final[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>" style="font-size: 0.8rem;">
+                        <%= bracketDuels.final[idx].holesInDuel[0].hole.course.name %> 
+                      </h6>
+                      <h5 class="mb-0 fw-bold fs-4 <%= (!bracketDuels.final[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes > bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted") %>">#<%= bracketDuels.eight[idx].holesInDuel[0].hole.number %></h5>
+                    <% } else { %>
+                      <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
+                    <% } %> 
+                  </div>
+                  <time class="text-black-50 text-center"><%= bracketStartDates.final[idx] %></time>
+                  <div class="d-flex justify-content-center align-items-center mt-2">
+                    <% if(bracketDuels.final[idx]) { %> 
+                      <div class="flex-shrink-0">
+                        <% if(bracketDuels.final[idx].isOngoing) { %>
+                          <i class="em em-crossed_swords" aria-role="presentation" aria-label=""></i>
+                        <% } %>
+                        <% if(bracketDuels.final[idx].isAboutToStart) { %>
+                          <i class="em em-grey_question" aria-role="presentation" aria-label="WHITE QUESTION MARK ORNAMENT"></i>
+                        <% } %>
+                        <% if(bracketDuels.final[idx].isFinished) { %>
+                          <% if(bracketDuels.final[idx].holesInDuel[0].votes < bracketDuels.final[idx].holesInDuel[1].votes) { %>
+                            <i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i>
+                          <% } else { %>
+                            <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK"></i>
+                          <% } %> 
+                        <% } %>
+                      </div>
+                      <h6 class="mb-0 text-center fw-bold mx-1 flex-grow-1 <%= (!bracketDuels.final[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted text-decoration-line-through") %>" style="font-size: 0.8rem;">
+                        <%= bracketDuels.final[idx].holesInDuel[1].hole.course.name %> 
+                      </h6>
+                      <h5 class="mb-0 fw-bold fs-4 <%= (!bracketDuels.final[idx].isFinished ? "" : ((bracketDuels.eight[idx].holesInDuel[0].votes < bracketDuels.eight[idx].holesInDuel[1].votes)) ? "" : "text-muted") %>">#<%= bracketDuels.eight[idx].holesInDuel[1].hole.number %></h5>
+                    <% } else { %>
+                      <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>
+                    <% } %> 
+                  </div>
+                </a>
+              <div class="position-absolute end-50 w-50 border-bottom border-end border-success border-3" style="bottom: -270%; height: 270%;"></div>
             </div>
           </div>
         <% } %> 
@@ -492,7 +492,7 @@
               lh-base
             "
           >
-            Vítězná jamka
+            Jamka roku
           </h4>
         </div>
         <div class="d-flex flex-column justify-content-evenly h-100">
