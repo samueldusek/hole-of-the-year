@@ -23,34 +23,33 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link <%= path==="/mains/home" ? "active" : "" %>" href="/">Domů</a>
+        <li class="nav-item ms-lg-3 d-flex align-items-center">
+          <a class="nav-link text-center <%= path==="/mains/home" ? "active" : "" %>" href="/">Domů</a>
         </li>
-        
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link <%= path==="/courses/index" ? "active" : "" %>" href="/courses">Hřiště</a>
+        <li class="nav-item ms-lg-3 d-flex align-items-center">
+          <a class="nav-link text-center <%= path==="/courses/index" ? "active" : "" %>" href="/courses">Hřiště</a>
         </li>
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link <%= path==="/holes/top" ? "active" : "" %>" href="/holes/top">Top jamky</a>
+        <li class="nav-item ms-lg-3 d-flex align-items-center">
+          <a class="nav-link text-center <%= path==="/holes/top" ? "active" : "" %>" href="/holes/top">Top jamky</a>
         </li>
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link <%= path==="/comments/top" ? "active" : "" %>" href="/comments/top">Top komentáře</a>
+        <li class="nav-item ms-lg-3 d-flex align-items-center">
+          <a class="nav-link text-center <%= path==="/comments/top" ? "active" : "" %>" href="/comments/top">Top komentáře</a>
         </li>
         <% if(showDuelsLink) { %>
-          <li class="nav-item ms-lg-3">
-            <a class="nav-link <%= path==="/duels/index" ? "active" : "" %>" href="/duels/">Duely</a>
+          <li class="nav-item ms-lg-3 d-flex align-items-center">
+            <a class="nav-link text-center <%= path==="/duels/index" ? "active" : "" %>" href="/duels/">Duely</a>
           </li>
         <% } %> 
         <% if (!currentUser) { %>
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link <%= path==="/users/register" ? "active" : "" %>" href="/users/register">Registrovat</a>
+        <li class="nav-item ms-lg-3 d-flex align-items-center">
+          <a class="nav-link text-center <%= path==="/users/register" ? "active" : "" %>" href="/users/register">Registrovat</a>
         </li>
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link <%= path==="/users/login" ? "active" : "" %>" href="/users/login">Přihlásit</a>
+        <li class="nav-item ms-lg-3 d-flex align-items-center">
+          <a class="nav-link text-center <%= path==="/users/login" ? "active" : "" %>" href="/users/login">Přihlásit</a>
         </li>
         <% } else { %>
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link" href="/users/logout">Odhlásit</a>
+        <li class="nav-item ms-lg-3 d-flex align-items-center">
+          <a class="nav-link text-center" href="/users/logout">Odhlásit</a>
         </li>
         <% } %>
       </ul>
