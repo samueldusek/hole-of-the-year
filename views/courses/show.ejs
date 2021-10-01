@@ -21,10 +21,10 @@
       <img src="<%= course.image.url %> " class="card-img-top" alt="<%= course.name %>" />
       <h6 class="card-subtitle my-2 ms-3 text-muted text-start">
         <% if(course.image.author.name === "UDisc") { %>
-          Fotografii poskytl <a class="link-success" href=<%= course.image.author.url %>>UDisc.com</a>, fotografem je <%= course.image.author.tag %>.
+          Fotografii poskytl <a class="link-success" target="_blank" href=<%= course.image.author.url %>>UDisc.com</a>, fotografem je <%= course.image.author.tag %>.
         <% } %>
         <% if(course.image.author.name === "proDiscgolf.cz") { %>
-          Fotografii poskytl proDiscgolf.cz, fotografem je <a class="link-success" href=<%= course.image.author.url %>><%= course.image.author.tag %></a>.
+          Fotografii poskytl proDiscgolf.cz, fotografem je <a class="link-success" target="_blank" href=<%= course.image.author.url %>><%= course.image.author.tag %></a>.
         <% } %> 
       </h6>
       <ul class="list-group list-group-flush">
