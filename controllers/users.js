@@ -1,10 +1,6 @@
 const User = require("../models/user");
 const { validationResult } = require("express-validator");
-const emailTemplate = require("../data/email");
-const mailjet = require("node-mailjet").connect(
-  process.env.MJ_APIKEY_PUBLIC,
-  process.env.MJ_APIKEY_PRIVATE
-);
+const { sendRegistrationEmail } = require("../utils/email");
 
 module.exports.showRegisterForm = (req, res) => {
   res.render("users/register", {
@@ -33,31 +29,7 @@ module.exports.registerNewUser = async (req, res) => {
   try {
     const user = new User({ email, username });
     const registeredUser = await User.register(user, password);
-    const request = mailjet.post("send", { version: "v3.1" }).request({
-      Messages: [
-        {
-          From: {
-            Email: process.env.EMAIL,
-            Name: "Jamka Roku 2021",
-          },
-          To: [
-            {
-              Email: registeredUser.email,
-              Name: registeredUser.username,
-            },
-          ],
-          Subject: emailTemplate.subject,
-          HTMLPart: emailTemplate.HTMLPart,
-        },
-      ],
-    });
-    request
-      .then((result) => {
-        console.log(result.body);
-      })
-      .catch((err) => {
-        console.log(err.statusCode);
-      });
+    const emailResult = await sendRegistrationEmail(registeredUser);
     req.login(registeredUser, (err) => {
       if (err) return next(err);
       req.flash(
