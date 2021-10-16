@@ -10,6 +10,7 @@ router
   .get(duelsController.showDuel)
   .put(
     protector.ensureAuthenticated,
+    protector.ensureVotingAllowed,
     protector.ensureVerified,
     duelsController.voteInDuel
   );

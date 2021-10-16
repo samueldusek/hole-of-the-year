@@ -26,18 +26,19 @@ const seedDb = async () => {
     .sort({ votes: "desc", lastVoteTimeStamp: "asc" })
     .limit(16);
 
-  console.log(holes);
+  const duels = await Duel.deleteMany({});
 
   const HAS_RANDOM_VOTES = true;
-  const ONE_DAY_IN_MS = 86400000;
-  const ONE_DAY_MINUS_MINUTE_IN_MS = 86340000;
+  const DUEL_DURATION_TIME = process.env.DUEL_DURATION_TIME * 1000;
+  const DUEL_START_END_GAP = process.env.DUEL_START_END_GAP * 1000;
+  const DUEL_DURATION_TIME_REAL = DUEL_DURATION_TIME - DUEL_START_END_GAP;
 
   let startDate = new Date(process.env.DATE_PLAYOFF_START * 1000);
 
   for (let i = 0; i < 8; i++) {
     const duel = new Duel({
       startDate: startDate,
-      endDate: new Date(startDate.getTime() + ONE_DAY_MINUS_MINUTE_IN_MS),
+      endDate: new Date(startDate.getTime() + DUEL_DURATION_TIME_REAL),
       round: i + 1,
       phase: "eight",
     });
@@ -50,7 +51,7 @@ const seedDb = async () => {
       votes: HAS_RANDOM_VOTES ? Math.floor(Math.random() * 300) : 0,
     });
     await duel.save();
-    startDate = new Date(startDate.getTime() + ONE_DAY_IN_MS);
+    startDate = new Date(startDate.getTime() + DUEL_DURATION_TIME);
   }
 };
 

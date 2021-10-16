@@ -7,6 +7,7 @@ module.exports = {
     }
     res.redirect("/users/login"); // if not auth
   },
+
   ensureVerified: (req, res, next) => {
     if (req.user.isVerified) {
       return next();
@@ -17,6 +18,7 @@ module.exports = {
     );
     return res.redirect("/courses");
   },
+
   ensureNominationAllowed: (req, res, next) => {
     const currentTime = new Date();
     const nominationStartTime = new Date(
@@ -36,6 +38,29 @@ module.exports = {
       req.flash(
         "error",
         `Již není možné jamky nominovat. Možnost nominovat skončila: ${endTime}.`
+      );
+      return res.redirect("/courses");
+    }
+    next();
+  },
+
+  ensureVotingAllowed: (req, res, next) => {
+    const currentTime = new Date();
+    const votingStartTime = new Date(process.env.DATE_PLAYOFF_START * 1000);
+    const votingEndTime = new Date(process.env.DATE_PLAYOFF_END * 1000);
+    if (currentTime < votingStartTime) {
+      const startTime = format(votingStartTime, "d.M., HH:mm");
+      req.flash(
+        "error",
+        `Ještě není možné hlasovat v duelech. Možnost hlasovat v duelech bude spuštěna: ${startTime}.`
+      );
+      return res.redirect("/courses");
+    }
+    if (currentTime > votingEndTime) {
+      const endTime = format(votingEndTime, "d.M., HH:mm");
+      req.flash(
+        "error",
+        `Playoff už skončilo. Možnost hlasovat v duelech skončila: ${endTime}.`
       );
       return res.redirect("/courses");
     }

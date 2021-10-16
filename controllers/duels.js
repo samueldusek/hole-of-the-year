@@ -18,7 +18,7 @@ module.exports.showAllDuels = async (req, res) => {
 
     const today = new Date().getTime();
     const playOffStartDate = process.env.DATE_PLAYOFF_START;
-    const ONE_DAY_IN_MS = 86400000;
+    const DUEL_DURATION_TIME = process.env.DUEL_DURATION_TIME;
 
     // "eight", "quarter", "semi", "final"
     const formattedDuels = [];
@@ -38,7 +38,7 @@ module.exports.showAllDuels = async (req, res) => {
 
     for (let i = 0; i < 16; i++) {
       const startDate = format(
-        new Date(playOffStartDate * 1000 + i * ONE_DAY_IN_MS),
+        new Date(playOffStartDate * 1000 + i * (DUEL_DURATION_TIME * 1000)),
         "d.M.y"
       );
       if (i < 8) {
