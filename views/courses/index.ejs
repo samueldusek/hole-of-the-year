@@ -47,6 +47,7 @@
           src="<%= course.image.url %>"
           class="card-img-top"
           alt="<%= course.name %>"
+          onerror="this.onerror=null;this.src='https://res.cloudinary.com/dnlt6jw53/image/upload/courses/_placeholders/placeholder_course.jpg';"
         />
         <div class="card-body">
           <h5 class="card-title fw-bold"><%= course.name %></h5>

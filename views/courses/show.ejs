@@ -18,13 +18,14 @@
   <div class="col-lg-6 mb-md-4">
     <h3 class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block">Základní informace</h3>
     <div class="card shadow">
-      <img src="<%= course.image.url %> " class="card-img-top" alt="<%= course.name %>" />
+      <img src="<%= course.image.url %> " onerror="this.onerror=null;this.src='https://res.cloudinary.com/dnlt6jw53/image/upload/courses/_placeholders/placeholder_course.jpg';" class="card-img-top" alt="<%= course.name %>" />
       <h6 class="card-subtitle my-2 ms-3 text-muted text-start">
         <% if(course.image.author.name === "UDisc") { %>
           Fotografii poskytl <a class="link-success" target="_blank" href=<%= course.image.author.url %>>UDisc.com</a>, fotografem je <%= course.image.author.tag %>.
-        <% } %>
-        <% if(course.image.author.name === "proDiscgolf.cz") { %>
+        <% } else if(course.image.author.name === "proDiscgolf.cz") { %>
           Fotografii poskytl proDiscgolf.cz, fotografem je <a class="link-success" target="_blank" href=<%= course.image.author.url %>><%= course.image.author.tag %></a>.
+        <% } else { %>
+          K tomuto hřišti bohužel nemáme fotku.
         <% } %> 
       </h6>
       <ul class="list-group list-group-flush">
@@ -132,6 +133,7 @@
           <div class="col-auto d-none d-md-inline">
             <img
               src="<%= hole.image.url %>"
+              onerror="this.onerror=null;this.src='https://res.cloudinary.com/dnlt6jw53/image/upload/courses/_placeholders/placeholder_teesign.jpg';"
               alt="Teesign jamky číslo <%= hole.number %>. na hřišti <%= course.name %>."
               class="img-fluid rounded-start border-0"
               style="max-width: 150px"
