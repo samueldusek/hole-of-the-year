@@ -1,22 +1,21 @@
 const express = require("express");
 const router = express.Router();
 const commentsController = require("../controllers/comments");
-const isAuth = require("../utils/isAuth");
-const isVerified = require("../utils/isVerified");
+const protector = require("../utils/protectors");
 
 router
   .route("/")
   .post(
-    isAuth.ensureAuthenticated,
-    isVerified.ensureVerified,
+    protector.ensureAuthenticated,
+    protector.ensureVerified,
     commentsController.addComment
   );
 
 router
   .route("/:commentId")
   .put(
-    isAuth.ensureAuthenticated,
-    isVerified.ensureVerified,
+    protector.ensureAuthenticated,
+    protector.ensureVerified,
     commentsController.likeComment
   );
 

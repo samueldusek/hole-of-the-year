@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const duelsController = require("../controllers/duels");
-const isAuth = require("../utils/isAuth");
-const isVerified = require("../utils/isVerified");
+const protector = require("../utils/protectors");
 
 router.route("/").get(duelsController.showAllDuels);
 
@@ -10,8 +9,8 @@ router
   .route("/:id")
   .get(duelsController.showDuel)
   .put(
-    isAuth.ensureAuthenticated,
-    isVerified.ensureVerified,
+    protector.ensureAuthenticated,
+    protector.ensureVerified,
     duelsController.voteInDuel
   );
 
