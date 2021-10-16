@@ -35,7 +35,7 @@ module.exports.registerNewUser = async (req, res) => {
       if (err) return next(err);
       req.flash(
         "success",
-        "Byli jste úspěšně zaregistrování. Můžete nominovat své oblíbené jamky!"
+        "Byli jste úspěšně zaregistrování. Navštivte prosím svůj email a klikněte na zaslaný odkaz pro ověření vašeho účtu."
       );
       return res.redirect("/courses");
     });
@@ -64,9 +64,7 @@ module.exports.logout = (req, res) => {
 };
 
 module.exports.verifyUser = async (req, res) => {
-  // Deconstruct token from the url
   const { token } = req.params;
-  console.log(token);
 
   try {
     const userToVerify = await User.findOne({ token: token });
@@ -78,7 +76,6 @@ module.exports.verifyUser = async (req, res) => {
       );
       return res.redirect("/users/register");
     }
-    console.log(userToVerify);
     userToVerify.isVerified = true;
     await userToVerify.save();
     req.flash(
@@ -87,7 +84,6 @@ module.exports.verifyUser = async (req, res) => {
     );
     return res.redirect("/courses");
   } catch (error) {
-    console.log(error);
     req.logout();
     req.flash(
       "error",
