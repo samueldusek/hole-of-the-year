@@ -1,6 +1,7 @@
 const User = require("../models/user");
 const { validationResult } = require("express-validator");
 const { sendRegistrationEmail } = require("../utils/email");
+const { v4: uuidv4 } = require("uuid");
 
 module.exports.showRegisterForm = (req, res) => {
   res.render("users/register", {
@@ -27,7 +28,7 @@ module.exports.registerNewUser = async (req, res) => {
   }
 
   try {
-    const user = new User({ email, username });
+    const user = new User({ email, username, token: uuidv4() });
     const registeredUser = await User.register(user, password);
     const emailResult = await sendRegistrationEmail(registeredUser);
     req.login(registeredUser, (err) => {
@@ -60,4 +61,38 @@ module.exports.logout = (req, res) => {
   req.logout();
   req.flash("success", "Byli jste úspěšně odhlášeni.");
   res.redirect("/courses");
+};
+
+module.exports.verifyUser = async (req, res) => {
+  // Deconstruct token from the url
+  const { token } = req.params;
+  console.log(token);
+
+  try {
+    const userToVerify = await User.findOne({ token: token });
+    if (!userToVerify) {
+      req.logout();
+      req.flash(
+        "error",
+        "Uživatel se zadaným verifikačním kódem neexistuje! Zaregistrujte se prosím znovu."
+      );
+      return res.redirect("/users/register");
+    }
+    console.log(userToVerify);
+    userToVerify.isVerified = true;
+    await userToVerify.save();
+    req.flash(
+      "success",
+      "Tvůj účet byl úspěšně ověřen. Můžeš nominovat až 3 ze svých oblíbených jamek a následně hlasovat v duelech."
+    );
+    return res.redirect("/courses");
+  } catch (error) {
+    console.log(error);
+    req.logout();
+    req.flash(
+      "error",
+      "Uživatel se zadaným verifikačním kódem neexistuje! Zaregistrujte se prosím znovu."
+    );
+    return res.redirect("/users/register");
+  }
 };

@@ -32,6 +32,7 @@
     "node-mailjet": "^3.3.4",
     "passport": "^0.4.1",
     "passport-local-mongoose": "^6.1.0",
-    "slugify": "^1.5.3"
+    "slugify": "^1.5.3",
+    "uuid": "^8.3.2"
   }
 }
