@@ -5,7 +5,9 @@
       <div class="me-1">
         <i class="bi bi-person"></i>
         <span class="text-secondary">uživatel: </span
-        ><span><%= currentUser.username %></span>
+        ><a class="link-success" href="/users/profile"
+          ><%= currentUser.username %></a
+        >
       </div>
       <% if (currentUser.isVerified) { %>
       <span class="badge rounded-pill bg-success">ověřen/a</span>

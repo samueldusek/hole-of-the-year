@@ -1,0 +1,85 @@
+<% layout('/layouts/mainTemplate') %>
+
+<div class="d-flex justify-content-center">
+  <h1
+    class="
+      display-6
+      d-inline-block
+      fw-bold
+      border-bottom border-5 border-success
+      lh-base
+    "
+  >
+    Profil uživatele: <%= currentUser.username %>
+  </h1>
+</div>
+
+<div class="row my-5 d-flex justify-content-center">
+  <div class="col-7 d-flex flex-column align-items-center">
+    <h3
+      class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block"
+    >
+      Nominoval/a jsi
+    </h3>
+    <div>
+      <% if(userHoles.length === 0) { %>
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        Ještě jsi nenominoval/a žádné jamky. Až nějakou nominuješ, objeví se
+        tady.
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      <% } else { for (let hole of userHoles) { %>
+      <div class="card shadow mb-3">
+        <div class="row g-0">
+          <div class="col-auto d-none d-md-inline">
+            <img
+              src="<%= hole.image.url %>"
+              onerror="this.onerror=null;this.src='https://res.cloudinary.com/dnlt6jw53/image/upload/courses/_placeholders/placeholder_teesign.jpg';"
+              alt="Teesign jamky číslo <%= hole.number %>. na hřišti <%= hole.course.name %>."
+              class="img-fluid rounded-start border-0"
+              style="max-width: 150px"
+            />
+          </div>
+          <div class="col">
+            <div class="card-header">
+              <h5 class="fw-bold d-inline">Jamka č. <%= hole.number %></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span class="fw-bold me-1">Hřiště:</span
+                ><a class="link-success" href="/courses/<%= hole.course._id %>"
+                  ><%= hole.course.name %></a
+                >
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Par:</span> <%= hole.par %>
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Délka jamky:</span> <%= hole.length %> m
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <span class="fw-bold">Počet nominací:</span> <%= hole.votes
+                    %>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <% }} %>
+    </div>
+    <h3
+      class="my-4 fw-bold border-bottom border-3 border-success d-inline-block"
+    >
+      Hlasoval/a jsi v těchto duelech
+    </h3>
+  </div>
+</div>

@@ -92,3 +92,30 @@ module.exports.verifyUser = async (req, res) => {
     return res.redirect("/users/register");
   }
 };
+
+module.exports.showUserProfile = async (req, res) => {
+  const { _id: id } = req.user;
+
+  try {
+    const user = await User.findById(id)
+      .populate({
+        path: "nominatedHoles",
+        populate: {
+          path: "course",
+          model: "Course",
+        },
+      })
+      .populate({
+        path: "userDuels",
+        populate: {
+          path: "hole",
+        },
+      });
+    console.log(user.nominatedHoles[0]);
+    res.render("users/profile", {
+      pageTitle: `Profil uživatele ${user.username}`,
+      userHoles: user.nominatedHoles,
+      path: "/users/profile",
+    });
+  } catch (error) {}
+};

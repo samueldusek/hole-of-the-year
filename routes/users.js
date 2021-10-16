@@ -4,6 +4,7 @@ const usersController = require("../controllers/users");
 const passport = require("passport");
 const { body } = require("express-validator");
 const User = require("../models/user");
+const protector = require("../utils/protectors");
 
 router
   .route("/register")
@@ -66,5 +67,9 @@ router
 router.get("/logout", usersController.logout);
 
 router.route("/verify/:token").get(usersController.verifyUser);
+
+router
+  .route("/profile")
+  .get(protector.ensureAuthenticated, usersController.showUserProfile);
 
 module.exports = router;
