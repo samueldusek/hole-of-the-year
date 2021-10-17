@@ -16,7 +16,7 @@
 
 <div class="alert alert-info alert-dismissible fade show" role="alert">
   <% if(isOngoing) { %> 
-    <strong>Tento duel právě probíhá!</strong> Možnost hlasovat v tomto duelu skončí dnes ve 23:59! <% if(!currentUser) { %> Pro možnost hlasovat v tomto duelu se musíš <a href="/users/login">přihlásit</a>.<% } %> 
+    <strong>Tento duel právě probíhá!</strong> Možnost hlasovat v tomto duelu skončí <%= endDate %> ! <% if(!currentUser) { %> Pro možnost hlasovat v tomto duelu se musíš <a href="/users/login">přihlásit</a>.<% } %> 
     <% } else if(isAboutToStart) { %>
       <strong>Tento duel ještě nezačal!</strong> Možnost hlasovat v tomto duelu začne <strong><%= startDate %></strong>.
       <% } else if(isFinished) { %>
@@ -76,6 +76,7 @@
               src=<%= holeOne.hole.image.url %>
               class="card-img-top d-none d-md-block"
               alt="<%= holeOne.hole.course.name %>"
+              onerror="this.onerror=null;this.src='https://res.cloudinary.com/dnlt6jw53/image/upload/courses/_placeholders/placeholder_teesign.png';"
             />
             <div class="card-body d-flex align-items-center flex-column">
               <h5 class="card-title text-center fw-bold border-bottom border-primary border-5">Jamka #<%= holeOne.hole.number %></h5>
@@ -132,6 +133,7 @@
               src=<%= holeTwo.hole.image.url %>
               class="card-img-top d-none d-md-block"
               alt="<%= holeTwo.hole.course.name %>"
+              onerror="this.onerror=null;this.src='https://res.cloudinary.com/dnlt6jw53/image/upload/courses/_placeholders/placeholder_teesign.png';"
             />
             <div class="card-body d-flex align-items-center flex-column">
               <h5 class="card-title text-center fw-bold border-bottom border-success border-5">Jamka #<%= holeTwo.hole.number %></h5>
