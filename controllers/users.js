@@ -2,6 +2,7 @@ const User = require("../models/user");
 const { validationResult } = require("express-validator");
 const { sendRegistrationEmail } = require("../utils/email");
 const { v4: uuidv4 } = require("uuid");
+const format = require("date-fns/format");
 
 module.exports.showRegisterForm = (req, res) => {
   res.render("users/register", {
@@ -102,7 +103,7 @@ module.exports.showUserProfile = async (req, res) => {
         path: "nominatedHoles",
         populate: {
           path: "course",
-          model: "Course",
+          select: "name _id",
         },
       })
       .populate({
@@ -111,13 +112,28 @@ module.exports.showUserProfile = async (req, res) => {
           path: "hole duel",
           populate: {
             path: "course",
+            select: "name _id",
           },
         },
+      })
+      .populate({
+        path: "comments",
+        populate: {
+          path: "course",
+          select: "name _id",
+        },
       });
+    const formattedComments = user.comments.map((comment) => {
+      return {
+        ...comment._doc,
+        date: format(comment.date, "d.M.y, HH:mm"),
+      };
+    });
     res.render("users/profile", {
       pageTitle: `Profil uživatele ${user.username}`,
       userHoles: user.nominatedHoles,
       userDuels: user.userDuels,
+      userComments: formattedComments,
       path: "/users/profile",
     });
   } catch (error) {

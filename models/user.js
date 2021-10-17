@@ -36,6 +36,12 @@ const UserSchema = new Schema({
       ref: "Comment",
     },
   ],
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
 });
 
 UserSchema.plugin(passportLocalMongoose);

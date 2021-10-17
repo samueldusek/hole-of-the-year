@@ -93,32 +93,91 @@
       ></button>
     </div>
     <% } else { %>
-        <div class="table-responsive">
-        <table class="table align-middle">
-            <thead class="table-success">
-            <tr>
-                <th scope="col">Duel #</th>
-                <th scope="col" class="text-start">Hlasoval/a jsi pro jamku:</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% for (let userDuel of userDuels){ %>
-            <tr>
-                <th scope="row" class="text-center"><%= userDuel.duel.round %></th>
-                <td class="d-flex">
-                <p class="fw-bold m-0 me-2"><%= userDuel.hole.number %>#</p>
-                <a
-                    class="link-success text-decoration-none"
-                    href="/courses/<%= userDuel.hole.course._id %>"
-                >
-                    <%= userDuel.hole.course.name %>
-                </a>
-                </td>
-            </tr>
-            <% } %>
-            </tbody>
-        </table>
-        </div>
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead class="table-success">
+          <tr>
+            <th scope="col">Duel #</th>
+            <th scope="col" class="text-start">Hlasoval/a jsi pro jamku:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let userDuel of userDuels){ %>
+          <tr>
+            <th scope="row" class="text-center"><%= userDuel.duel.round %></th>
+            <td class="d-flex">
+              <p class="fw-bold m-0 me-2"><%= userDuel.hole.number %>#</p>
+              <a
+                class="link-success text-decoration-none"
+                href="/courses/<%= userDuel.hole.course._id %>"
+              >
+                <%= userDuel.hole.course.name %>
+              </a>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
     <% } %>
+    <h3
+      class="my-4 fw-bold border-bottom border-3 border-success d-inline-block"
+    >
+      Napsal/a jsi tyto komentáře
+    </h3>
+    <% if(userComments.length === 0) { %>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      Ještě jsi nenapsal/a žádné komentáře. Hned jak nějaký napíšeš, objeví se
+      tady.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <% } else { for (let comment of userComments) { %>
+      <div class="card mb-3 shadow">
+        <div class="card-header d-flex">
+          <span class="fw-bold"><%= currentUser.username %></span>
+          <div class="ms-auto">
+            <time
+              class="
+                badge
+                rounded-pill
+                bg-secondary
+                text-white text-wrap
+                px-2
+                py-1
+              "
+              ><%= comment.date %></time
+            >
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><%= comment.text %></p>
+          <div class="border-top d-flex justify-content-between pt-3">
+            <a class="link-success" href=<%= `/courses/${comment.course._id}` %>><%= comment.course.name %></a>
+            <div class="me-1 badge bg-success d-flex align-items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+              <span class="ms-1 fs-6"><%= comment.votes %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }} %>
   </div>
 </div>

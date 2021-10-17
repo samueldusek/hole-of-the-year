@@ -49,8 +49,12 @@ module.exports.addComment = async (req, res) => {
     // Add comment to course
     course.comments.push(newComment);
 
-    // Save the course to the database
+    // Add comment to user
+    user.comments.push(newComment);
+
+    // Save the course and user to the database
     await course.save();
+    await user.save();
 
     // Send message to the user that the comment was added successfully
     req.flash("success", `Tvůj komentář byl přidán.`);
