@@ -1,4 +1,5 @@
 const Course = require("../models/course");
+const Comment = require("../models/comment");
 const slugify = require("slugify");
 const format = require("date-fns/format");
 
@@ -85,17 +86,31 @@ module.exports.showAllCourses = async (req, res) => {
 module.exports.showCourse = async (req, res) => {
   const { id } = req.params;
   try {
-    const course = await Course.findById(id)
-      .populate("holes")
-      .populate({
-        path: "comments",
-        populate: {
-          path: "author",
-        },
-      });
+    const course = await Course.findById(id).populate("holes");
+    const courseCommentsCount = await Comment.find({
+      course: course,
+    }).countDocuments();
+
+    // Calculate the last page and check whether the query.page exceeds calculated value
+    const lastPage = Math.ceil(courseCommentsCount / ITEMS_PER_PAGE);
+
+    // Check if the request is coming from page different from 1st
+    let page = req.query.page;
+    if (!page || !parseInt(page) || page < 1) {
+      page = 1;
+    } else if (page > lastPage) {
+      page = lastPage;
+    } else {
+      page = Math.floor(page);
+    }
+
+    const courseComments = await Comment.find({ course: course })
+      .skip((page - 1) * ITEMS_PER_PAGE)
+      .limit(ITEMS_PER_PAGE)
+      .populate({ path: "author", select: "username" });
 
     // Convert all the dates in comments to human readable czech format
-    const comments = course.comments.map((comment) => {
+    const comments = courseComments.map((comment) => {
       return {
         id: comment._id,
         author: comment.author,
@@ -106,6 +121,13 @@ module.exports.showCourse = async (req, res) => {
     });
 
     res.render("courses/show", {
+      hasPagination: lastPage > 1,
+      hasNextPage: ITEMS_PER_PAGE * page < courseCommentsCount,
+      hasPreviousPage: page > 1,
+      nextPage: Number(page) + 1,
+      previousPage: page - 1,
+      currentPage: page,
+      lastPage: lastPage,
       course: course,
       comments: comments,
       pageTitle: course.name,

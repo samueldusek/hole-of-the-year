@@ -48,6 +48,42 @@
     </div>
     <!-- Comment section  -->
     <h3 class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block mt-5">Komentáře</h3>
+    <div class="card mb-3 shadow">
+      <form
+      class="validated-form"
+      action="/comments"
+      method="POST"
+      novalidate
+      >
+        <div class="card-header">
+          <label class="form-label fw-bold" for="comment">Přidej komentář</label>
+        </div>
+          <div class="card-body">
+            <textarea
+              class="form-control"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="3"
+              required
+            ></textarea>
+            <div class="valid-feedback">To vypadá dobře!</div>
+            <div class="invalid-feedback">Zapoměl jsi zadat text!</div>
+          </div>
+          <% if (currentUser) { %> 
+            <input type="hidden" name="userId" value="<%= currentUser._id %>">
+            <input type="hidden" name="courseId" value="<%= course._id %>">
+          <% } %> 
+            <div class="card-footer d-flex justify-content-end">
+              <button class="btn btn-success btn-sm d-flex justify-content-between align-items-center" type="submit" <%= currentUser ? '' : 'disabled' %>>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span class="ms-1 fw-bold">Přidat Komentář</span>
+              </button>
+            </div>
+        </form> 
+      </div>
     <% if (comments.length == 0) { %>
       <div class="alert alert-info alert-dismissible fade show" role="alert">
         K tomuto hřišti ještě nikdo nepřidal komentář, buď první! Sdílej svůj
@@ -86,43 +122,51 @@
         </div>
       </div>
     </div>
-    <% } }%>
-    <div class="card mb-3 shadow">
-      <form
-      class="validated-form"
-      action="/comments"
-      method="POST"
-      novalidate
-      >
-        <div class="card-header">
-          <label class="form-label fw-bold" for="comment">Přidej komentář</label>
-        </div>
-          <div class="card-body">
-            <textarea
-              class="form-control"
-              name="comment"
-              id="comment"
-              cols="30"
-              rows="3"
-              required
-            ></textarea>
-            <div class="valid-feedback">To vypadá dobře!</div>
-            <div class="invalid-feedback">Zapoměl jsi zadat text!</div>
-          </div>
-          <% if (currentUser) { %> 
-            <input type="hidden" name="userId" value="<%= currentUser._id %>">
-            <input type="hidden" name="courseId" value="<%= course._id %>">
-          <% } %> 
-            <div class="card-footer d-flex justify-content-end">
-              <button class="btn btn-success btn-sm d-flex justify-content-between align-items-center" type="submit" <%= currentUser ? '' : 'disabled' %>>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                <span class="ms-1 fw-bold">Přidat Komentář</span>
-              </button>
-            </div>
-        </form> 
-      </div>
+    <% }} if (lastPage > 1) { %>
+      <nav aria-label="Comments navigation">
+        <ul class="pagination justify-content-center">
+          <% if(previousPage != 1 && currentPage != 1) { %>
+          <li class="page-item">
+            <a class="page-link text-success" href="/courses/<%= course._id %>/?page=<%= 1 %>"
+              ><%= 1 %></a
+            >
+          </li>
+          <% } %> <% if(hasPreviousPage) { %>
+          <li class="page-item">
+            <a
+              class="page-link text-success"
+              href="/courses/<%= course._id %>/?page=<%= previousPage %>"
+              ><%= previousPage %></a
+            >
+          </li>
+          <% } %>
+          <li class="page-item">
+            <a
+              class="page-link text-white bg-success"
+              href="/courses/<%= course._id %>/?page=<%= currentPage %>"
+              ><%= currentPage %></a
+            >
+          </li>
+          <% if(hasNextPage) { %>
+          <li class="page-item">
+            <a
+              class="page-link text-success"
+              href="/courses/<%= course._id %>/?page=<%= nextPage %>"
+              ><%= nextPage %></a
+            >
+          </li>
+          <% } %> <% if(lastPage != nextPage && lastPage != currentPage) { %>
+          <li class="page-item">
+            <a
+              class="page-link text-success"
+              href="/courses/<%= course._id %>/?page=<%= lastPage %>"
+              ><%= lastPage %></a
+            >
+          </li>
+          <% } %>
+        </ul>
+      </nav>
+      <% } %>
     </div>
   <!-- Hole section -->
   <div class="col-lg-6">
