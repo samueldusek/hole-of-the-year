@@ -108,14 +108,23 @@ module.exports.showUserProfile = async (req, res) => {
       .populate({
         path: "userDuels",
         populate: {
-          path: "hole",
+          path: "hole duel",
+          populate: {
+            path: "course",
+          },
         },
       });
-    console.log(user.nominatedHoles[0]);
     res.render("users/profile", {
       pageTitle: `Profil uživatele ${user.username}`,
       userHoles: user.nominatedHoles,
+      userDuels: user.userDuels,
       path: "/users/profile",
     });
-  } catch (error) {}
+  } catch (error) {
+    req.flash(
+      "error",
+      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+    );
+    return res.redirect("/courses");
+  }
 };

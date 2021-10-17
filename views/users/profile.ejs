@@ -81,5 +81,44 @@
     >
       Hlasoval/a jsi v těchto duelech
     </h3>
+    <% if(userDuels.length === 0) { %>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      Ještě jsi nehlasoval/a v žádném duelu. Až se zúčastníš hlasování v nějakém
+      duelu, objeví se zde.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <% } else { %>
+        <div class="table-responsive">
+        <table class="table align-middle">
+            <thead class="table-success">
+            <tr>
+                <th scope="col">Duel #</th>
+                <th scope="col" class="text-start">Hlasoval/a jsi pro jamku:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (let userDuel of userDuels){ %>
+            <tr>
+                <th scope="row" class="text-center"><%= userDuel.duel.round %></th>
+                <td class="d-flex">
+                <p class="fw-bold m-0 me-2"><%= userDuel.hole.number %>#</p>
+                <a
+                    class="link-success text-decoration-none"
+                    href="/courses/<%= userDuel.hole.course._id %>"
+                >
+                    <%= userDuel.hole.course.name %>
+                </a>
+                </td>
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+        </div>
+    <% } %>
   </div>
 </div>
