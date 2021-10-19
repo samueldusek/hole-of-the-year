@@ -3,11 +3,13 @@ const router = express.Router();
 const duelsController = require("../controllers/duels");
 const protector = require("../utils/protectors");
 
-router.route("/").get(duelsController.showAllDuels);
+router
+  .route("/")
+  .get(protector.ensureVotingAllowed, duelsController.showAllDuels);
 
 router
   .route("/:id")
-  .get(duelsController.showDuel)
+  .get(protector.ensureVotingAllowed, duelsController.showDuel)
   .put(
     protector.ensureAuthenticated,
     protector.ensureVotingAllowed,
