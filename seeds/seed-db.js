@@ -39,7 +39,7 @@ const seedDb = async () => {
   await Comment.deleteMany({});
   await Duel.deleteMany({});
 
-  const HAS_RANDOM_VOTES = true;
+  const HAS_RANDOM_VOTES = false;
 
   // Load data from the file
   const courses = await loadData();
