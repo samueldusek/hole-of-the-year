@@ -148,10 +148,10 @@ module.exports.showDuel = async (req, res) => {
       round: duel.round,
       holeOne: duel.holesInDuel[0],
       holeOnePercentage: holeOnePercentage,
-      holeOneIsWinner: duel.holesInDuel[0].votes > duel.holesInDuel[1].votes,
+      holeOneIsWinner: (duel.holesInDuel[0].votes > duel.holesInDuel[1].votes) || ((duel.holesInDuel[0].votes === duel.holesInDuel[1].votes) && (duel.holesInDuel[0].lastVoteTimeStamp < duel.holesInDuel[1].lastVoteTimeStamp)),
       holeTwo: duel.holesInDuel[1],
       holeTwoPercentage: holeTwoPercentage,
-      holeTwoIsWinner: duel.holesInDuel[0].votes < duel.holesInDuel[1].votes,
+      holeTwoIsWinner: (duel.holesInDuel[0].votes < duel.holesInDuel[1].votes) || ((duel.holesInDuel[0].votes === duel.holesInDuel[1].votes) && (duel.holesInDuel[0].lastVoteTimeStamp > duel.holesInDuel[1].lastVoteTimeStamp)),
       pageTitle: `Duel #${duel.round} - Jamka Roku 2021`,
       path: "/duels/show",
     });
