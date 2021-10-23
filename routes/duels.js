@@ -5,11 +5,11 @@ const protector = require("../utils/protectors");
 
 router
   .route("/")
-  .get(protector.ensureVotingAllowed, duelsController.showAllDuels);
+  .get(protector.ensureDuelsVisible, duelsController.showAllDuels);
 
 router
   .route("/:id")
-  .get(protector.ensureVotingAllowed, duelsController.showDuel)
+  .get(protector.ensureDuelsVisible, duelsController.showDuel)
   .put(
     protector.ensureAuthenticated,
     protector.ensureVotingAllowed,

@@ -66,4 +66,18 @@ module.exports = {
     }
     next();
   },
+
+  ensureDuelsVisible: (req, res, next) => {
+    const currentTime = new Date();
+    const votingStartTime = new Date(process.env.DATE_PLAYOFF_START * 1000);
+    if (currentTime < votingStartTime) {
+      const startTime = format(votingStartTime, "d.M., HH:mm");
+      req.flash(
+        "error",
+        `Ještě není možné hlasovat v duelech. Možnost hlasovat v duelech bude spuštěna: ${startTime}.`
+      );
+      return res.redirect("/courses");
+    }
+    next();
+  },
 };
