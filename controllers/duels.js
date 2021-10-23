@@ -241,8 +241,10 @@ module.exports.voteInDuel = async (req, res) => {
       // Add one vote in the duel for the selected hole
       if (duel.holesInDuel[0].hole._id.toString() === holeId) {
         duel.holesInDuel[0].votes++;
+        duel.holesInDuel[0].lastVoteTimeStamp = Date.now();
       } else if (duel.holesInDuel[1].hole._id.toString() === holeId) {
         duel.holesInDuel[1].votes++;
+        duel.holesInDuel[1].lastVoteTimeStamp = Date.now();
       } else {
         // Send error message that the selected hole is not in the duel
         req.flash("error", "Zvolená jamka se v duelu nenachází!.");

@@ -22,6 +22,10 @@ const DuelSchema = new Schema({
         type: Number,
         default: 0,
       },
+      lastVoteTimeStamp: {
+        type: Number,
+        default: 0,
+      },
     },
   ],
 });
