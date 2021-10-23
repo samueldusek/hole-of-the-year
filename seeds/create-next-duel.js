@@ -20,10 +20,11 @@ db.once("open", () => {
 });
 
 const HAS_RANDOM_VOTES = false; // <--- SET: true, false
-const ONE_DAY_MINUS_MINUTE_IN_MS = 86340000;
-const ONE_DAY_IN_MS = 86400000;
+const DUEL_DURATION_TIME = process.env.DUEL_DURATION_TIME * 1000;
+const DUEL_START_END_GAP = process.env.DUEL_START_END_GAP * 1000;
+const DUEL_DURATION_TIME_REAL = DUEL_DURATION_TIME - DUEL_START_END_GAP;
 
-const NEXT_DUEL_ROUND = 9; // <--- SET: 9, 10, 11, 12, 13, 14, 15
+const NEXT_DUEL_ROUND = 15; // <--- SET: 9, 10, 11, 12, 13, 14, 15
 
 const DUEL_ROUNDS = {
   9: 1,
@@ -50,7 +51,8 @@ const getDuelPhase = (round) => {
 const FIRST_DUEL_ROUND = DUEL_ROUNDS[NEXT_DUEL_ROUND.toString()];
 const SECOND_DUEL_ROUND = FIRST_DUEL_ROUND + 1;
 const NEXT_DUEL_START_DATE = new Date(
-  process.env.DATE_PLAYOFF_START * 1000 + (NEXT_DUEL_ROUND - 1) * ONE_DAY_IN_MS
+  process.env.DATE_PLAYOFF_START * 1000 +
+    (NEXT_DUEL_ROUND - 1) * DUEL_DURATION_TIME
 );
 const NEXT_DUEL_PHASE = getDuelPhase(NEXT_DUEL_ROUND);
 
@@ -63,7 +65,12 @@ const seedDb = async () => {
   const holes = [];
 
   duels.forEach((duel) => {
-    if (duel.holesInDuel[0].votes > duel.holesInDuel[1].votes) {
+    if (
+      duel.holesInDuel[0].votes > duel.holesInDuel[1].votes ||
+      (duel.holesInDuel[0].votes === duel.holesInDuel[1].votes &&
+        duel.holesInDuel[0].lastVoteTimeStamp <
+          duel.holesInDuel[1].lastVoteTimeStamp)
+    ) {
       holes.push(duel.holesInDuel[0].hole);
     } else {
       holes.push(duel.holesInDuel[1].hole);
@@ -72,9 +79,7 @@ const seedDb = async () => {
 
   const duel = new Duel({
     startDate: NEXT_DUEL_START_DATE,
-    endDate: new Date(
-      NEXT_DUEL_START_DATE.getTime() + ONE_DAY_MINUS_MINUTE_IN_MS
-    ),
+    endDate: new Date(NEXT_DUEL_START_DATE.getTime() + DUEL_DURATION_TIME_REAL),
     round: NEXT_DUEL_ROUND,
     phase: NEXT_DUEL_PHASE,
   });
