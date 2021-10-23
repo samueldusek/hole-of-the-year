@@ -23,7 +23,7 @@ router
         });
       }),
     body("username")
-      .isAlphanumeric()
+      .isAlphanumeric("cs-CZ")
       .withMessage(
         "Uživatelské jméno může obsahovat pouze písmena a čísla. Zvol si prosím jiné."
       )
