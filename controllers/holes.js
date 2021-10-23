@@ -56,9 +56,26 @@ module.exports.nominateHole = async (req, res) => {
           user.nominatedHoles.push(hole);
           // Count votes left and tell user his nomination process was successful
           const votesLeft = 3 - user.nominatedHoles.length;
+
+          let voteMessage = "";
+
+          switch (votesLeft) {
+            case 2: {
+              voteMessage = "Ještě ti zbývají 2 nomiační hlasy.";
+              break;
+            }
+            case 1: {
+              voteMessage = "Zbývá ti poslední nominační hlas.";
+              break;
+            }
+            default: {
+              voteMessage = "Už nemáš žádný nominační hlas.";
+            }
+          }
+
           req.flash(
             "success",
-            `Úspěšně jsi nominoval/a jamku č. ${hole.number} na hřišti ${hole.course.name}. Ještě ti zbývá ${votesLeft} nominačních hlasů.`
+            `Úspěšně jsi nominoval/a jamku č. ${hole.number} na hřišti ${hole.course.name}. ${voteMessage}`
           );
         } else {
           // User cannot nominate the same hole twice
@@ -90,10 +107,32 @@ module.exports.nominateHole = async (req, res) => {
           (userHole) => hole._id.toString() !== userHole._id.toString()
         );
         user.nominatedHoles = newNominatedHoles;
+
         const votesLeft = 3 - user.nominatedHoles.length;
+
+        let voteMessage = "";
+
+        switch (votesLeft) {
+          case 3: {
+            voteMessage = "Máš možnost nominovat až 3 jamky.";
+            break;
+          }
+          case 2: {
+            voteMessage = "Ještě ti zbývají 2 nomiační hlasy.";
+            break;
+          }
+          case 1: {
+            voteMessage = "Zbývá ti poslední nominační hlas.";
+            break;
+          }
+          default: {
+            voteMessage = "Už nemáš žádný nominační hlas.";
+          }
+        }
+
         req.flash(
           "success",
-          `Úspěšně jsi denominoval/a jamku č. ${hole.number} na hřišti ${hole.course.name}. Ještě ti zbývá ${votesLeft} nominačních hlasů.`
+          `Úspěšně jsi denominoval/a jamku č. ${hole.number} na hřišti ${hole.course.name}. ${voteMessage}`
         );
       } else {
         // User cannot denominate this hole as this hole is not among his previously nominated holes
