@@ -28,7 +28,7 @@ const seedDb = async () => {
 
   const duels = await Duel.deleteMany({});
 
-  const HAS_RANDOM_VOTES = true;
+  const HAS_RANDOM_VOTES = false; // <--- SET: true, false
   const DUEL_DURATION_TIME = process.env.DUEL_DURATION_TIME * 1000;
   const DUEL_START_END_GAP = process.env.DUEL_START_END_GAP * 1000;
   const DUEL_DURATION_TIME_REAL = DUEL_DURATION_TIME - DUEL_START_END_GAP;

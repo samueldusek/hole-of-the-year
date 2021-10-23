@@ -205,38 +205,40 @@
                 </div>
               </li>
             </ul>
-            <div class="card-footer d-flex justify-content-end">
-              <% if (currentUser && currentUser.nominatedHoles.some(userHole => userHole._id.toString() === hole._id.toString())) { %>
-                <form class="me-2" action="/holes/<%= hole._id %>/?_method=PUT" method="POST">
+            <div class="card-footer d-flex justify-content-end h-100">
+              <% if (isNominationPhase) { %> 
+                <% if (currentUser && currentUser.nominatedHoles.some(userHole => userHole._id.toString() === hole._id.toString())) { %>
+                  <form class="me-2" action="/holes/<%= hole._id %>/?_method=PUT" method="POST">
+                    <input type="hidden" name="userId" value="<%= currentUser._id %>">
+                    <input type="hidden" name="nomination" value="deselect">
+                    <button class="btn btn-danger btn-sm d-flex justify-content-between align-items-center" >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      <span class="ms-1 fw-bold">
+                        Zrušit
+                      </span>
+                    </button>
+                  </form>
+                <% } %>
+                <form
+                  action="/holes/<%= hole._id %>/?_method=PUT"
+                  method="POST"
+                >
+                  <input type="hidden" name="nomination" value="select">
+                  <% if (currentUser) { %> 
                   <input type="hidden" name="userId" value="<%= currentUser._id %>">
-                  <input type="hidden" name="nomination" value="deselect">
-                  <button class="btn btn-danger btn-sm d-flex justify-content-between align-items-center" >
+                  <% } %> 
+                  <button class="btn btn-success btn-sm d-flex justify-content-between align-items-center" <% if (!currentUser || currentUser.nominatedHoles.length >= 3 || currentUser.nominatedHoles.some(userHole => userHole._id.toString() === hole._id.toString())) { %>disabled<% } %>>
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                     </svg>
                     <span class="ms-1 fw-bold">
-                      Zrušit
+                      Nominovat
                     </span>
                   </button>
                 </form>
-              <% } %>
-              <form
-                action="/holes/<%= hole._id %>/?_method=PUT"
-                method="POST"
-              >
-                <input type="hidden" name="nomination" value="select">
-                <% if (currentUser) { %> 
-                <input type="hidden" name="userId" value="<%= currentUser._id %>">
-                <% } %> 
-                <button class="btn btn-success btn-sm d-flex justify-content-between align-items-center" <% if (!currentUser || currentUser.nominatedHoles.length >= 3 || currentUser.nominatedHoles.some(userHole => userHole._id.toString() === hole._id.toString())) { %>disabled<% } %>>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                  </svg>
-                  <span class="ms-1 fw-bold">
-                    Nominovat
-                  </span>
-                </button>
-              </form>
+              <% } %> 
             </div>
           </div>
         </div>

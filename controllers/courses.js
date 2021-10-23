@@ -104,6 +104,10 @@ module.exports.showCourse = async (req, res) => {
       page = Math.floor(page);
     }
 
+    const today = new Date().getTime();
+    const nominationStartDate = process.env.DATE_NOMINATION_START * 1000;
+    const nominationEndDate = process.env.DATE_NOMINATION_END * 1000;
+
     const courseComments = await Comment.find({ course: course })
       .skip((page - 1) * ITEMS_PER_PAGE)
       .limit(ITEMS_PER_PAGE)
@@ -121,6 +125,8 @@ module.exports.showCourse = async (req, res) => {
     });
 
     res.render("courses/show", {
+      isNominationPhase:
+        nominationStartDate < today && nominationEndDate > today,
       hasPagination: lastPage > 1,
       hasNextPage: ITEMS_PER_PAGE * page < courseCommentsCount,
       hasPreviousPage: page > 1,

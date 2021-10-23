@@ -19,7 +19,7 @@ db.once("open", () => {
   console.log("Database connected");
 });
 
-const HAS_RANDOM_VOTES = true; // <--- SET: true, false
+const HAS_RANDOM_VOTES = false; // <--- SET: true, false
 const ONE_DAY_MINUS_MINUTE_IN_MS = 86340000;
 const ONE_DAY_IN_MS = 86400000;
 
