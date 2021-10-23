@@ -109,6 +109,7 @@ module.exports.showCourse = async (req, res) => {
     const nominationEndDate = process.env.DATE_NOMINATION_END * 1000;
 
     const courseComments = await Comment.find({ course: course })
+      .sort({ votes: -1 })
       .skip((page - 1) * ITEMS_PER_PAGE)
       .limit(ITEMS_PER_PAGE)
       .populate({ path: "author", select: "username" });
