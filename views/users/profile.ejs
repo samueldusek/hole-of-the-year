@@ -15,13 +15,13 @@
 </div>
 
 <div class="row my-5 d-flex justify-content-center">
-  <div class="col-7 d-flex flex-column align-items-center">
+  <div class="col col-md-8 col-lg-7 d-flex flex-column align-items-center">
     <h3
       class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block"
     >
       Nominoval/a jsi
     </h3>
-    <div>
+    <div class="w-100">
       <% if(userHoles.length === 0) { %>
       <div class="alert alert-info alert-dismissible fade show" role="alert">
         Ještě jsi nenominoval/a žádné jamky. Až nějakou nominuješ, objeví se
@@ -36,7 +36,7 @@
       <% } else { for (let hole of userHoles) { %>
       <div class="card shadow mb-3">
         <div class="row g-0">
-          <div class="col-auto d-none d-md-inline">
+          <div class="col-auto d-none d-sm-inline">
             <img
               src="<%= hole.image.url %>"
               onerror="this.onerror=null;this.src='https://res.cloudinary.com/dnlt6jw53/image/upload/courses/_placeholders/placeholder_teesign.png';"
