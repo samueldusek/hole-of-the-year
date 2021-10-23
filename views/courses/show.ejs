@@ -48,6 +48,12 @@
     </div>
     <!-- Comment section  -->
     <h3 class="mb-4 fw-bold border-bottom border-3 border-success d-inline-block mt-5">Komentáře</h3>
+    <% if (!currentUser) { %>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Komentáře mohou přidávat pouze registrovaní a přihlášení uživatelé.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% } %> 
     <div class="card mb-3 shadow">
       <form
       class="validated-form"
