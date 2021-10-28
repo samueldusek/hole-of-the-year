@@ -77,7 +77,7 @@ module.exports.showAllCourses = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím provést svou akci znovu."
     );
     return res.redirect("/courses");
   }

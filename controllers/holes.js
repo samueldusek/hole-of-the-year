@@ -17,7 +17,7 @@ module.exports.nominateHole = async (req, res) => {
     if (!userId)
       errorMsg = "Nelze nominovat jamku bez platného uživatelského id.";
     if (!nomination || !(nomination === "select" || nomination === "deselect"))
-      errorMsg = "Zvolil jsi špatnou volbu pro nominaci jamky.";
+      errorMsg = "Zvolil/a jsi špatnou volbu pro nominaci jamky.";
     req.flash("error", errorMsg);
     return res.redirect("/courses");
   }
@@ -34,7 +34,7 @@ module.exports.nominateHole = async (req, res) => {
     if (!user) {
       req.flash(
         "error",
-        "Pro nominování musíš být přihlášen pod existujícím účtem."
+        "Pro nominování musíš být přihlášen/a pod existujícím účtem."
       );
       return res.redirect(`/users/login`);
     }
@@ -148,7 +148,7 @@ module.exports.nominateHole = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím provést svou akci znovu."
     );
     return res.redirect("/courses");
   }
@@ -169,7 +169,7 @@ module.exports.getTopHoles = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím provést svou akci znovu."
     );
     return res.redirect("/courses");
   }

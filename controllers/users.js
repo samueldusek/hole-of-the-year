@@ -36,7 +36,7 @@ module.exports.registerNewUser = async (req, res) => {
       if (err) return next(err);
       req.flash(
         "success",
-        "Byli jste úspěšně zaregistrování. Navštivte prosím svůj email a klikněte na zaslaný odkaz pro ověření vašeho účtu."
+        "Byl/a jsi úspěšně zaregistrován/a. Navštiv prosím svůj email a klikni na zaslaný odkaz pro ověření tvého účtu."
       );
       return res.redirect("/courses");
     });
@@ -54,13 +54,13 @@ module.exports.showLoginForm = (req, res) => {
 };
 
 module.exports.login = (req, res) => {
-  req.flash("success", "Byli jste úspěšně přihlášeni.");
+  req.flash("success", "Přihlášení bylo úspěšné.");
   res.redirect("/courses");
 };
 
 module.exports.logout = (req, res) => {
   req.logout();
-  req.flash("success", "Byli jste úspěšně odhlášeni.");
+  req.flash("success", "Odhlášení bylo úspěšné.");
   res.redirect("/courses");
 };
 
@@ -73,7 +73,7 @@ module.exports.verifyUser = async (req, res) => {
       req.logout();
       req.flash(
         "error",
-        "Uživatel se zadaným verifikačním kódem neexistuje! Zaregistrujte se prosím znovu."
+        "Uživatel se zadaným verifikačním kódem neexistuje. Zaregistruj se prosím znovu."
       );
       return res.redirect("/users/register");
     }
@@ -88,7 +88,7 @@ module.exports.verifyUser = async (req, res) => {
     req.logout();
     req.flash(
       "error",
-      "Uživatel se zadaným verifikačním kódem neexistuje! Zaregistrujte se prosím znovu."
+      "Uživatel se zadaným verifikačním kódem neexistuje! Zaregistruj se prosím znovu."
     );
     return res.redirect("/users/register");
   }
@@ -139,7 +139,7 @@ module.exports.showUserProfile = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím provést svou akci znovu."
     );
     return res.redirect("/courses");
   }

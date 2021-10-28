@@ -96,7 +96,7 @@ module.exports.showAllDuels = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím zobrazit duely znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím zobrazit duely znovu."
     );
     return res.redirect("/courses");
   }
@@ -117,7 +117,7 @@ module.exports.showDuel = async (req, res) => {
       },
     });
     if (!duel) {
-      req.flash("error", `Duel s id: ${duelId} neexistuje. Vyber duel jiný.`);
+      req.flash("error", `Duel s id: ${duelId} neexistuje. Vyber prosím duel jiný.`);
       return res.redirect(`/duels`);
     }
 
@@ -158,7 +158,7 @@ module.exports.showDuel = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím provést svou akci znovu."
     );
     return res.redirect("/duels");
   }
@@ -203,7 +203,7 @@ module.exports.voteInDuel = async (req, res) => {
     if (!user) {
       req.flash(
         "error",
-        "Pro hlasování v duelu musíš být přihlášen pod existujícím účtem."
+        "Pro hlasování v duelu musíš být přihlášen/a pod existujícím účtem."
       );
       return res.redirect(`/users/login`);
     }

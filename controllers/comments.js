@@ -23,7 +23,7 @@ module.exports.addComment = async (req, res) => {
     if (!user) {
       req.flash(
         "error",
-        "Pro přidání komentáře musíš být přihlášen pod existujícím účtem."
+        "Pro přidání komentáře musíš být přihlášen/a pod existujícím účtem."
       );
       return res.redirect(`/users/login`);
     }
@@ -62,7 +62,7 @@ module.exports.addComment = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím provést svou akci znovu."
     );
     return res.redirect("/courses");
   }
@@ -78,7 +78,7 @@ module.exports.likeComment = async (req, res) => {
   if (!userId || !courseId) {
     req.flash(
       "error",
-      "Nelze dat like komentáři bez id uživatele a id hřiště."
+      "Nelze dát like komentáři bez id uživatele a id hřiště."
     );
     return res.redirect("/courses");
   }
@@ -89,7 +89,7 @@ module.exports.likeComment = async (req, res) => {
     if (!course) {
       req.flash(
         "error",
-        "Nelze dat like komentáři na hřišti, které neexistuje."
+        "Nelze dát like komentáři na hřišti, které neexistuje."
       );
       return res.redirect("/courses");
     }
@@ -99,7 +99,7 @@ module.exports.likeComment = async (req, res) => {
     if (!comment) {
       req.flash(
         "error",
-        "Nelze dat like komentáři který neexistuje. Vyber si prosim jiný komentář."
+        "Nelze dát like komentáři který neexistuje. Vyber si prosim jiný komentář."
       );
       return res.redirect(`/courses/${courseId}`);
     }
@@ -109,7 +109,7 @@ module.exports.likeComment = async (req, res) => {
     if (!user) {
       req.flash(
         "error",
-        "Pro přidání like komentáři musíš být přihlášen pod existujícím účtem."
+        "Pro přidání like komentáři musíš být přihlášen/a pod existujícím účtem."
       );
       return res.redirect(`/users/login`);
     }
@@ -122,7 +122,7 @@ module.exports.likeComment = async (req, res) => {
       if (isLikedByUser) {
         req.flash(
           "error",
-          "Tomuto komentáři si Like už dal. Nemůžeš dát víc jak dva Liky jednomu komentáři."
+          "Tomuto komentáři si Like už dal/a. Nemůžeš dát víc jak dva Liky jednomu komentáři."
         );
         return res.redirect(`/courses/${courseId}`);
       }
@@ -143,7 +143,7 @@ module.exports.likeComment = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím provést svou akci znovu."
     );
     return res.redirect("/courses");
   }
@@ -179,7 +179,7 @@ module.exports.getTopComments = async (req, res) => {
   } catch (error) {
     req.flash(
       "error",
-      "Ooops! Omlouváme se, něco se pokazilo. Zkuste prosím provést svou akci znovu."
+      "Ooops! Omlouváme se, něco se pokazilo. Zkus prosím provést svou akci znovu."
     );
     return res.redirect("/courses");
   }
