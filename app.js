@@ -64,6 +64,12 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   res.locals.showDuelsLink = Date.now() / 1000 > process.env.DATE_PLAYOFF_START;
+  res.locals.isBlackFriday =
+    process.env.DATE_BLACK_FRIDAY_START < Date.now() / 1000 &&
+    process.env.DATE_BLACK_FRIDAY_END > Date.now() / 1000;
+  res.locals.isFreeShipping =
+    process.env.DATE_FREE_SHIPPING_START < Date.now() / 1000 &&
+    process.env.DATE_FREE_SHIPPING_END > Date.now() / 1000;
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
   next();
