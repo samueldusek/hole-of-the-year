@@ -221,7 +221,7 @@
                 </div>
               </li>
             </ul>
-            <div class="card-footer d-flex justify-content-end h-100">
+            <div class="card-footer d-flex justify-content-end h-auto">
               <% if (isNominationPhase) { %> 
                 <% if (currentUser && currentUser.nominatedHoles.some(userHole => userHole._id.toString() === hole._id.toString())) { %>
                   <form class="me-2" action="/holes/<%= hole._id %>/?_method=PUT" method="POST">
