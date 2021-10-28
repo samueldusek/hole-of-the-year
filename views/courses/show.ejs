@@ -33,7 +33,18 @@
           <span class="fw-bold">Lokace:</span> <%= course.region %>
         </li>
         <li class="list-group-item">
-          <span class="fw-bold">Realizace:</span> <%= course.company.name %>
+          <span class="fw-bold">Realizace:</span> 
+          <% if(course.company.url === "") { %>
+            <%= course.company.name %>
+          <% } else { %>
+            <a
+            class="link-success"
+            href=<%= course.company.url %> 
+            target="_blank"
+            rel="noopener noreferrer"
+            ><%= course.company.name %> </a
+          >
+          <% } %> 
         </li>
         <li class="list-group-item">
           <span class="fw-bold">Počet jamek:</span> <%= course.numberOfHoles %>
@@ -92,8 +103,7 @@
       </div>
     <% if (comments.length == 0) { %>
       <div class="alert alert-info alert-dismissible fade show" role="alert">
-        K tomuto hřišti ještě nikdo nepřidal komentář, buď první! Sdílej svůj
-        příběh, který se váže k tomuto hřišti a vyhraj zajímavé ceny!
+        K tomuto hřišti ještě nikdo nepřidal komentář, buď první! Sdílej svůj příběh, který se váže k tomuto hřišti, staň se Vypravěčem a vyhraj zajímavé ceny.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% } else { %> <% for (let comment of comments ) { %>
