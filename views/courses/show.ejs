@@ -199,18 +199,18 @@
               style="max-width: 150px"
             />
           </div>
-          <div class="col">
-            <div class="card-header">
+          <div class="col d-flex flex-column ">
+            <div class="card-header flex-fill">
               <h5 class="fw-bold d-inline">Jamka č. <%= hole.number %></h5>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
+            <ul class="list-group list-group-flush flex-fill d-flex flex-column">
+              <li class="list-group-item flex-fill">
                 <span class="fw-bold">Par:</span> <%= hole.par %>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item flex-fill">
                 <span class="fw-bold">Délka jamky:</span> <%= hole.length %> m
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item flex-fill">
                 <div class="row">
                   <div class="col"><span class="fw-bold">Počet nominací:</span> <%= hole.votes %></div>
                 <% if (currentUser && currentUser.nominatedHoles.find(userHole => userHole._id.toString() === hole._id.toString())) { %>
@@ -221,7 +221,7 @@
                 </div>
               </li>
             </ul>
-            <div class="card-footer d-flex justify-content-end h-auto">
+            <div class="card-footer d-flex justify-content-end  flex-fill">
               <% if (isNominationPhase) { %> 
                 <% if (currentUser && currentUser.nominatedHoles.some(userHole => userHole._id.toString() === hole._id.toString())) { %>
                   <form class="me-2" action="/holes/<%= hole._id %>/?_method=PUT" method="POST">
