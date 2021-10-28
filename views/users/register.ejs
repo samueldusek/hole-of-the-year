@@ -14,11 +14,14 @@
   </h1>
 </div>
 
-<div class="row my-5">
+<div class="row mt-3 mb-5">
   <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+    <p class="lh-lg text-center mb-4">
+      Pro účast v anketě je třeba se zaregistrovat, aktivovat svůj účet a přihlásit se.
+    </p>
     <div class="card shadow">
       <img
-        src="https://jamkaroku.cz/wp-content/uploads/2019/11/hp_1.jpg"
+        src="/img/hole.jpg"
         alt="Jamka Roku 2021"
         class="card-img-top"
       />
@@ -40,7 +43,7 @@
             name="username" required autofocus value="<%= username ? username :
             '' %>" />
             <div id="usernameHelp" class="form-text">
-              Vaše uživatelské jméno se bude zobrazovat v komentářové sekci.
+              Smí obsahovat pouze písmena a čísla. Vaše uživatelské jméno se bude zobrazovat v komentářové sekci.
             </div>
             <div class="invalid-feedback">
               <% if (errors.find(e => e.param === 'username')) { %> <%=
@@ -53,11 +56,10 @@
             <label for="email" class="form-label fw-bold">Email</label>
             <input type="email" class="form-control <%= errors.find(e => e.param
             === "email") ? "is-invalid" : "" %>" id="email" name="email"
-            aria-describedby="emailHelp" placeholder="jamka@roku.cz" required
+            aria-describedby="emailHelp" placeholder="tvuj@email.cz" required
             value="<%= email ? email : '' %>" />
             <div id="emailHelp" class="form-text">
-              Emailová adresa bude použita pro ověření vašeho účtu a nebude s
-              nikým sdílena.
+              Emailová adresa bude použita pro ověření vašeho účtu a nebude veřejně sdílena.
             </div>
             <div class="invalid-feedback">
               <% if (errors.find(e => e.param === 'email')) { %> <%=
@@ -72,7 +74,7 @@
             e.param === "password") ? "is-invalid" : "" %>" id="password"
             name="password" required />
             <div id="passwordHelp" class="form-text">
-              Heslo by mělo mít alespoň 5 znaků.
+              Heslo musí mít alespoň 5 znaků.
             </div>
             <div class="invalid-feedback">
               <% if (errors.find(e => e.param === 'password')) { %> <%=
@@ -82,8 +84,7 @@
           </div>
           <div class="mb-3">
             <label for="passwordConfirmation" class="form-label fw-bold"
-              >Potvrdit heslo</label
-            >
+              >Potvrdit heslo</label>
             <input type="password" class="form-control <%= errors.find(e =>
             e.param === "passwordConfirmation") ? "is-invalid" : "" %>"
             id="passwordConfirmation" name="passwordConfirmation" required />
@@ -103,8 +104,7 @@
                 required
               />
               <label class="form-check-label" for="invalidCheck">
-                Souhlasím se
-                <a class="link-success" href="/terms">soutěžními podmínkami</a>.
+                Souhlasím se <a class="link-success" href="/terms">soutěžními podmínkami a zásadami ochrany osobních údajů</a>.
               </label>
               <div class="invalid-feedback">
                 Musíš souhlasit se soutěžními podmínkami.
