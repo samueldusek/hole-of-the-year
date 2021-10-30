@@ -31,7 +31,7 @@ const findNominator = async () => {
   const users = await User.find({ nominatedHoles: holeId }).select("username");
   const hole = await Hole.findById(holeId).populate("course");
 
-  const fd = await fs.open("./users.txt", "w");
+  const fd = await fs.open("./files/nominators.txt", "w");
 
   await fd.write(`Jamka #${hole.number} - ${hole.course.name} \n`);
   await fd.write(`Počet nominačních hlasů: ${hole.votes} \n\n`);
