@@ -3,5 +3,5 @@ module.exports.getSubject = () => {
 };
 
 module.exports.getHTMLPart = (username, token) => {
-  return `<h1>Ahoj ${username}, </h1><h3>Vítej v soutěži Jamka Roku 2021!</h3><p>Pro ověření tvého emailu prosím klikni na následující odkaz: <a href="https://www.jamkaroku.cz/users/verify/${token}" target="_blank"  rel="noreferrer" rel="noopener">https://www.jamkaroku.cz/users/verify/${token}</a></p>`;
+  return `<h2>Ahoj ${username}, </h2><h1>Vítej v soutěži Discgolfová jamka roku 2021!</h1><p>Jak už jsme psali na webu, pro účast v anketě a další možnosti je třeba ověřit tvůj účet. Stačí kliknout na následující odkaz:</p><a href="https://www.jamkaroku.cz/users/verify/${token}" target="_blank"  rel="noreferrer" rel="noopener">https://www.jamkaroku.cz/users/verify/${token}</a><p>Přejeme příjemnou hru, šťastnou ruku, ať vyhraje ta nejlepší jamka a hlavně ať to lítá!</p><p>Tým <a href="https://www.prodiscgolf.cz/" target="_blank"  rel="noreferrer" rel="noopener">proDiscgolf.cz</a>, pořadatel Jamky roku 2021</p>`;
 };

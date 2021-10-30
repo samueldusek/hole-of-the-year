@@ -43,7 +43,7 @@
             name="username" required autofocus value="<%= username ? username :
             '' %>" />
             <div id="usernameHelp" class="form-text">
-              Smí obsahovat pouze písmena a čísla. Vaše uživatelské jméno se bude zobrazovat v komentářové sekci.
+              Smí obsahovat pouze písmena a čísla. Tvé uživatelské jméno se bude zobrazovat v komentářové sekci.
             </div>
             <div class="invalid-feedback">
               <% if (errors.find(e => e.param === 'username')) { %> <%=
@@ -59,12 +59,12 @@
             aria-describedby="emailHelp" placeholder="tvuj@email.cz" required
             value="<%= email ? email : '' %>" />
             <div id="emailHelp" class="form-text">
-              Emailová adresa bude použita pro ověření vašeho účtu a nebude veřejně sdílena.
+              Emailová adresa bude použita pro ověření tvého účtu a nebude veřejně sdílena.
             </div>
             <div class="invalid-feedback">
               <% if (errors.find(e => e.param === 'email')) { %> <%=
               errors.filter(e => e.param === 'email')[0].msg %> <% } else { %>
-              Prosím, zadejte svou emailovou adresu. <% } %>
+              Prosím, zadej svou emailovou adresu. <% } %>
             </div>
             <div class="valid-feedback">V pořádku!</div>
           </div>
@@ -91,7 +91,7 @@
             <div class="invalid-feedback">
               <% if (errors.find(e => e.param === 'passwordConfirmation')) { %>
               <%= errors.filter(e => e.param === 'passwordConfirmation')[0].msg
-              %> <% } else { %> Prosím, potvrďte své heslo. <% } %>
+              %> <% } else { %> Prosím, potvrď své heslo. <% } %>
             </div>
           </div>
           <div class="mb-3">
