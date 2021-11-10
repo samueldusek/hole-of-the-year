@@ -26,7 +26,7 @@ const seedDb = async () => {
     .sort({ votes: "desc", lastVoteTimeStamp: "asc" })
     .limit(16);
 
-  const duels = await Duel.deleteMany({});
+  // const duels = await Duel.deleteMany({});
 
   const HAS_RANDOM_VOTES = false; // <--- SET: true, false
   const DUEL_DURATION_TIME = process.env.DUEL_DURATION_TIME * 1000;
