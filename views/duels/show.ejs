@@ -69,6 +69,60 @@
     </div>
     <div class="col-3 text-center"><h4 class="display-6 m-0 border-bottom border-success border-5 d-inline-block"><%= holeTwo.votes %></h4></div>
   </div>
+  <div class="banner my-5 container">
+    <div class="d-none d-md-block">
+      <a
+      href="https://www.prodiscgolf.cz/"
+      target="_blank"
+      rel="noopener noreferrer">
+      <% if(isBlackFriday) { %> 
+        <img
+        class="w-100"
+        src="/banners/blackfriday_1300px.jpg"
+        alt="Banner Black Friday - prodiscgolf.cz"
+        />
+      <% } else if(isFreeShipping) {  %>
+        <img
+        class="w-100"
+        src="/banners/doprava_1300px.jpg"
+        alt="Banner Doprava Zdarma - prodiscgolf.cz"
+        />
+      <% } else {  %>
+        <img
+        class="w-100"
+        src="/banners/prodiscgolf_1300px.jpg"
+        alt="Banner - prodiscgolf.cz"
+        />
+      <% } %> 
+      </a>
+    </div>
+    <div class="d-block d-md-none">
+      <a
+      href="https://www.prodiscgolf.cz/"
+      target="_blank"
+      rel="noopener noreferrer">
+      <% if(isBlackFriday) { %> 
+        <img
+        class="w-100"
+        src="/banners/blackfriday_550px.jpg"
+        alt="Banner Black Friday - prodiscgolf.cz"
+        />
+      <% } else if(isFreeShipping) {  %>
+        <img
+        class="w-100"
+        src="/banners/doprava_550px.jpg"
+        alt="Banner Doprava Zdarma - prodiscgolf.cz"
+        />
+      <% } else {  %>
+        <img
+        class="w-100"
+        src="/banners/prodiscgolf_550px.jpg"
+        alt="Banner - prodiscgolf.cz"
+        />
+      <% } %> 
+      </a>
+    </div> 
+  </div>
   <div class="row my-4 align-items-center justify-content-center">
       <div class="col-md-5">
         <div class="card mt-3 <% if(isFinished && holeOneIsWinner) { %>shadow-gold<% } else { %>shadow<% } %>">
