@@ -145,7 +145,7 @@
                 <span class="badge rounded-pill bg-warning text-dark mt-1">Postupující jamka</span>
               </div>
               <% } %>
-              <% if(currentUser && currentUser.userDuels.find(userDuel => userDuel.hole._id.toString() === holeOne.hole._id.toString())) { %> 
+              <% if(currentUser && currentUser.userDuels.some(userDuel => userDuel.hole._id.toString() === holeOne.hole._id.toString() && userDuel.duel._id.toString() === duelId.toString())) { %> 
                 <div>
                   <span class="badge rounded-pill bg-info text-dark text-wrap">Tvůj hlas</span> 
                 </div>
@@ -202,11 +202,11 @@
                   <span class="badge rounded-pill bg-warning text-dark mt-1">Postupující jamka</span>
                 </div>
                 <% } %>
-                <% if(currentUser && currentUser.userDuels.find(userDuel => userDuel.hole._id.toString() === holeTwo.hole._id.toString())) { %> 
+                <% if(currentUser && currentUser.userDuels.some(userDuel => userDuel.hole._id.toString() === holeTwo.hole._id.toString() && userDuel.duel._id.toString() === duelId.toString() )) { %> 
                   <div>
-                    <span class="badge rounded-pill bg-info text-dark text-wrap">Tvá nominace</span> 
+                    <span class="badge rounded-pill bg-info text-dark text-wrap">Tvůj hlas</span> 
                   </div>
-                  <% } %> 
+                <% } %> 
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
