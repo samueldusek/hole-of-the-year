@@ -26,8 +26,8 @@ db.once("open", () => {
 const findVoter = async () => {
   // Get all users that nominated particular hole
 
-  const duelId = mongoose.Types.ObjectId("619536a9017a374acbb61e7e"); // <--- INSERT DUEL ID
-  const holeId = "617d097e48d30e2ee83c297a"; // <--- INSERT HOLE ID
+  const duelId = mongoose.Types.ObjectId("6197df3d940bb3595c19e40d"); // <--- INSERT DUEL ID
+  const holeId = "617d097348d30e2ee83c2767"; // <--- INSERT HOLE ID
 
   const users = await User.find({
     "userDuels.duel": duelId,
