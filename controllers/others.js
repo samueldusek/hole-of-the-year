@@ -1,7 +1,7 @@
 const User = require("../models/user");
 
 module.exports.showLuckers = async (req, res) => {
-  const users = await User.find({}).select("username userDuels");
+  const users = await User.find({}).select("username userDuels email");
 
   const filteredUsers = users.filter((user) => user.userDuels.length > 0);
 
@@ -9,7 +9,7 @@ module.exports.showLuckers = async (req, res) => {
 
   for (const user of filteredUsers) {
     for (const duel of user.userDuels) {
-      luckers.push({ username: user.username });
+      luckers.push({ username: user.username, email: user.email });
     }
   }
 
