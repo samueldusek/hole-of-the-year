@@ -1,0 +1,38 @@
+<% layout('/layouts/mainTemplate') %>
+
+<div class="d-flex justify-content-center">
+  <h1
+    class="
+      display-6
+      d-inline-block
+      fw-bold
+      border-bottom border-5 border-success
+      lh-base
+    "
+  >
+    Štístko
+  </h1>
+</div>
+
+<div class="my-3">
+  <p class="lead">Počet losů: <%= luckers.length %></p>
+  <p class="lead">Počet soutěžících: <%= numberOfCompetitors %></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Uživatelské jméno</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let idx = 0; idx < luckers.length; idx++) { %>
+      <tr>
+        <th scope="row"><%= idx + 1 %></th>
+        <td><%= luckers[idx].username %></td>
+        <td><%= luckers[idx].email %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
