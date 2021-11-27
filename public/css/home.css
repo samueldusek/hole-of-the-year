@@ -3,7 +3,7 @@
       rgba(20, 20, 20, 0.5),
       rgba(20, 20, 20, 0.5)
     ),
-    url("../img/hole3.jpg");
+    url("../img/kobyli-4.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 
 .mainBox .title {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -37,4 +37,10 @@
   text-align: center;
   color: white;
   margin-bottom: 1.5rem;
+}
+
+.nominatorsList {
+  min-width: 300px;
+  width: 25%;
+  margin: auto;
 }

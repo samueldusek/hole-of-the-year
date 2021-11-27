@@ -108,7 +108,7 @@ app.get("/terms", (req, res) => {
 
 // Set the route for the home page
 app.get("/", (req, res) => {
-  res.render("mains/home", {
+  res.render("mains/home-after", {
     pageTitle: "Jamka Roku 2021",
     path: "/mains/home",
   });
