@@ -1,6 +1,6 @@
 # Discgolf Hole of the year 2021 :flying_disc: :czech_republic:
 
-The discgolf hole of the year 2021 is app being developed using the NodeJS (Express) and MongoDB (Mongoose). The goal of this app is to choose the most beautiful discgolf hole currently located in the Czech Republic. This contest is being organized by [www.prodiscgolf.cz](prodiscgolf.cz). Please be aware of the fact that it is Czech contest so all the text is in Czech.
+The discgolf hole of the year 2021 is app being developed using the NodeJS (Express) and MongoDB (Mongoose). The goal of this app is to choose the most beautiful discgolf hole currently located in the Czech Republic. This contest is being organized by [www.prodiscgolf.cz](https://www.prodiscgolf.cz). Please be aware of the fact that it is Czech contest so all the text is in Czech.
 
 ## Deployment
 
